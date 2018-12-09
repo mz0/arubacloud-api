@@ -1,0 +1,87 @@
+show|ipv6 |size|sshk|	Id | Name                  |Description
+True|True|-MLX|False|	954|WS08-001_W2K8R2_X64_1_2	|Windows 2008 R2 64bit
+False|False|SMLX|True|	955|ac_Centos5_x32_3_0	|CentOS 5.x 32bit
+False|False|SMLX|True|	956|ac_Centos5_x64_3_0	|CentOS 5.x 64bit
+True|False|SMLX|True|	957|ac_Centos6_std_x32_3_0	|CentOS 6.x 32bit
+True|True|SMLX|True|	958|ac_Centos6_std_x64_3_0	|CentOS 6.x 64bit
+False|False|SMLX|True|	959|ac_Debian5_x32_2_0	|Debian 5 32bit
+False|False|SMLX|True|	960|ac_Debian5_x64_2_0	|Debian 5 64bit
+False|False|SMLX|True|	961|ac_Debian6_x32_2_0	|Debian 6 32bit
+False|False|SMLX|True|	962|ac_Debian6_x64_2_0	|Debian 6 64bit
+False|False|SMLX|True|	963|ac_Ubuntu11_x32_2_0	|Ubuntu Server 11.04 32bit
+False|False|SMLX|True|	964|ac_Ubuntu11_x64_2_0	|Ubuntu Server 11.04 64bit
+True|False|SMLX|True|	965|ac_Centos6_db_x64_3_1	|CentOS 6.x 64bit - MySQL 5
+False|False|-MLX|False|	966|AWW-002_W2K3R2_WS_X64_1_2	|Windows 2003 R2 64bit - Web Server
+False|False|-MLX|False|	967|AWW-001_W2K3R2_WS_X86_1_2	|Windows 2003 R2 32bit - Web Server
+False|False|SMLX|True|	968|ac_Ubuntu10_x32_2_0	|Ubuntu Server 10.04 LTS 32bit
+False|False|SMLX|True|	969|ac_Ubuntu10_x64_2_0	|Ubuntu Server 10.04 LTS 64bit
+False|False|SMLX|True|	970|ac_Centos6_db_x32_3_0	|CentOS 6.x 32bit - MySQL 5
+False|False|SMLX|True|	971|ac_Ubuntu1104_vdesktop_x32_1_1	|Ubuntu Virtual Desktop 32bit
+False|False|SMLX|True|	972|ac_Ubuntu1104_vdesktop_x64_1_1	|Ubuntu Virtual Desktop 64bit
+True|False|-MLX|False|	973|AVW-001_W2K8R2_VD_X64_1_2	|Windows 2008 R2 64bit - Virtual Desktop
+False|False|-MLX|False|	974|WS03-001_W2K3R2_X86_1_2	|Windows 2003 R2 32bit
+False|False|-MLX|False|	975|WS03-002_W2K3R2_X64_1_2	|Windows 2003 R2 64bit
+False|False|-MLX|False|	976|ADW-005_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2008 Web
+True|False|-MLX|False|	977|ADW-006_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2008 R2 Standard
+False|False|-MLX|False|	978|ADW-007_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2005 Workgroup
+False|False|-MLX|False|	979|ADW-008_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2005 Standard
+True|False|SMLX|True|	980|ac_Centos6_web_x32_3_0	|CentOS 6.x 32bit - Web Server LAMP
+True|False|SMLX|True|	981|ac_Centos6_web_x64_3_1	|CentOS 6.x 64bit - Web Server LAMP
+False|False|SMLX|True|	982|ac_centos6_mailserver_x32_2_0	|CentOS 6.x 32bit - Mail Server
+True|False|SMLX|True|	983|ac_centos6_mailserver_x64_2_0	|CentOS 6.x 64bit - Mail Server
+True|False|-MLX|False|	984|ADW-014_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2008 R2 Web
+False|False|-MLX|False|	985|ADW-013_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2008 Standard
+False|False|-MLX|False|	986|ADW-002_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2005 Express
+True|False|-MLX|False|	987|ADW-001_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2008 R2 Express
+True|False|-MLX|False|	988|AWW-003_W2K8R2_WS_X64_1_2	|Windows 2008 R2 64bit - Web Server
+True|False|-MLX|False|	989|AWW-004_W2K8R2_WA_X64_1_2	|Windows 2008 R2 64bit - Web Server WAMP
+True|False|-MLX|False|	990|AMW-001_W2K8R2_MS_X64_1_2	|Windows 2008 R2 64bit - Hmailserver
+True|False|SMLX|True|	991|LO12-001_OpenSuse_12_x86_1_0	|openSuse 12.1 32bit
+True|False|SMLX|True|	992|LO12-002_OpenSuse_12_x64_1_0	|openSuse 12.1 64bit
+False|False|SMLX|True|	993|APL_001_Centos62_PSA_x86_1_1	|CentOS 6.x 32bit - Plesk 10.4.4
+False|False|SMLX|True|	994|APL_002_Centos62_PSA_x64_1_1	|CentOS 6.x 64bit - Plesk 10.4.4
+False|False|-MLX|False|	995|APW-001_W2K8R2_PL_X64_1_1	|Windows 2008 R2 64bit - Plesk 10.4.4
+True|False|-MLX|False|	996|ADW-015_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2012 Express
+True|False|-MLX|False|	997|ADW-016_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2012 Web
+True|False|-MLX|False|	998|ADW-017_W2K8R2_DB_X64_1_2	|Windows 2008 R2 64bit - SQL Server 2012 Standard
+False|False|SMLX|True|	999|ac_ubuntu1204S_x32_1_0	|Ubuntu Server 12.04 LTS 32bit
+False|False|SMLX|True|	1000|ac_ubuntu1204S_x64_1_0	|Ubuntu Server 12.04 LTS 64bit
+False|False|SMLX|True|	1001|ac_opensuse114_x32_1_0	|openSuse 11.4 32bit
+True|False|SMLX|True|	1002|ac_opensuse114_x64_1_0	|openSuse 11.4 64bit
+False|False|SMLX|True|	1003|ac_centos6_tomcat_x32_1_0	|CentOS 6.x 32bit - Tomcat
+True|False|SMLX|True|	1004|ac_centos6_tomcat_x64_1_0	|CentOS 6.x 64bit - Tomcat
+False|False|SMLX|True|	1005|ac_centos6_jboss_x32_1_0	|CentOS 6.x 32bit - JBoss
+True|False|SMLX|True|	1006|ac_centos6_jboss_x64_1_0	|CentOS 6.x 64bit - JBoss
+False|False|SMLX|True|	1007|ac_centos6_postgresql_x32_1_0	|CentOS 6.x 32bit - PostgreSQL
+True|False|SMLX|True|	1008|ac_centos6_postgresql_x64_1_0	|CentOS 6.x 64bit - PostgreSQL
+False|False|SMLX|True|	1009|ac_centos6_cacti_x32_1_0	|CentOS 6.x 32bit - Cacti
+True|False|SMLX|True|	1010|ac_centos6_cacti_x64_1_0	|CentOS 6.x 64bit - Cacti
+True|False|SMLX|True|	1011|ASL-001_centos6_pandorafms_x64_1_0	|CentOS 6.x 64bit - Pandora FMS
+True|False|SMLX|True|	1012|ADL-005_centos6_oracle_x64_1_0	|CentOS 6.x 64bit - Oracle Express
+False|False|-MLX|False|	1013|ARW-001_W2K8R2_RDS_X64_1_0	|Windows 2008 R2 64bit - RDS (5 CAL)
+False|False|-MLX|False|	1014|ARW-001_W2K8R2_RDS_X64_1_0	|Windows 2008 R2 64bit - RDS (10 CAL)
+False|False|-MLX|False|	1015|ARW-001_W2K8R2_RDS_X64_1_0	|Windows 2008 R2 64bit - RDS (15 CAL)
+False|False|-MLX|False|	1016|ARW-001_W2K8R2_RDS_X64_1_0	|Windows 2008 R2 64bit - RDS (30 CAL)
+False|False|SMLX|True|	1114|debian7_x64_1_0	|Debian 7 64bit
+False|False|SMLX|True|	1115|debian7_x86_1_0	|Debian 7 32bit
+False|True|SMLX|True|	1229|ubuntu1404_x64_1_0	|Ubuntu Server 14.04 LTS 64bit
+True|True|-MLX|False|	1542|WS12-002_W2K12R2_1_0	|Windows 2012 R2 64bit
+True|False|-MLX|False|	1546|ADW-020_W2K12R2_DB_X64_1_0	|Windows 2012 R2 64bit - SQL Server 2014 Express
+True|False|-MLX|False|	1547|ADW-021_W2K12R2_DB_X64_1_0	|Windows 2012 R2 64bit - SQL Server 2014 Web
+True|False|-MLX|False|	1548|ADW-022_W2K12R2_DB_X64_1_0	|Windows 2012 R2 64bit - SQL Server 2014 Standard
+True|True|SMLX|True|	1608|centos7_x64_1_0	|CentOS 7.x 64bit
+True|True|SMLX|True|	1723|debian8_x64_1_0	|Debian 8 64bit
+True|False|SMLX|True|	2071|APL-003_Centos7_PSA_x64_1_0	|CentOS 7.x 64bit - Plesk Onyx
+False|False|-MLX|False|	2075|APW-002_W2K12R2_PSA_X64_1_0	|Windows 2012 R2 64bit - Plesk 12.5
+True|False|-MLX|False|	2113|ARW-002_W2K12R2_RDS_X64_1_0	|Windows 2012 R2 64bit - RDS (5 CAL)
+True|False|-MLX|False|	2117|ARW-002_W2K12R2_RDS_X64_1_0	|Windows 2012 R2 64bit - RDS (10 CAL)
+True|False|-MLX|False|	2121|ARW-002_W2K12R2_RDS_X64_1_0	|Windows 2012 R2 64bit - RDS (15 CAL)
+True|False|-MLX|False|	2125|ARW-002_W2K12R2_RDS_X64_1_0	|Windows 2012 R2 64bit - RDS (30 CAL)
+True|True|SMLX|True|	2144|ubuntu1604_x64_1_0	|Ubuntu Server 16.04 LTS 64bit
+True|False|SMLX|True|	2146|BSD-001-freebsd_x64_1_0	|FreeBSD 10.x 64bit
+True|False|SMLX|True|	2255|centos7_wp_x64_1_0	|CentOS 7.x 64bit - Wordpress
+True|False|SMLX|True|	2827|APL-003_Centos7_PSA_x64_1_0	|CentOS 7.x 64bit - Plesk Onyx - Wordpress Toolkit
+True|False|SMLX|True|	2830|ac_Ubuntu1604_vdesktop_x64_1_1	|Ubuntu Virtual Desktop
+True|True|SMLX|True|	2833|debian9_x64_1_0	|Debian 9 64bit
+True|True|-MLX|False|	2996|WS16-001_W2K16_1_0	|Windows 2016 64bit
+True|True|SMLX|True|	3013|ubuntu1804_x64_1_0	|Ubuntu Server 18.04 LTS 64bit
