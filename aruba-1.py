@@ -4,6 +4,7 @@ import requests
 from pprint import pprint
 import json
 from datetime import datetime
+from sys import stderr
 
 try:
     from ConfigParser import ConfigParser as iniParser
@@ -20,15 +21,11 @@ def u(dc, cmd):
     return "https://api.dc{}.computing.cloud.it/WsEndUser/v2.9/WsEndUser.svc/json/{}".format(dc, cmd)
 
 
-def c0(cmd):
-    return '{{"ApplicationId":"{}","RequestId":"{}","SessionId":"{}","Password":"{}","Username":"{}"' \
-           '}}'.format(cmd, cmd, cmd, myPw, myId)
-
-
-def c1(cmd, server):
-    """ GetServerDetails, SetEnqueueServerStart (powerOn), SetEnqueueServerPowerOff, SetEnqueueServerDeletion """
-    return '{{"ApplicationId":"{}","RequestId":"{}","SessionId":"{}","Password":"{}","Username":"{}"' \
-           ',"ServerId":{}}}'.format(cmd, cmd, cmd, myPw, myId, server)
+def c0x(cmd, x=''):
+    """ x=ServerId
+    GetServerDetails, SetEnqueueServerStart (powerOn), SetEnqueueServerPowerOff, SetEnqueueServerDeletion """
+    return '{{"ApplicationId":"{}","RequestId":"{}","SessionId":"{}","Password":"{}","Username":"{}"{}' \
+           '}}'.format(cmd, cmd, cmd, myPw, myId, x)
 
 
 def dns(ip, fqdn):
@@ -45,7 +42,7 @@ h_cl = 'Content-Length'
 def list_server(dc):
     server = 0
     cmd = "GetServers"
-    data1 = c0(cmd=cmd)
+    data1 = c0x(cmd=cmd)
     headers = {h_ct: t_json, h_cl: str(len(data1))}
     response = requests.post(u(dc, cmd), data=data1, headers=headers)
     if response.status_code == 200 and \
@@ -54,7 +51,6 @@ def list_server(dc):
          re = response.content
     try:
         for jr in json.loads(re)['Value']:
-
             isSmart = jr['HypervisorType']==4
             name    = jr['Name']
             tpl     = jr['OSTemplateId']
@@ -71,7 +67,8 @@ def list_server(dc):
         print(e)
 
     cmd = "GetServerDetails"
-    data2 = c1(cmd=cmd, server=server)
+    x = ',"ServerId":{}'.format(server)
+    data2 = c0x(cmd=cmd, x=x)
     headers = {h_ct: t_json, h_cl: str(len(data2))}
     response = requests.post(u(dc, cmd), data=data2, headers=headers)
     if response.status_code == 200:
@@ -94,12 +91,9 @@ def list_server(dc):
         print(e)
 
 
-for dc in [1, 5, 6]: list_server(dc)
-
-
 def templates(dc):
     cmd = 'GetHypervisors'
-    data1 = c0(cmd=cmd)
+    data1 = c0x(cmd=cmd)
     headers = {h_ct: t_json, h_cl: str(len(data1))}
     response = requests.post(u(dc, cmd), data=data1, headers=headers)
     if response.status_code == 200 and \
@@ -128,4 +122,109 @@ def templates(dc):
                 print(str(showme)+"|"+str(ipv6_ok)+"|"+compat+"|"+str(ssh_in)+"|\t"+str(id)+"|"+name+"\t|"+descr)
 
 
-# templates(6)
+# for dc in [1, 5, 6]: list_server(dc)
+# templates(1)
+
+
+def get_servers(dc):
+    servers = []
+    cmd = "GetServers"
+    data1 = c0x(cmd=cmd)
+    headers = {h_ct: t_json, h_cl: str(len(data1))}
+    response = requests.post(u(dc, cmd), data=data1, headers=headers)
+    if response.status_code == 200 and \
+       h_ct in response.headers and \
+       response.headers[h_ct] == t_json:
+         re = response.content
+    try:
+        for j in json.loads(re)['Value']:
+            # pprint(j)
+            name    = j['Name']
+            tpl     = j['OSTemplateId']
+            powerOn = j['ServerStatus']==3
+            server  = j['ServerId']
+            busy    = j['Busy']
+            servers.append({"DC": dc, "ServerID": server, "ServerName": name,
+                 "Busy":busy, "TemplateID": tpl, "isOn": powerOn})
+    except Exception as e:
+        stderr.write(e)
+    return servers
+
+
+def cmdX(dc, cmd, x=''):
+    data = c0x(cmd=cmd, x=x)
+    headers = {h_ct: t_json, h_cl: str(len(data))}
+    return requests.post(u(dc, cmd), data=data, headers=headers)
+
+def isBusy(s):
+    dc  = s["DC"]
+    sId = s["ServerID"]
+    all = get_servers(dc)
+    for x in all:
+        if x["ServerID"] == sId:
+            return x['Busy']
+
+
+def poweroff(s):
+    if not s["isOn"]:
+        stderr.write("Already Off!\n")
+        return
+    if isBusy(s):
+        stderr.write("Busy!\n")
+        return
+    server = s["ServerID"]
+    dc     = s["DC"]
+    cmd  = "SetEnqueueServerPowerOff"
+    xtra = ',"ServerId":{}'.format(server)
+    cmdX(dc, cmd, xtra)
+
+    cmd = "GetJobs"
+    response = cmdX(dc, cmd, xtra)
+    pprint(response.headers)
+    pprint(response.content)
+# '{"ExceptionInfo":null,"ResultCode":0,"ResultMessage":null,"Success":true,"Value":[
+#    {"CreationDate":"\\/Date(1544463013390+0100)\\/","JobId":7958363,"LastUpdateDate":"\\/Date(1544463013390+0100)\\/","LicenseId":null,"OperationName":"StopVirtualMachineSmartVMWare","Progress":0,"ResourceId":null,"ResourceValue":null,"ServerId":292659,"ServerName":"La","Status":1,"UserId":70331,"Username":"AWI-71331"}]}'
+
+
+def poweron(s):
+    if s["isOn"]:
+        stderr.write("Already On!\n")
+        return
+    if isBusy(s):
+        stderr.write("Busy!\n")
+        return
+    server = s["ServerID"]
+    dc     = s["DC"]
+    cmd = "SetEnqueueServerStart"
+    x = ',"ServerId":{}'.format(server)
+    data = c0x(cmd=cmd, x=x)
+    headers = {h_ct: t_json, h_cl: str(len(data))}
+    response = requests.post(u(dc, cmd), data=data, headers=headers)
+#   pprint(response.headers)
+#   pprint(response.content)
+# {'Content-Length': '73',
+#  'X-AspNet-Version': '4.0.30319', 'Set-Cookie': 'ASP.NET_SessionId=jwe0r42fww1ulyyoam1uwxjx; path=/; HttpOnly',
+#  'X-Powered-By': 'ASP.NET',  'Server': 'Microsoft-IIS/7.5', 'Cache-Control': 'private',
+#  'Date': 'Mon, 10 Dec 2018 16:14:55 GMT', 'Content-Type': 'application/json'}
+#'{"ExceptionInfo":null,"ResultCode":0,"ResultMessage":null,"Success":true}'
+
+
+def reinit(s):
+    server = s["ServerID"]
+    dc     = s["DC"]
+    cmd = "SetEnqueueReinitializeServer"
+    rtpw = 'fsk;dlfk'
+    ipv6 = 'false'
+    x = ',"AdministratorPassword":"{}","ServerId":{},"ConfigureIPv6":{}'.format(rtpw, server, ipv6)
+    data = c0x(cmd=cmd, x=x)
+    headers = {h_ct: t_json, h_cl: str(len(data))}
+    response = requests.post(u(dc, cmd), data=data, headers=headers)
+    pprint(response.headers)
+    pprint(response.content)
+
+
+for s in get_servers(1):
+    pprint(s)
+    poweroff(s)
+    poweroff(s)
+    reinit(s)
