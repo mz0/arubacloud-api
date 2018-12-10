@@ -212,6 +212,10 @@ def poweron(s):
 def reinit(s):
     server = s["ServerID"]
     dc     = s["DC"]
+    if isBusy(s):
+        return "Busy"
+    if s["isOn"]:
+        return "isON"
     cmd = "SetEnqueueReinitializeServer"
     rtpw = 'fsk;dlfk'
     ipv6 = 'false'
@@ -219,12 +223,20 @@ def reinit(s):
     data = c0x(cmd=cmd, x=x)
     headers = {h_ct: t_json, h_cl: str(len(data))}
     response = requests.post(u(dc, cmd), data=data, headers=headers)
-    pprint(response.headers)
-    pprint(response.content)
+    rc = response.content
+    if response.status_code == 200 and \
+       h_ct in response.headers and \
+       response.headers[h_ct] == t_json:
+        suc = "Success"
+        jr = json.loads(rc)
+        if suc in jr and jr[suc]:
+            return "QOKW"
+    else:
+        return "Error: "+rc
 
 
 for s in get_servers(1):
     pprint(s)
     poweroff(s)
     poweroff(s)
-    reinit(s)
+    print(reinit(s))
