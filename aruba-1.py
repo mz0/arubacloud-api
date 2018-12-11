@@ -15,6 +15,9 @@ inifile = iniParser()
 inifile.read("/home/mz0/.ssh/aruba/ansible.ini")
 myId = inifile.get("acct0", "user")
 myPw = inifile.get("acct0", "passwd")
+t_json = 'application/json'
+h_ct = 'Content-Type'
+h_cl = 'Content-Length'
 
 
 def u(dc, cmd):
@@ -32,11 +35,6 @@ def dns(ip, fqdn):
     cmd = "SetEnqueueSetReverseDns"
     return '{{"ApplicationId":"{}","RequestId":"{}","SessionId":"{}","Password":"{}","Username":"{}"' \
            ',"Hosts":["{}"],"IP":"{}"}}'.format(cmd, cmd, cmd, myPw, myId, fqdn, ip)
-
-
-t_json = 'application/json'
-h_ct = 'Content-Type'
-h_cl = 'Content-Length'
 
 
 def list_server(dc):
@@ -122,10 +120,6 @@ def templates(dc):
                 print(str(showme)+"|"+str(ipv6_ok)+"|"+compat+"|"+str(ssh_in)+"|\t"+str(id)+"|"+name+"\t|"+descr)
 
 
-# for dc in [1, 5, 6]: list_server(dc)
-# templates(1)
-
-
 def get_servers(dc):
     servers = []
     cmd = "GetServers"
@@ -165,13 +159,25 @@ def isBusy(s):
             return x['Busy']
 
 
+def report(response, ok="OK"):
+    rc = response.content
+    if response.status_code == 200 and \
+       h_ct in response.headers and \
+       response.headers[h_ct] == t_json:
+        suc = "Success"
+        jr = json.loads(rc)
+        if suc in jr and jr[suc]:
+            return ok
+        elif suc in jr and jr["ResultMessage"]:
+            return str(jr["ResultMessage"])
+    else:
+        return "Error: {}".format(str(rc))
+
 def poweroff(s):
-    if not s["isOn"]:
-        stderr.write("Already Off!\n")
-        return
+    if not s["isOn"] and not s["Busy"]:
+        return "_dn_"
     if isBusy(s):
-        stderr.write("Busy!\n")
-        return
+        return "Busy"
     server = s["ServerID"]
     dc     = s["DC"]
     cmd  = "SetEnqueueServerPowerOff"
@@ -180,19 +186,16 @@ def poweroff(s):
 
     cmd = "GetJobs"
     response = cmdX(dc, cmd, xtra)
-    pprint(response.headers)
-    pprint(response.content)
+    return report(response, "Qdn_")
 # '{"ExceptionInfo":null,"ResultCode":0,"ResultMessage":null,"Success":true,"Value":[
 #    {"CreationDate":"\\/Date(1544463013390+0100)\\/","JobId":7958363,"LastUpdateDate":"\\/Date(1544463013390+0100)\\/","LicenseId":null,"OperationName":"StopVirtualMachineSmartVMWare","Progress":0,"ResourceId":null,"ResourceValue":null,"ServerId":292659,"ServerName":"La","Status":1,"UserId":70331,"Username":"AWI-71331"}]}'
 
 
 def poweron(s):
-    if s["isOn"]:
-        stderr.write("Already On!\n")
-        return
+    if s["isOn"] and not s["Busy"]:
+        return "_ON_"
     if isBusy(s):
-        stderr.write("Busy!\n")
-        return
+        return "BUSY"
     server = s["ServerID"]
     dc     = s["DC"]
     cmd = "SetEnqueueServerStart"
@@ -200,8 +203,7 @@ def poweron(s):
     data = c0x(cmd=cmd, x=x)
     headers = {h_ct: t_json, h_cl: str(len(data))}
     response = requests.post(u(dc, cmd), data=data, headers=headers)
-#   pprint(response.headers)
-#   pprint(response.content)
+    return report(response, "Qup^")
 # {'Content-Length': '73',
 #  'X-AspNet-Version': '4.0.30319', 'Set-Cookie': 'ASP.NET_SessionId=jwe0r42fww1ulyyoam1uwxjx; path=/; HttpOnly',
 #  'X-Powered-By': 'ASP.NET',  'Server': 'Microsoft-IIS/7.5', 'Cache-Control': 'private',
@@ -217,26 +219,19 @@ def reinit(s):
     if s["isOn"]:
         return "isON"
     cmd = "SetEnqueueReinitializeServer"
-    rtpw = 'fsk;dlfk'
-    ipv6 = 'false'
+    rtpw = 'fsk;dlfk2'  # BUG https://github.com/Arubacloud/pyArubaCloud/issues/55
+    ipv6 = 'false'      # BUG https://github.com/Arubacloud/pyArubaCloud/issues/57
     x = ',"AdministratorPassword":"{}","ServerId":{},"ConfigureIPv6":{}'.format(rtpw, server, ipv6)
     data = c0x(cmd=cmd, x=x)
     headers = {h_ct: t_json, h_cl: str(len(data))}
     response = requests.post(u(dc, cmd), data=data, headers=headers)
-    rc = response.content
-    if response.status_code == 200 and \
-       h_ct in response.headers and \
-       response.headers[h_ct] == t_json:
-        suc = "Success"
-        jr = json.loads(rc)
-        if suc in jr and jr[suc]:
-            return "QOKW"
-    else:
-        return "Error: "+rc
+    return report(response, "QOKW")
 
+for dc in [1, 5, 6]: list_server(dc)
+templates(1)
 
 for s in get_servers(1):
     pprint(s)
-    poweroff(s)
-    poweroff(s)
+#   print(poweron(s))
+    print(poweroff(s))
     print(reinit(s))
