@@ -5,7 +5,7 @@ from ArubaCloud.objects.VmTypes import Smart, Pro
 from ArubaCloud.ReverseDns import ReverseDns
 from pprint import pprint
 
-myId='AWI-71331'
+myId=''
 myPw=''
 
 # hypervisors:
@@ -57,7 +57,7 @@ for dc in [1,5,6]:
             print("unexpected!")
             # for ip in vm.ip_addr: print(" IP: {}".format(ip.ip_addr))
 
-#DC1 vm-name: La 	IP 212.237.9.140  PTR lab.x302.net ServerID 292659
-#DC3 vm-name: cz2 	IP 80.211.223.223 PTR --
-#DC5 vm-name: de1 	IP 86.105.53.69   PTR fe.x302.net ServerID 29652
-#DC6 vm-name: uk1 	IP 94.177.255.25  PTR li.x302.net ServerID 24848
+#DC1 vm-name: La 	IP 11.237.9.140  PTR La.x302.net ServerID 29265
+#DC3 vm-name: cz2 	IP 10.211.23.223 PTR --
+#DC5 vm-name: de1 	IP 16.105.53.6   PTR fe.x302.net ServerID 29252
+#DC6 vm-name: uk1 	IP 14.177.25.25  PTR li.x302.net ServerID 24842
