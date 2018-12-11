@@ -1,0 +1,28 @@
+(Fri, 05 Oct 2012 +0400) 
+r15 arubacloud  14:29:04 mapping for ws-enduser API version 2.0
+
+(Wed, 19 Sep 2012) 
+r14 arubacloud  17:29:41 -
+r13 arubacloud  17:27:42 (Wed, 19 Sep 2012) -
+
+(Tue, 19 Jun 2012)
+r12 arubacloud  19:54:02 [maven-release-plugin] prepare for next development iteration
+r10 arubacloud  19:53:09 [maven-release-plugin] prepare release java-OpenPanel-0.9.1
+r9  arubacloud  19:52:30 -
+r8  arubacloud  19:51:14 -
+r7  arubacloud  19:47:07 -
+r6  arubacloud  19:41:04 [maven-release-plugin] rollback the release of java-OpenPanel-0.9.1
+r5  arubacloud  19:40:08 [maven-release-plugin] prepare release java-OpenPanel-0.9.1
+r4  arubacloud  19:33:23 -
+r3  arubacloud  19:15:22 First Release
+r2  arubacloud  18:59:47 Initial import.
+r1  allura      18:46:54 Initial commit
+
+===================
+svn co https://svn.code.sf.net/p/java-openpanel/code-0/trunk java-opnpnel-svn
+mv java-opnpnel-svn/java-OpenPanel .
+svn log
+svn log -v -r r15
+svn diff -c r15 java-OpenPanel/README 
+svn log -v -r r12
+svn diff -c r12
