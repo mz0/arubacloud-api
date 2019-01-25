@@ -1,0 +1,1851 @@
+$ pip3 install --user zeep
+$ python3 -mzeep https://api.dc1.computing.cloud.it/WsEndUser/v2.8/WsEndUser.svc?wsdl
+
+Prefixes:
+     xsd: http://www.w3.org/2001/XMLSchema
+     ns0: https://api.computing.cloud.it/WsEndUser/jsonp/Imports
+     ns1: https://api.computing.cloud.it/WsEndUser/jsonp
+     ns2: http://schemas.microsoft.com/Message
+     ns3: https://api.computing.cloud.it/WsEndUser
+     ns4: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities
+     ns5: http://schemas.microsoft.com/2003/10/Serialization/Arrays
+     ns6: http://schemas.microsoft.com/2003/10/Serialization/
+     ns7: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities.CustomProduct
+     ns8: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities.LoadBalancer
+     ns9: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities.PrivateCloud
+     ns10: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities.SharedStorage
+     ns11: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Common
+     ns12: http://schemas.datacontract.org/2004/07/
+     ns13: http://schemas.datacontract.org/2004/07/Aruba.Cloud.WsEndUser.Business.Entities
+     ns14: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities.AdditionalServices
+     ns15: http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities.SmartVMWare
+     ns16: https://api.computing.cloud.it/WsEndUser/json/Imports
+     ns17: https://api.computing.cloud.it/WsEndUser/json
+     ns18: http://schemas.datacontract.org/2004/07/Aruba.Cloud.WsEndUser.Json
+     ns19: https://api.computing.cloud.it/WsEndUser/Imports
+
+Global elements:
+     ns11:WsResult(ns11:WsResult)
+     ns11:WsResultOfArrayOfAdditionalServiceDescriptor(ns11:WsResultOfArrayOfAdditionalServiceDescriptor)
+     ns11:WsResultOfArrayOfAssistanceRequest(ns11:WsResultOfArrayOfAssistanceRequest)
+     ns11:WsResultOfArrayOfCloudPackage(ns11:WsResultOfArrayOfCloudPackage)
+     ns11:WsResultOfArrayOfControlToolActivationRequest(ns11:WsResultOfArrayOfControlToolActivationRequest)
+     ns11:WsResultOfArrayOfCustomVirtualDisk(ns11:WsResultOfArrayOfCustomVirtualDisk)
+     ns11:WsResultOfArrayOfDatacenterConfig(ns11:WsResultOfArrayOfDatacenterConfig)
+     ns11:WsResultOfArrayOfHypervisor(ns11:WsResultOfArrayOfHypervisor)
+     ns11:WsResultOfArrayOfIPAddress(ns11:WsResultOfArrayOfIPAddress)
+     ns11:WsResultOfArrayOfIsoDetails(ns11:WsResultOfArrayOfIsoDetails)
+     ns11:WsResultOfArrayOfJob(ns11:WsResultOfArrayOfJob)
+     ns11:WsResultOfArrayOfLanguages(ns11:WsResultOfArrayOfLanguages)
+     ns11:WsResultOfArrayOfLoadBalancer(ns11:WsResultOfArrayOfLoadBalancer)
+     ns11:WsResultOfArrayOfLog(ns11:WsResultOfArrayOfLog)
+     ns11:WsResultOfArrayOfNews(ns11:WsResultOfArrayOfNews)
+     ns11:WsResultOfArrayOfPersonalTemplate(ns11:WsResultOfArrayOfPersonalTemplate)
+     ns11:WsResultOfArrayOfPriceList(ns11:WsResultOfArrayOfPriceList)
+     ns11:WsResultOfArrayOfPurchasedAdditionalService(ns11:WsResultOfArrayOfPurchasedAdditionalService)
+     ns11:WsResultOfArrayOfScheduleLog(ns11:WsResultOfArrayOfScheduleLog)
+     ns11:WsResultOfArrayOfScheduledOperation(ns11:WsResultOfArrayOfScheduledOperation)
+     ns11:WsResultOfArrayOfScheduledOperationOccurrence(ns11:WsResultOfArrayOfScheduledOperationOccurrence)
+     ns11:WsResultOfArrayOfServer(ns11:WsResultOfArrayOfServer)
+     ns11:WsResultOfArrayOfSharedStorage(ns11:WsResultOfArrayOfSharedStorage)
+     ns11:WsResultOfArrayOfVLan(ns11:WsResultOfArrayOfVLan)
+     ns11:WsResultOfAssistanceRequest(ns11:WsResultOfAssistanceRequest)
+     ns11:WsResultOfCompanySettings(ns11:WsResultOfCompanySettings)
+     ns11:WsResultOfCredit(ns11:WsResultOfCredit)
+     ns11:WsResultOfFTP(ns11:WsResultOfFTP)
+     ns11:WsResultOfHypervisor(ns11:WsResultOfHypervisor)
+     ns11:WsResultOfIPAddress(ns11:WsResultOfIPAddress)
+     ns11:WsResultOfLoadBalancerLoads(ns11:WsResultOfLoadBalancerLoads)
+     ns11:WsResultOfLoadBalancerNotifications(ns11:WsResultOfLoadBalancerNotifications)
+     ns11:WsResultOfLoadBalancerRuleStatistics(ns11:WsResultOfLoadBalancerRuleStatistics)
+     ns11:WsResultOfNetworkAdapterEntity(ns11:WsResultOfNetworkAdapterEntity)
+     ns11:WsResultOfPrivateCloudEntities(ns11:WsResultOfPrivateCloudEntities)
+     ns11:WsResultOfPrivateCloudEntityDetails(ns11:WsResultOfPrivateCloudEntityDetails)
+     ns11:WsResultOfPrivateCloudResurcesTypes(ns11:WsResultOfPrivateCloudResurcesTypes)
+     ns11:WsResultOfPurchasedPrivateCloud(ns11:WsResultOfPurchasedPrivateCloud)
+     ns11:WsResultOfSchedulerDataTypes(ns11:WsResultOfSchedulerDataTypes)
+     ns11:WsResultOfServerDetails(ns11:WsResultOfServerDetails)
+     ns11:WsResultOfSystemStatusHistory(ns11:WsResultOfSystemStatusHistory)
+     ns11:WsResultOfTemplateCategories(ns11:WsResultOfTemplateCategories)
+     ns11:WsResultOfTemplateDetails(ns11:WsResultOfTemplateDetails)
+     ns11:WsResultOfUserInfo(ns11:WsResultOfUserInfo)
+     ns11:WsResultOfUserToken(ns11:WsResultOfUserToken)
+     ns11:WsResultOfVLan(ns11:WsResultOfVLan)
+     ns11:WsResultOfVirtualDatacenter(ns11:WsResultOfVirtualDatacenter)
+     ns11:WsResultOfVirtualDatacenterCost(ns11:WsResultOfVirtualDatacenterCost)
+     ns11:WsResultOfboolean(ns11:WsResultOfboolean)
+     ns11:WsResultOfstring(ns11:WsResultOfstring)
+     ns14:AdditionalService(ns14:AdditionalService)
+     ns14:AdditionalServiceDescriptor(ns14:AdditionalServiceDescriptor)
+     ns14:ArrayOfAdditionalService(ns14:ArrayOfAdditionalService)
+     ns14:ArrayOfAdditionalServiceDescriptor(ns14:ArrayOfAdditionalServiceDescriptor)
+     ns14:ArrayOfPurchasedAdditionalService(ns14:ArrayOfPurchasedAdditionalService)
+     ns14:GetAdditionalServicesRequest(ns14:GetAdditionalServicesRequest)
+     ns14:GetPurchasedAdditionalServicesRequest(ns14:GetPurchasedAdditionalServicesRequest)
+     ns14:PurchasedAdditionalService(ns14:PurchasedAdditionalService)
+     ns14:PurchasedAdditionalServiceWorkingStatus(ns14:PurchasedAdditionalServiceWorkingStatus)
+     ns14:SetPurchasedAdditionalServicesRequest(ns14:SetPurchasedAdditionalServicesRequest)
+     ns7:ArrayOfCustomProductCost(ns7:ArrayOfCustomProductCost)
+     ns7:ArrayOfCustomProductEntity(ns7:ArrayOfCustomProductEntity)
+     ns7:ArrayOfCustomProductHistory(ns7:ArrayOfCustomProductHistory)
+     ns7:CloudResource(ns7:CloudResource)
+     ns7:CustomProductCategory(ns7:CustomProductCategory)
+     ns7:CustomProductCost(ns7:CustomProductCost)
+     ns7:CustomProductEntity(ns7:CustomProductEntity)
+     ns7:CustomProductHistory(ns7:CustomProductHistory)
+     ns8:AddLoadBalancerContactsRequest(ns8:AddLoadBalancerContactsRequest)
+     ns8:AddLoadBalancerRuleRequest(ns8:AddLoadBalancerRuleRequest)
+     ns8:ArrayOfCommunication(ns8:ArrayOfCommunication)
+     ns8:ArrayOfLoad(ns8:ArrayOfLoad)
+     ns8:ArrayOfLoadBalancer(ns8:ArrayOfLoadBalancer)
+     ns8:ArrayOfLoadBalancerCost(ns8:ArrayOfLoadBalancerCost)
+     ns8:ArrayOfLoadBalancerIPAddress(ns8:ArrayOfLoadBalancerIPAddress)
+     ns8:ArrayOfLoadBalancerInstance(ns8:ArrayOfLoadBalancerInstance)
+     ns8:ArrayOfLoadBalancerRule(ns8:ArrayOfLoadBalancerRule)
+     ns8:ArrayOfNotificationContact(ns8:ArrayOfNotificationContact)
+     ns8:ArrayOfRecipient(ns8:ArrayOfRecipient)
+     ns8:ArrayOfRuleNotificationEvent(ns8:ArrayOfRuleNotificationEvent)
+     ns8:ArrayOfStatistics(ns8:ArrayOfStatistics)
+     ns8:Communication(ns8:Communication)
+     ns8:Load(ns8:Load)
+     ns8:LoadBalancer(ns8:LoadBalancer)
+     ns8:LoadBalancerContactsRequest(ns8:LoadBalancerContactsRequest)
+     ns8:LoadBalancerCost(ns8:LoadBalancerCost)
+     ns8:LoadBalancerCreationRequest(ns8:LoadBalancerCreationRequest)
+     ns8:LoadBalancerIPAddress(ns8:LoadBalancerIPAddress)
+     ns8:LoadBalancerInstance(ns8:LoadBalancerInstance)
+     ns8:LoadBalancerInstancesRequest(ns8:LoadBalancerInstancesRequest)
+     ns8:LoadBalancerLoadRequest(ns8:LoadBalancerLoadRequest)
+     ns8:LoadBalancerLoads(ns8:LoadBalancerLoads)
+     ns8:LoadBalancerNotifications(ns8:LoadBalancerNotifications)
+     ns8:LoadBalancerNotificationsRequest(ns8:LoadBalancerNotificationsRequest)
+     ns8:LoadBalancerRule(ns8:LoadBalancerRule)
+     ns8:LoadBalancerRuleStatistics(ns8:LoadBalancerRuleStatistics)
+     ns8:LoadBalancerRuleStatisticsRequest(ns8:LoadBalancerRuleStatisticsRequest)
+     ns8:LoadBalancersFilter(ns8:LoadBalancersFilter)
+     ns8:ModifyLoadBalancerRequest(ns8:ModifyLoadBalancerRequest)
+     ns8:NotificationContact(ns8:NotificationContact)
+     ns8:Recipient(ns8:Recipient)
+     ns8:RemoveLoadBalancerContactsRequest(ns8:RemoveLoadBalancerContactsRequest)
+     ns8:RemoveLoadBalancerRuleRequest(ns8:RemoveLoadBalancerRuleRequest)
+     ns8:RuleNotificationEvent(ns8:RuleNotificationEvent)
+     ns8:Statistics(ns8:Statistics)
+     ns9:ArrayOfCPUEntity(ns9:ArrayOfCPUEntity)
+     ns9:ArrayOfCPUProduct(ns9:ArrayOfCPUProduct)
+     ns9:ArrayOfCpuCost(ns9:ArrayOfCpuCost)
+     ns9:ArrayOfDiskCost(ns9:ArrayOfDiskCost)
+     ns9:ArrayOfDiskEntity(ns9:ArrayOfDiskEntity)
+     ns9:ArrayOfDiskProduct(ns9:ArrayOfDiskProduct)
+     ns9:ArrayOfPrivateCloudCPU(ns9:ArrayOfPrivateCloudCPU)
+     ns9:ArrayOfPrivateCloudCost(ns9:ArrayOfPrivateCloudCost)
+     ns9:ArrayOfPrivateCloudDisk(ns9:ArrayOfPrivateCloudDisk)
+     ns9:ArrayOfPrivateCloudEntity(ns9:ArrayOfPrivateCloudEntity)
+     ns9:BaseCost(ns9:BaseCost)
+     ns9:BaseProduct(ns9:BaseProduct)
+     ns9:CPUEntity(ns9:CPUEntity)
+     ns9:CPUProduct(ns9:CPUProduct)
+     ns9:CpuCost(ns9:CpuCost)
+     ns9:DiskCost(ns9:DiskCost)
+     ns9:DiskEntity(ns9:DiskEntity)
+     ns9:DiskProduct(ns9:DiskProduct)
+     ns9:IPCost(ns9:IPCost)
+     ns9:IPEntity(ns9:IPEntity)
+     ns9:IPProduct(ns9:IPProduct)
+     ns9:ModifyPrivateCloud(ns9:ModifyPrivateCloud)
+     ns9:ModifyPrivateCloudResources(ns9:ModifyPrivateCloudResources)
+     ns9:PrivateCloudCPU(ns9:PrivateCloudCPU)
+     ns9:PrivateCloudCost(ns9:PrivateCloudCost)
+     ns9:PrivateCloudDisk(ns9:PrivateCloudDisk)
+     ns9:PrivateCloudEntities(ns9:PrivateCloudEntities)
+     ns9:PrivateCloudEntity(ns9:PrivateCloudEntity)
+     ns9:PrivateCloudEntityDetails(ns9:PrivateCloudEntityDetails)
+     ns9:PrivateCloudProduct(ns9:PrivateCloudProduct)
+     ns9:PrivateCloudResurcesTypes(ns9:PrivateCloudResurcesTypes)
+     ns9:PurchasePrivateCloud(ns9:PurchasePrivateCloud)
+     ns9:PurchasedPrivateCloud(ns9:PurchasedPrivateCloud)
+     ns9:RAMEntity(ns9:RAMEntity)
+     ns9:RAMProduct(ns9:RAMProduct)
+     ns9:RamCost(ns9:RamCost)
+     ns9:ResourceBaseEntity(ns9:ResourceBaseEntity)
+     ns9:VLanCost(ns9:VLanCost)
+     ns10:ArrayOfSharedStorage(ns10:ArrayOfSharedStorage)
+     ns10:ArrayOfSharedStorageIQN(ns10:ArrayOfSharedStorageIQN)
+     ns10:ArrayOfSharedStorageResource(ns10:ArrayOfSharedStorageResource)
+     ns10:EnqueueAddIQNSharedStorageRequest(ns10:EnqueueAddIQNSharedStorageRequest)
+     ns10:EnqueueModifySharedStorageRequest(ns10:EnqueueModifySharedStorageRequest)
+     ns10:EnqueuePurchaseSharedStorageRequest(ns10:EnqueuePurchaseSharedStorageRequest)
+     ns10:EnqueueRemoveIQNSharedStorageRequest(ns10:EnqueueRemoveIQNSharedStorageRequest)
+     ns10:EnqueueRemoveSharedStorageRequest(ns10:EnqueueRemoveSharedStorageRequest)
+     ns10:PrivateVlan(ns10:PrivateVlan)
+     ns10:RenameSharedStorageRequest(ns10:RenameSharedStorageRequest)
+     ns10:SharedStorage(ns10:SharedStorage)
+     ns10:SharedStorageIQN(ns10:SharedStorageIQN)
+     ns10:SharedStorageResource(ns10:SharedStorageResource)
+     ns15:ArrayOfCloudPackage(ns15:ArrayOfCloudPackage)
+     ns15:CloudPackage(ns15:CloudPackage)
+     ns15:GetPreConfiguredPackagesRequestEntity(ns15:GetPreConfiguredPackagesRequestEntity)
+     ns15:ReinitializeServerRequest(ns15:ReinitializeServerRequest)
+     ns4:AggregateCost(ns4:AggregateCost)
+     ns4:ApplianceType(ns4:ApplianceType)
+     ns4:ApplianceTypes(ns4:ApplianceTypes)
+     ns4:ArchitectureType(ns4:ArchitectureType)
+     ns4:ArchitectureTypes(ns4:ArchitectureTypes)
+     ns4:ArrayOfApplianceType(ns4:ArrayOfApplianceType)
+     ns4:ArrayOfArchitectureType(ns4:ArrayOfArchitectureType)
+     ns4:ArrayOfAssistanceRequest(ns4:ArrayOfAssistanceRequest)
+     ns4:ArrayOfCloudService(ns4:ArrayOfCloudService)
+     ns4:ArrayOfControlToolActivationRequest(ns4:ArrayOfControlToolActivationRequest)
+     ns4:ArrayOfCore(ns4:ArrayOfCore)
+     ns4:ArrayOfCpuHistory(ns4:ArrayOfCpuHistory)
+     ns4:ArrayOfCustomVirtualDisk(ns4:ArrayOfCustomVirtualDisk)
+     ns4:ArrayOfDatacenterConfig(ns4:ArrayOfDatacenterConfig)
+     ns4:ArrayOfDisk(ns4:ArrayOfDisk)
+     ns4:ArrayOfDiskHistory(ns4:ArrayOfDiskHistory)
+     ns4:ArrayOfFeatureType(ns4:ArrayOfFeatureType)
+     ns4:ArrayOfFeatureTypes(ns4:ArrayOfFeatureTypes)
+     ns4:ArrayOfHypervisor(ns4:ArrayOfHypervisor)
+     ns4:ArrayOfHypervisorTemplateBounds(ns4:ArrayOfHypervisorTemplateBounds)
+     ns4:ArrayOfIPAddress(ns4:ArrayOfIPAddress)
+     ns4:ArrayOfIPConfiguration(ns4:ArrayOfIPConfiguration)
+     ns4:ArrayOfIsoDetails(ns4:ArrayOfIsoDetails)
+     ns4:ArrayOfJob(ns4:ArrayOfJob)
+     ns4:ArrayOfKeyValuePair(ns4:ArrayOfKeyValuePair)
+     ns4:ArrayOfLanguages(ns4:ArrayOfLanguages)
+     ns4:ArrayOfLicenseKey(ns4:ArrayOfLicenseKey)
+     ns4:ArrayOfLocalizedText(ns4:ArrayOfLocalizedText)
+     ns4:ArrayOfLog(ns4:ArrayOfLog)
+     ns4:ArrayOfNetworkAdapter(ns4:ArrayOfNetworkAdapter)
+     ns4:ArrayOfNetworkAdapterConfiguration(ns4:ArrayOfNetworkAdapterConfiguration)
+     ns4:ArrayOfNews(ns4:ArrayOfNews)
+     ns4:ArrayOfOperatingSystemFamily(ns4:ArrayOfOperatingSystemFamily)
+     ns4:ArrayOfOperationParameters(ns4:ArrayOfOperationParameters)
+     ns4:ArrayOfPermission(ns4:ArrayOfPermission)
+     ns4:ArrayOfPersonalTemplate(ns4:ArrayOfPersonalTemplate)
+     ns4:ArrayOfPleskLicense(ns4:ArrayOfPleskLicense)
+     ns4:ArrayOfPleskLicenseCost(ns4:ArrayOfPleskLicenseCost)
+     ns4:ArrayOfPrice(ns4:ArrayOfPrice)
+     ns4:ArrayOfPriceList(ns4:ArrayOfPriceList)
+     ns4:ArrayOfPriceModifier(ns4:ArrayOfPriceModifier)
+     ns4:ArrayOfPublicIpAddressDetails(ns4:ArrayOfPublicIpAddressDetails)
+     ns4:ArrayOfPurchasedAddonLicense(ns4:ArrayOfPurchasedAddonLicense)
+     ns4:ArrayOfRamHistory(ns4:ArrayOfRamHistory)
+     ns4:ArrayOfResourceBound(ns4:ArrayOfResourceBound)
+     ns4:ArrayOfResourceCost(ns4:ArrayOfResourceCost)
+     ns4:ArrayOfScheduleFrequencyTypeDescription(ns4:ArrayOfScheduleFrequencyTypeDescription)
+     ns4:ArrayOfScheduleFrequencyTypes(ns4:ArrayOfScheduleFrequencyTypes)
+     ns4:ArrayOfScheduleLog(ns4:ArrayOfScheduleLog)
+     ns4:ArrayOfScheduleParameterTypeDescription(ns4:ArrayOfScheduleParameterTypeDescription)
+     ns4:ArrayOfScheduleParametersType(ns4:ArrayOfScheduleParametersType)
+     ns4:ArrayOfScheduleWeekDays(ns4:ArrayOfScheduleWeekDays)
+     ns4:ArrayOfScheduledOperation(ns4:ArrayOfScheduledOperation)
+     ns4:ArrayOfScheduledOperationOccurrence(ns4:ArrayOfScheduledOperationOccurrence)
+     ns4:ArrayOfServer(ns4:ArrayOfServer)
+     ns4:ArrayOfServerCost(ns4:ArrayOfServerCost)
+     ns4:ArrayOfServerDetails(ns4:ArrayOfServerDetails)
+     ns4:ArrayOfSharedStorageCost(ns4:ArrayOfSharedStorageCost)
+     ns4:ArrayOfSnapshot(ns4:ArrayOfSnapshot)
+     ns4:ArrayOfTemplateBound(ns4:ArrayOfTemplateBound)
+     ns4:ArrayOfTemplateDetails(ns4:ArrayOfTemplateDetails)
+     ns4:ArrayOfTemplateFeature(ns4:ArrayOfTemplateFeature)
+     ns4:ArrayOfTemplateType(ns4:ArrayOfTemplateType)
+     ns4:ArrayOfUserContact(ns4:ArrayOfUserContact)
+     ns4:ArrayOfUserServiceAvailabilitySettings(ns4:ArrayOfUserServiceAvailabilitySettings)
+     ns4:ArrayOfVLan(ns4:ArrayOfVLan)
+     ns4:ArrayOfVirtualDVD(ns4:ArrayOfVirtualDVD)
+     ns4:ArrayOfVirtualDisk(ns4:ArrayOfVirtualDisk)
+     ns4:ArrayOfVirtualDiskDetails(ns4:ArrayOfVirtualDiskDetails)
+     ns4:ArrayOfVirtualDiskUpdate(ns4:ArrayOfVirtualDiskUpdate)
+     ns4:AssistanceQuotation(ns4:AssistanceQuotation)
+     ns4:AssistanceRequest(ns4:AssistanceRequest)
+     ns4:AssistanceRequestCurrency(ns4:AssistanceRequestCurrency)
+     ns4:AssistanceRequestQuotationAcceptanceStatus(ns4:AssistanceRequestQuotationAcceptanceStatus)
+     ns4:AssistanceRequestStatus(ns4:AssistanceRequestStatus)
+     ns4:BillingTypes(ns4:BillingTypes)
+     ns4:CloudEntity(ns4:CloudEntity)
+     ns4:CloudReferenceType(ns4:CloudReferenceType)
+     ns4:CloudService(ns4:CloudService)
+     ns4:Company(ns4:Company)
+     ns4:CompanyDataCenterStatuses(ns4:CompanyDataCenterStatuses)
+     ns4:ContactTypes(ns4:ContactTypes)
+     ns4:ControlToolActivationRequest(ns4:ControlToolActivationRequest)
+     ns4:Core(ns4:Core)
+     ns4:Cpu(ns4:Cpu)
+     ns4:CpuHistory(ns4:CpuHistory)
+     ns4:Credit(ns4:Credit)
+     ns4:CustomPriceListElementStatus(ns4:CustomPriceListElementStatus)
+     ns4:CustomVirtualDisk(ns4:CustomVirtualDisk)
+     ns4:DataCenterTypes(ns4:DataCenterTypes)
+     ns4:DatacenterConfig(ns4:DatacenterConfig)
+     ns4:DatacenterConfigStatus(ns4:DatacenterConfigStatus)
+     ns4:DelayerModifier(ns4:DelayerModifier)
+     ns4:Disk(ns4:Disk)
+     ns4:DiskHistory(ns4:DiskHistory)
+     ns4:ExportVirtualDisk(ns4:ExportVirtualDisk)
+     ns4:FTP(ns4:FTP)
+     ns4:FTPAccountStatus(ns4:FTPAccountStatus)
+     ns4:FTPCost(ns4:FTPCost)
+     ns4:FTPServer(ns4:FTPServer)
+     ns4:FeatureType(ns4:FeatureType)
+     ns4:FeatureTypes(ns4:FeatureTypes)
+     ns4:GetRemoteAccessUrlRequest(ns4:GetRemoteAccessUrlRequest)
+     ns4:GetScheduleOccurrencesRequest(ns4:GetScheduleOccurrencesRequest)
+     ns4:GetSchedulePlan(ns4:GetSchedulePlan)
+     ns4:GetScheduledOperationRequest(ns4:GetScheduledOperationRequest)
+     ns4:GetServerSchedulesLogsRequest(ns4:GetServerSchedulesLogsRequest)
+     ns4:GetUserAuthenticationTokenRequest(ns4:GetUserAuthenticationTokenRequest)
+     ns4:GroupBy(ns4:GroupBy)
+     ns4:Hypervisor(ns4:Hypervisor)
+     ns4:HypervisorServerTypes(ns4:HypervisorServerTypes)
+     ns4:HypervisorTemplateBounds(ns4:HypervisorTemplateBounds)
+     ns4:HypervisorTypes(ns4:HypervisorTypes)
+     ns4:IPAddress(ns4:IPAddress)
+     ns4:IPConfiguration(ns4:IPConfiguration)
+     ns4:IpAddressCost(ns4:IpAddressCost)
+     ns4:IpAddressesRequest(ns4:IpAddressesRequest)
+     ns4:IsoDetails(ns4:IsoDetails)
+     ns4:IsoTypes(ns4:IsoTypes)
+     ns4:Job(ns4:Job)
+     ns4:JobStatus(ns4:JobStatus)
+     ns4:KeyValuePair(ns4:KeyValuePair)
+     ns4:Languages(ns4:Languages)
+     ns4:LicenseKey(ns4:LicenseKey)
+     ns4:LicenseStatusTypes(ns4:LicenseStatusTypes)
+     ns4:LoadBalancerAlgorithmType(ns4:LoadBalancerAlgorithmType)
+     ns4:LoadBalancerProtocol(ns4:LoadBalancerProtocol)
+     ns4:LoadBalancerStatus(ns4:LoadBalancerStatus)
+     ns4:LocalizedText(ns4:LocalizedText)
+     ns4:Log(ns4:Log)
+     ns4:MonitoringResourceType(ns4:MonitoringResourceType)
+     ns4:NetworkAdapter(ns4:NetworkAdapter)
+     ns4:NetworkAdapterConfiguration(ns4:NetworkAdapterConfiguration)
+     ns4:NetworkAdapterEntity(ns4:NetworkAdapterEntity)
+     ns4:NetworkAdapterTypes(ns4:NetworkAdapterTypes)
+     ns4:NewAssistanceRequest(ns4:NewAssistanceRequest)
+     ns4:NewIso(ns4:NewIso)
+     ns4:NewPersonalTemplate(ns4:NewPersonalTemplate)
+     ns4:NewServer(ns4:NewServer)
+     ns4:NewTemplateBound(ns4:NewTemplateBound)
+     ns4:News(ns4:News)
+     ns4:NewsCategoryTypes(ns4:NewsCategoryTypes)
+     ns4:NewsPriorityTypes(ns4:NewsPriorityTypes)
+     ns4:NewsSenderTypes(ns4:NewsSenderTypes)
+     ns4:NotificationType(ns4:NotificationType)
+     ns4:OSFamilyTypes(ns4:OSFamilyTypes)
+     ns4:OperatingSystemFamily(ns4:OperatingSystemFamily)
+     ns4:OperationParameters(ns4:OperationParameters)
+     ns4:OtpDetails(ns4:OtpDetails)
+     ns4:ParameterType(ns4:ParameterType)
+     ns4:Permission(ns4:Permission)
+     ns4:PersonalTemplate(ns4:PersonalTemplate)
+     ns4:PleskLicense(ns4:PleskLicense)
+     ns4:PleskLicenseCost(ns4:PleskLicenseCost)
+     ns4:Price(ns4:Price)
+     ns4:PriceList(ns4:PriceList)
+     ns4:PriceListElementStatus(ns4:PriceListElementStatus)
+     ns4:PriceModifier(ns4:PriceModifier)
+     ns4:PrivateCloudInstanceStatus(ns4:PrivateCloudInstanceStatus)
+     ns4:PrivateVLanDetails(ns4:PrivateVLanDetails)
+     ns4:PublicIpAddressDetails(ns4:PublicIpAddressDetails)
+     ns4:PurchasedAddonLicense(ns4:PurchasedAddonLicense)
+     ns4:QuotationType(ns4:QuotationType)
+     ns4:Ram(ns4:Ram)
+     ns4:RamHistory(ns4:RamHistory)
+     ns4:ResourceBound(ns4:ResourceBound)
+     ns4:ResourceCost(ns4:ResourceCost)
+     ns4:ResourceTypes(ns4:ResourceTypes)
+     ns4:Roles(ns4:Roles)
+     ns4:ScheduleFrequencyType(ns4:ScheduleFrequencyType)
+     ns4:ScheduleFrequencyTypeDescription(ns4:ScheduleFrequencyTypeDescription)
+     ns4:ScheduleFrequencyTypes(ns4:ScheduleFrequencyTypes)
+     ns4:ScheduleLog(ns4:ScheduleLog)
+     ns4:ScheduleOwnerType(ns4:ScheduleOwnerType)
+     ns4:ScheduleParameterTypeDescription(ns4:ScheduleParameterTypeDescription)
+     ns4:ScheduleParametersType(ns4:ScheduleParametersType)
+     ns4:SchedulePlan(ns4:SchedulePlan)
+     ns4:ScheduleWeekDays(ns4:ScheduleWeekDays)
+     ns4:ScheduledMontlyRecurrence(ns4:ScheduledMontlyRecurrence)
+     ns4:ScheduledOperation(ns4:ScheduledOperation)
+     ns4:ScheduledOperationOccurrence(ns4:ScheduledOperationOccurrence)
+     ns4:ScheduledOperationTypes(ns4:ScheduledOperationTypes)
+     ns4:ScheduledPlanStatus(ns4:ScheduledPlanStatus)
+     ns4:SchedulerDataTypes(ns4:SchedulerDataTypes)
+     ns4:SendAssistanceRequest(ns4:SendAssistanceRequest)
+     ns4:Server(ns4:Server)
+     ns4:ServerCost(ns4:ServerCost)
+     ns4:ServerDetails(ns4:ServerDetails)
+     ns4:ServerParameterKeys(ns4:ServerParameterKeys)
+     ns4:ServerRestore(ns4:ServerRestore)
+     ns4:ServerStatus(ns4:ServerStatus)
+     ns4:ServerUpdate(ns4:ServerUpdate)
+     ns4:ServiceStatuses(ns4:ServiceStatuses)
+     ns4:ServiceTypes(ns4:ServiceTypes)
+     ns4:SetAddScheduledOperationRequest(ns4:SetAddScheduledOperationRequest)
+     ns4:SetRemoveScheduledOperationRequest(ns4:SetRemoveScheduledOperationRequest)
+     ns4:SetUpdateScheduledOperationRequest(ns4:SetUpdateScheduledOperationRequest)
+     ns4:SetVlanRequest(ns4:SetVlanRequest)
+     ns4:SharedStorageCost(ns4:SharedStorageCost)
+     ns4:SharedStorageProtocolType(ns4:SharedStorageProtocolType)
+     ns4:SharedStorageStatus(ns4:SharedStorageStatus)
+     ns4:Snapshot(ns4:Snapshot)
+     ns4:SnapshotOperationTypes(ns4:SnapshotOperationTypes)
+     ns4:SnapshotStatusTypes(ns4:SnapshotStatusTypes)
+     ns4:SystemStatusHistory(ns4:SystemStatusHistory)
+     ns4:SystemStatusHistoryRequest(ns4:SystemStatusHistoryRequest)
+     ns4:Template(ns4:Template)
+     ns4:TemplateBound(ns4:TemplateBound)
+     ns4:TemplateCategories(ns4:TemplateCategories)
+     ns4:TemplateDetails(ns4:TemplateDetails)
+     ns4:TemplateFeature(ns4:TemplateFeature)
+     ns4:TemplateOwnershipTypes(ns4:TemplateOwnershipTypes)
+     ns4:TemplateSellingStatus(ns4:TemplateSellingStatus)
+     ns4:TemplateStatus(ns4:TemplateStatus)
+     ns4:TemplateType(ns4:TemplateType)
+     ns4:TemplateTypes(ns4:TemplateTypes)
+     ns4:TokenType(ns4:TokenType)
+     ns4:UpdateAssistanceRequest(ns4:UpdateAssistanceRequest)
+     ns4:UpdatePersonalTemplate(ns4:UpdatePersonalTemplate)
+     ns4:UserContact(ns4:UserContact)
+     ns4:UserInfo(ns4:UserInfo)
+     ns4:UserServiceAvailabilitySettings(ns4:UserServiceAvailabilitySettings)
+     ns4:UserStatus(ns4:UserStatus)
+     ns4:UserToken(ns4:UserToken)
+     ns4:VLan(ns4:VLan)
+     ns4:VirtualDVD(ns4:VirtualDVD)
+     ns4:VirtualDatacenter(ns4:VirtualDatacenter)
+     ns4:VirtualDatacenterCost(ns4:VirtualDatacenterCost)
+     ns4:VirtualDisk(ns4:VirtualDisk)
+     ns4:VirtualDiskCost(ns4:VirtualDiskCost)
+     ns4:VirtualDiskDetails(ns4:VirtualDiskDetails)
+     ns4:VirtualDiskOperationTypes(ns4:VirtualDiskOperationTypes)
+     ns4:VirtualDiskTypes(ns4:VirtualDiskTypes)
+     ns4:VirtualDiskUpdate(ns4:VirtualDiskUpdate)
+     ns4:VlanRequest(ns4:VlanRequest)
+     ns13:ArrayOfCompanyDataCenterSettings(ns13:ArrayOfCompanyDataCenterSettings)
+     ns13:ArrayOfCompanySupportSettings(ns13:ArrayOfCompanySupportSettings)
+     ns13:CompanyDataCenterSettings(ns13:CompanyDataCenterSettings)
+     ns13:CompanySettings(ns13:CompanySettings)
+     ns13:CompanySupportSettings(ns13:CompanySupportSettings)
+     ns18:AssistanceQuotationAcceptance(ns18:AssistanceQuotationAcceptance)
+     ns18:AssistanceRequestIdentifier(ns18:AssistanceRequestIdentifier)
+     ns18:GetCompanyByUrlRequest(ns18:GetCompanyByUrlRequest)
+     ns18:GetCustomVirtualDisksRequest(ns18:GetCustomVirtualDisksRequest)
+     ns18:GetLoadBalancerLoadsRequest(ns18:GetLoadBalancerLoadsRequest)
+     ns18:GetLoadBalancerNotificationsRequest(ns18:GetLoadBalancerNotificationsRequest)
+     ns18:GetLoadBalancerRuleStatisticsRequest(ns18:GetLoadBalancerRuleStatisticsRequest)
+     ns18:GetLoadBalancersRequest(ns18:GetLoadBalancersRequest)
+     ns18:GetLogsRequest(ns18:GetLogsRequest)
+     ns18:GetNetworkAdapterConfigurationRequest(ns18:GetNetworkAdapterConfigurationRequest)
+     ns18:GetNewsRequest(ns18:GetNewsRequest)
+     ns18:GetPreConfiguredPackagesRequest(ns18:GetPreConfiguredPackagesRequest)
+     ns18:GetScheduledOperationRequest(ns18:GetScheduledOperationRequest)
+     ns18:GetSerialCommandResultRequest(ns18:GetSerialCommandResultRequest)
+     ns18:GetServerSchedulesLogsRequest(ns18:GetServerSchedulesLogsRequest)
+     ns18:GetServersRequest(ns18:GetServersRequest)
+     ns18:GetUserAuthenticationTokenRequest(ns18:GetUserAuthenticationTokenRequest)
+     ns18:JsonHeader(ns18:JsonHeader)
+     ns18:JsonRequest(ns18:JsonRequest)
+     ns18:ModifyPrivateCloud(ns18:ModifyPrivateCloud)
+     ns18:ModifyPrivateCloudResources(ns18:ModifyPrivateCloudResources)
+     ns18:NewAssistanceRequest(ns18:NewAssistanceRequest)
+     ns18:PrivateCloudIdentifier(ns18:PrivateCloudIdentifier)
+     ns18:PurchasePrivateCloud(ns18:PurchasePrivateCloud)
+     ns18:ReinitializeServerRequest(ns18:ReinitializeServerRequest)
+     ns18:ServerRequest(ns18:ServerRequest)
+     ns18:SetAddScheduledOperationRequest(ns18:SetAddScheduledOperationRequest)
+     ns18:SetAddVDCGraphRequest(ns18:SetAddVDCGraphRequest)
+     ns18:SetChangeNoteServerRequest(ns18:SetChangeNoteServerRequest)
+     ns18:SetControlToolActivationRequestRequest(ns18:SetControlToolActivationRequestRequest)
+     ns18:SetControlToolActiveRequest(ns18:SetControlToolActiveRequest)
+     ns18:SetEnqueueAssociateIpAddressRequest(ns18:SetEnqueueAssociateIpAddressRequest)
+     ns18:SetEnqueueAssociateVLanRequest(ns18:SetEnqueueAssociateVLanRequest)
+     ns18:SetEnqueueDeassociateIpAddressRequest(ns18:SetEnqueueDeassociateIpAddressRequest)
+     ns18:SetEnqueueDeassociateVLanRequest(ns18:SetEnqueueDeassociateVLanRequest)
+     ns18:SetEnqueueHardwareUpdateRequest(ns18:SetEnqueueHardwareUpdateRequest)
+     ns18:SetEnqueueLoadBalancerDeletionRequest(ns18:SetEnqueueLoadBalancerDeletionRequest)
+     ns18:SetEnqueueLoadBalancerPowerOffRequest(ns18:SetEnqueueLoadBalancerPowerOffRequest)
+     ns18:SetEnqueueLoadBalancerStartRequest(ns18:SetEnqueueLoadBalancerStartRequest)
+     ns18:SetEnqueueMountDvdIsoRequest(ns18:SetEnqueueMountDvdIsoRequest)
+     ns18:SetEnqueueResizeFTPAccountRequest(ns18:SetEnqueueResizeFTPAccountRequest)
+     ns18:SetEnqueueServerCreationRequest(ns18:SetEnqueueServerCreationRequest)
+     ns18:SetEnqueueServerRestoreRequest(ns18:SetEnqueueServerRestoreRequest)
+     ns18:SetEnqueueServerSnapshotRequest(ns18:SetEnqueueServerSnapshotRequest)
+     ns18:SetEnqueueServerUpdateRequest(ns18:SetEnqueueServerUpdateRequest)
+     ns18:SetEnqueueVirtualDiskExportRequest(ns18:SetEnqueueVirtualDiskExportRequest)
+     ns18:SetEnqueueVirtualDiskManageRequest(ns18:SetEnqueueVirtualDiskManageRequest)
+     ns18:SetPurchaseVLanRequest(ns18:SetPurchaseVLanRequest)
+     ns18:SetReadNewsRequest(ns18:SetReadNewsRequest)
+     ns18:SetRemoveIpAddressRequest(ns18:SetRemoveIpAddressRequest)
+     ns18:SetRemoveScheduledOperationRequest(ns18:SetRemoveScheduledOperationRequest)
+     ns18:SetRemoveVLanRequest(ns18:SetRemoveVLanRequest)
+     ns18:SetRenameServerRequest(ns18:SetRenameServerRequest)
+     ns18:SetRenameVLanRequest(ns18:SetRenameVLanRequest)
+     ns18:SetUpdateScheduledOperationRequest(ns18:SetUpdateScheduledOperationRequest)
+     ns18:SetUpdateVDCGraphRequest(ns18:SetUpdateVDCGraphRequest)
+     ns18:UpdateAssistanceRequest(ns18:UpdateAssistanceRequest)
+     ns18:UserAssistanceRequestsFilter(ns18:UserAssistanceRequestsFilter)
+     ns12:ExceptionInfo(ns12:ExceptionInfo)
+     ns5:ArrayOfint(ns5:ArrayOfint)
+     ns5:ArrayOfstring(ns5:ArrayOfstring)
+     ns6:QName(xsd:QName)
+     ns6:anyType(None)
+     ns6:anyURI(xsd:anyURI)
+     ns6:base64Binary(xsd:base64Binary)
+     ns6:boolean(xsd:boolean)
+     ns6:byte(xsd:byte)
+     ns6:char(ns6:char)
+     ns6:dateTime(xsd:dateTime)
+     ns6:decimal(xsd:decimal)
+     ns6:double(xsd:double)
+     ns6:duration(ns6:duration)
+     ns6:float(xsd:float)
+     ns6:guid(ns6:guid)
+     ns6:int(xsd:int)
+     ns6:long(xsd:long)
+     ns6:short(xsd:short)
+     ns6:string(xsd:string)
+     ns6:unsignedByte(xsd:unsignedByte)
+     ns6:unsignedInt(xsd:unsignedInt)
+     ns6:unsignedLong(xsd:unsignedLong)
+     ns6:unsignedShort(xsd:unsignedShort)
+     
+     ns1:GetAllLogs(jsonp: xsd:string, userName: xsd:string, token: xsd:string, dateFrom: xsd:string, dateTo: xsd:string)
+     ns1:GetAllLogsResponse(GetAllLogsResult: ns2:StreamBody)
+     ns1:GetAllServers(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetAllServersResponse(GetAllServersResult: ns2:StreamBody)
+     ns1:GetAssistanceLanguages(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetAssistanceLanguagesResponse(GetAssistanceLanguagesResult: ns2:StreamBody)
+     ns1:GetAssistanceRequestDetails(jsonp: xsd:string, userName: xsd:string, token: xsd:string, requestID: xsd:string)
+     ns1:GetAssistanceRequestDetailsResponse(GetAssistanceRequestDetailsResult: ns2:StreamBody)
+     ns1:GetCompanyByUrl(jsonp: xsd:string, userName: xsd:string, token: xsd:string, url: xsd:string)
+     ns1:GetCompanyByUrlResponse(GetCompanyByUrlResult: ns2:StreamBody)
+     ns1:GetControlToolActivationRequests(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetControlToolActivationRequestsResponse(GetControlToolActivationRequestsResult: ns2:StreamBody)
+     ns1:GetControlToolCheck(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverID: xsd:string)
+     ns1:GetControlToolCheckResponse(GetControlToolCheckResult: ns2:StreamBody)
+     ns1:GetCredit(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetCreditResponse(GetCreditResult: ns2:StreamBody)
+     ns1:GetCustomVirtualDisks(jsonp: xsd:string, userName: xsd:string, token: xsd:string, hypervisorType: xsd:string)
+     ns1:GetCustomVirtualDisksResponse(GetCustomVirtualDisksResult: ns2:StreamBody)
+     ns1:GetDatacenterConfigurations(jsonp: xsd:string)
+     ns1:GetDatacenterConfigurationsResponse(GetDatacenterConfigurationsResult: ns2:StreamBody)
+     ns1:GetHypervisors(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetHypervisorsResponse(GetHypervisorsResult: ns2:StreamBody)
+     ns1:GetIsos(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetIsosResponse(GetIsosResult: ns2:StreamBody)
+     ns1:GetJobs(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetJobsResponse(GetJobsResult: ns2:StreamBody)
+     ns1:GetLoadBalancerLoads(jsonp: xsd:string, userName: xsd:string, token: xsd:string, loadbalancerId: xsd:string, startDate: xsd:string, endDate: xsd:string)
+     ns1:GetLoadBalancerLoadsResponse(GetLoadBalancerLoadsResult: ns2:StreamBody)
+     ns1:GetLoadBalancerNotifications(jsonp: xsd:string, userName: xsd:string, token: xsd:string, loadbalancerId: xsd:string, loadbalancerRuleId: xsd:string, startDate: xsd:string, endDate: xsd:string)
+     ns1:GetLoadBalancerNotificationsResponse(GetLoadBalancerNotificationsResult: ns2:StreamBody)
+     ns1:GetLoadBalancerRuleStatistics(jsonp: xsd:string, userName: xsd:string, token: xsd:string, loadbalancerRuleId: xsd:string, startDate: xsd:string, endDate: xsd:string)
+     ns1:GetLoadBalancerRuleStatisticsResponse(GetLoadBalancerRuleStatisticsResult: ns2:StreamBody)
+     ns1:GetLoadBalancers(jsonp: xsd:string, userName: xsd:string, token: xsd:string, loadbalancerId: xsd:string)
+     ns1:GetLoadBalancersResponse(GetLoadBalancersResult: ns2:StreamBody)
+     ns1:GetLogs(jsonp: xsd:string, userName: xsd:string, token: xsd:string, dateFrom: xsd:string, dateTo: xsd:string, serverId: xsd:string)
+     ns1:GetLogsResponse(GetLogsResult: ns2:StreamBody)
+     ns1:GetNetworkAdapterConfiguration(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverID: xsd:string, networkAdapter: xsd:string)
+     ns1:GetNetworkAdapterConfigurationResponse(GetNetworkAdapterConfigurationResult: ns2:StreamBody)
+     ns1:GetNews(jsonp: xsd:string, userName: xsd:string, token: xsd:string, language: xsd:string)
+     ns1:GetNewsResponse(GetNewsResult: ns2:StreamBody)
+     ns1:GetPreConfiguredPackages(jsonp: xsd:string, userName: xsd:string, token: xsd:string, hypervisorType: xsd:string)
+     ns1:GetPreConfiguredPackagesResponse(GetPreConfiguredPackagesResult: ns2:StreamBody)
+     ns1:GetPriceList(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetPriceListResponse(GetPriceListResult: ns2:StreamBody)
+     ns1:GetPrivateCloudResourcesTypes(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetPrivateCloudResourcesTypesResponse(GetPrivateCloudResourcesTypesResult: ns2:StreamBody)
+     ns1:GetPurchasedFTP(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetPurchasedFTPResponse(GetPurchasedFTPResult: ns2:StreamBody)
+     ns1:GetPurchasedIpAddresses(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetPurchasedIpAddressesResponse(GetPurchasedIpAddressesResult: ns2:StreamBody)
+     ns1:GetPurchasedPrivateClouds(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetPurchasedPrivateCloudsResponse(GetPurchasedPrivateCloudsResult: ns2:StreamBody)
+     ns1:GetPurchasedVLans(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetPurchasedVLansResponse(GetPurchasedVLansResult: ns2:StreamBody)
+     ns1:GetScheduledOperations(jsonp: xsd:string, userName: xsd:string, token: xsd:string, startDate: xsd:string, endDate: xsd:string)
+     ns1:GetScheduledOperationsResponse(GetScheduledOperationsResult: ns2:StreamBody)
+     ns1:GetSchedulerDataTypes(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetSchedulerDataTypesResponse(GetSchedulerDataTypesResult: ns2:StreamBody)
+     ns1:GetSerialCommandResult(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverID: xsd:string, command: xsd:string)
+     ns1:GetSerialCommandResultResponse(GetSerialCommandResultResult: ns2:StreamBody)
+     ns1:GetServerDetails(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:GetServerDetailsResponse(GetServerDetailsResult: ns2:StreamBody)
+     ns1:GetServerSchedulesLogs(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverID: xsd:string, startDate: xsd:string, endDate: xsd:string)
+     ns1:GetServerSchedulesLogsResponse(GetServerSchedulesLogsResult: ns2:StreamBody)
+     ns1:GetServers(jsonp: xsd:string, userName: xsd:string, token: xsd:string, statusId: xsd:string)
+     ns1:GetServersResponse(GetServersResult: ns2:StreamBody)
+     ns1:GetUserAssistanceRequests(jsonp: xsd:string, userName: xsd:string, token: xsd:string, dateStart: xsd:string, dateEnd: xsd:string, status: xsd:string)
+     ns1:GetUserAssistanceRequestsResponse(GetUserAssistanceRequestsResult: ns2:StreamBody)
+     ns1:GetUserAuthenticationToken(jsonp: xsd:string, username: xsd:string, password: xsd:string, otpValue: xsd:string)
+     ns1:GetUserAuthenticationTokenResponse(GetUserAuthenticationTokenResult: ns2:StreamBody)
+     ns1:GetUserInfo(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetUserInfoResponse(GetUserInfoResult: ns2:StreamBody)
+     ns1:GetVDCGraph(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetVDCGraphResponse(GetVDCGraphResult: ns2:StreamBody)
+     ns1:GetVirtualDatacenter(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetVirtualDatacenterCost(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:GetVirtualDatacenterCostResponse(GetVirtualDatacenterCostResult: ns2:StreamBody)
+     ns1:GetVirtualDatacenterResponse(GetVirtualDatacenterResult: ns2:StreamBody)
+     ns1:SetAddVDCGraph(jsonp: xsd:string, userName: xsd:string, token: xsd:string, jsonSerialization: xsd:string)
+     ns1:SetAddVDCGraphResponse(SetAddVDCGraphResult: ns2:StreamBody)
+     ns1:SetAssistanceQuotationAcceptance(jsonp: xsd:string, userName: xsd:string, token: xsd:string, quotationID: xsd:string, status: xsd:string)
+     ns1:SetAssistanceQuotationAcceptanceResponse(SetAssistanceQuotationAcceptanceResult: ns2:StreamBody)
+     ns1:SetChangeNoteServer(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, note: xsd:string)
+     ns1:SetChangeNoteServerResponse(SetChangeNoteServerResult: ns2:StreamBody)
+     ns1:SetControlToolActivationRequest(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverIDs: xsd:string)
+     ns1:SetControlToolActivationRequestResponse(SetControlToolActivationRequestResult: ns2:StreamBody)
+     ns1:SetControlToolActive(jsonp: xsd:string, userName: xsd:string, token: xsd:string, activationRequestToken: xsd:string)
+     ns1:SetControlToolActiveResponse(SetControlToolActiveResult: ns2:StreamBody)
+     ns1:SetControlToolDisable(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverID: xsd:string)
+     ns1:SetControlToolDisableResponse(SetControlToolDisableResult: ns2:StreamBody)
+     ns1:SetEnqueueAssociateIpAddress(jsonp: xsd:string, userName: xsd:string, token: xsd:string, ipAddressResourceId: xsd:string, networkAdapterId: xsd:string, setIPOnVirtualMachine: xsd:string)
+     ns1:SetEnqueueAssociateIpAddressResponse(SetEnqueueAssociateIpAddressResult: ns2:StreamBody)
+     ns1:SetEnqueueAssociateIpAddressSmart(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, setIPOnVirtualMachine: xsd:string)
+     ns1:SetEnqueueAssociateIpAddressSmartResponse(SetEnqueueAssociateIpAddressSmartResult: ns2:StreamBody)
+     ns1:SetEnqueueAssociateVLan(jsonp: xsd:string, userName: xsd:string, token: xsd:string, vlanResourceId: xsd:string, networkAdapterId: xsd:string, ipAddress: xsd:string, subNetMask: xsd:string, gateway: xsd:string, setIPOnVM: xsd:string)
+     ns1:SetEnqueueAssociateVLanResponse(SetEnqueueAssociateVLanResult: ns2:StreamBody)
+     ns1:SetEnqueueCreateFTPAccount(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:SetEnqueueCreateFTPAccountResponse(SetEnqueueCreateFTPAccountResult: ns2:StreamBody)
+     ns1:SetEnqueueDeassociateIpAddress(jsonp: xsd:string, userName: xsd:string, token: xsd:string, ipAddressResourceId: xsd:string, networkAdapterId: xsd:string, removeIPOnVirtualMachine: xsd:string)
+     ns1:SetEnqueueDeassociateIpAddressResponse(SetEnqueueDeassociateIpAddressResult: ns2:StreamBody)
+     ns1:SetEnqueueDeassociateVLan(jsonp: xsd:string, userName: xsd:string, token: xsd:string, vlanResourceId: xsd:string, networkAdapterId: xsd:string, resetNetworkAdapterOnVM: xsd:string)
+     ns1:SetEnqueueDeassociateVLanResponse(SetEnqueueDeassociateVLanResult: ns2:StreamBody)
+     ns1:SetEnqueueHardwareUpdate(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, cpuQuantity: xsd:string, ramQuantity: xsd:string, restartAfterExecuted: xsd:string)
+     ns1:SetEnqueueHardwareUpdateResponse(SetEnqueueHardwareUpdateResult: ns2:StreamBody)
+     ns1:SetEnqueueLoadBalancerDeletion(jsonp: xsd:string, userName: xsd:string, token: xsd:string, loadbalancerId: xsd:string)
+     ns1:SetEnqueueLoadBalancerDeletionResponse(SetEnqueueLoadBalancerDeletionResult: ns2:StreamBody)
+     ns1:SetEnqueueLoadBalancerPowerOff(jsonp: xsd:string, userName: xsd:string, token: xsd:string, loadbalancerId: xsd:string)
+     ns1:SetEnqueueLoadBalancerPowerOffResponse(SetEnqueueLoadBalancerPowerOffResult: ns2:StreamBody)
+     ns1:SetEnqueueLoadBalancerStart(jsonp: xsd:string, userName: xsd:string, token: xsd:string, loadbalancerId: xsd:string)
+     ns1:SetEnqueueLoadBalancerStartResponse(SetEnqueueLoadBalancerStartResult: ns2:StreamBody)
+     ns1:SetEnqueueMountDvdIso(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, isoPath: xsd:string, isoType: xsd:string)
+     ns1:SetEnqueueMountDvdIsoResponse(SetEnqueueMountDvdIsoResult: ns2:StreamBody)
+     ns1:SetEnqueuePrivateCloudActivation(jsonp: xsd:string, userName: xsd:string, token: xsd:string, privateCloudID: xsd:string)
+     ns1:SetEnqueuePrivateCloudActivationResponse(SetEnqueuePrivateCloudActivationResult: ns2:StreamBody)
+     ns1:SetEnqueuePrivateCloudDeletion(jsonp: xsd:string, userName: xsd:string, token: xsd:string, privateCloudID: xsd:string)
+     ns1:SetEnqueuePrivateCloudDeletionResponse(SetEnqueuePrivateCloudDeletionResult: ns2:StreamBody)
+     ns1:SetEnqueueResizeFTPAccount(jsonp: xsd:string, userName: xsd:string, token: xsd:string, ftpSize: xsd:string)
+     ns1:SetEnqueueResizeFTPAccountResponse(SetEnqueueResizeFTPAccountResult: ns2:StreamBody)
+     ns1:SetEnqueueServerArchiviation(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueServerArchiviationResponse(SetEnqueueServerArchiviationResult: ns2:StreamBody)
+     ns1:SetEnqueueServerDeletion(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueServerDeletionResponse(SetEnqueueServerDeletionResult: ns2:StreamBody)
+     ns1:SetEnqueueServerPowerOff(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueServerPowerOffResponse(SetEnqueueServerPowerOffResult: ns2:StreamBody)
+     ns1:SetEnqueueServerReset(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueServerResetResponse(SetEnqueueServerResetResult: ns2:StreamBody)
+     ns1:SetEnqueueServerRestart(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueServerRestartResponse(SetEnqueueServerRestartResult: ns2:StreamBody)
+     ns1:SetEnqueueServerRestore(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, cpuQuantity: xsd:string, ramQuantity: xsd:string)
+     ns1:SetEnqueueServerRestoreResponse(SetEnqueueServerRestoreResult: ns2:StreamBody)
+     ns1:SetEnqueueServerSnapshot(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, snapshotOperation: xsd:string)
+     ns1:SetEnqueueServerSnapshotResponse(SetEnqueueServerSnapshotResult: ns2:StreamBody)
+     ns1:SetEnqueueServerStart(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueServerStartResponse(SetEnqueueServerStartResult: ns2:StreamBody)
+     ns1:SetEnqueueServerStop(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueServerStopResponse(SetEnqueueServerStopResult: ns2:StreamBody)
+     ns1:SetEnqueueUnmountDvdIso(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string)
+     ns1:SetEnqueueUnmountDvdIsoResponse(SetEnqueueUnmountDvdIsoResult: ns2:StreamBody)
+     ns1:SetEnqueueUpdateControlTool(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverID: xsd:string)
+     ns1:SetEnqueueUpdateControlToolResponse(SetEnqueueUpdateControlToolResult: ns2:StreamBody)
+     ns1:SetEnqueueVirtualDiskExport(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, virtualDiskType: xsd:string)
+     ns1:SetEnqueueVirtualDiskExportResponse(SetEnqueueVirtualDiskExportResult: ns2:StreamBody)
+     ns1:SetEnqueueVirtualDiskManage(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, virtualDiskOperationType: xsd:string, virtualDiskType: xsd:string, size: xsd:string, customVirtualDiskPath: xsd:string)
+     ns1:SetEnqueueVirtualDiskManageResponse(SetEnqueueVirtualDiskManageResult: ns2:StreamBody)
+     ns1:SetModifyPrivateCloud(jsonp: xsd:string, userName: xsd:string, token: xsd:string, privateCloudID: xsd:string, name: xsd:string, description: xsd:string, telephoneNumber: xsd:string, email: xsd:string)
+     ns1:SetModifyPrivateCloudResponse(SetModifyPrivateCloudResult: ns2:StreamBody)
+     ns1:SetPurchaseIpAddress(jsonp: xsd:string, userName: xsd:string, token: xsd:string)
+     ns1:SetPurchaseIpAddressResponse(SetPurchaseIpAddressResult: ns2:StreamBody)
+     ns1:SetPurchaseVLan(jsonp: xsd:string, userName: xsd:string, token: xsd:string, vlanName: xsd:string)
+     ns1:SetPurchaseVLanResponse(SetPurchaseVLanResult: ns2:StreamBody)
+     ns1:SetReadNews(jsonp: xsd:string, userName: xsd:string, token: xsd:string, newsId: xsd:string, newsSenderType: xsd:string)
+     ns1:SetReadNewsResponse(SetReadNewsResult: ns2:StreamBody)
+     ns1:SetRemoveIpAddress(jsonp: xsd:string, userName: xsd:string, token: xsd:string, ipAddressResourceId: xsd:string)
+     ns1:SetRemoveIpAddressResponse(SetRemoveIpAddressResult: ns2:StreamBody)
+     ns1:SetRemoveServerScheduledOperation(jsonp: xsd:string, userName: xsd:string, token: xsd:string, scheduledOperationId: xsd:string)
+     ns1:SetRemoveServerScheduledOperationResponse(SetRemoveServerScheduledOperationResult: ns2:StreamBody)
+     ns1:SetRemoveVLan(jsonp: xsd:string, userName: xsd:string, token: xsd:string, vlanResourceId: xsd:string)
+     ns1:SetRemoveVLanResponse(SetRemoveVLanResult: ns2:StreamBody)
+     ns1:SetRenameServer(jsonp: xsd:string, userName: xsd:string, token: xsd:string, serverId: xsd:string, newName: xsd:string)
+     ns1:SetRenameServerResponse(SetRenameServerResult: ns2:StreamBody)
+     ns1:SetRenameVLan(jsonp: xsd:string, userName: xsd:string, token: xsd:string, vlanResourceId: xsd:string, vlanName: xsd:string)
+     ns1:SetRenameVLanResponse(SetRenameVLanResult: ns2:StreamBody)
+     ns1:SetSendAssistanceRequest(jsonp: xsd:string, userName: xsd:string, token: xsd:string, requestID: xsd:string)
+     ns1:SetSendAssistanceRequestResponse(SetSendAssistanceRequestResult: ns2:StreamBody)
+     ns1:SetUpdateVDCGraph(jsonp: xsd:string, userName: xsd:string, token: xsd:string, jsonSerialization: xsd:string)
+     ns1:SetUpdateVDCGraphResponse(SetUpdateVDCGraphResult: ns2:StreamBody)
+     ns17:GetAssistanceLanguages(request: ns18:JsonRequest)
+     ns17:GetAssistanceLanguagesResponse(GetAssistanceLanguagesResult: ns2:StreamBody)
+     ns17:GetAssistanceRequestDetails(request: ns18:AssistanceRequestIdentifier)
+     ns17:GetAssistanceRequestDetailsResponse(GetAssistanceRequestDetailsResult: ns2:StreamBody)
+     ns17:GetCompanyByUrl(request: ns18:GetCompanyByUrlRequest)
+     ns17:GetCompanyByUrlResponse(GetCompanyByUrlResult: ns2:StreamBody)
+     ns17:GetControlToolActivationRequests(request: ns18:JsonRequest)
+     ns17:GetControlToolActivationRequestsResponse(GetControlToolActivationRequestsResult: ns2:StreamBody)
+     ns17:GetControlToolCheck(request: ns18:ServerRequest)
+     ns17:GetControlToolCheckResponse(GetControlToolCheckResult: ns2:StreamBody)
+     ns17:GetCredit(request: ns18:JsonRequest)
+     ns17:GetCreditResponse(GetCreditResult: ns2:StreamBody)
+     ns17:GetCustomVirtualDisks(request: ns18:GetCustomVirtualDisksRequest)
+     ns17:GetCustomVirtualDisksResponse(GetCustomVirtualDisksResult: ns2:StreamBody)
+     ns17:GetDatacenterConfigurations(request: ns18:JsonHeader)
+     ns17:GetDatacenterConfigurationsResponse(GetDatacenterConfigurationsResult: ns2:StreamBody)
+     ns17:GetHypervisors(request: ns18:JsonRequest)
+     ns17:GetHypervisorsResponse(GetHypervisorsResult: ns2:StreamBody)
+     ns17:GetIsos(request: ns18:JsonRequest)
+     ns17:GetIsosResponse(GetIsosResult: ns2:StreamBody)
+     ns17:GetJobs(request: ns18:JsonRequest)
+     ns17:GetJobsResponse(GetJobsResult: ns2:StreamBody)
+     ns17:GetLoadBalancerLoads(request: ns18:GetLoadBalancerLoadsRequest)
+     ns17:GetLoadBalancerLoadsResponse(GetLoadBalancerLoadsResult: ns2:StreamBody)
+     ns17:GetLoadBalancerNotifications(request: ns18:GetLoadBalancerNotificationsRequest)
+     ns17:GetLoadBalancerNotificationsResponse(GetLoadBalancerNotificationsResult: ns2:StreamBody)
+     ns17:GetLoadBalancerRuleStatistics(request: ns18:GetLoadBalancerRuleStatisticsRequest)
+     ns17:GetLoadBalancerRuleStatisticsResponse(GetLoadBalancerRuleStatisticsResult: ns2:StreamBody)
+     ns17:GetLoadBalancers(request: ns18:GetLoadBalancersRequest)
+     ns17:GetLoadBalancersResponse(GetLoadBalancersResult: ns2:StreamBody)
+     ns17:GetLogs(request: ns18:GetLogsRequest)
+     ns17:GetLogsResponse(GetLogsResult: ns2:StreamBody)
+     ns17:GetNetworkAdapterConfiguration(request: ns18:GetNetworkAdapterConfigurationRequest)
+     ns17:GetNetworkAdapterConfigurationResponse(GetNetworkAdapterConfigurationResult: ns2:StreamBody)
+     ns17:GetNews(request: ns18:GetNewsRequest)
+     ns17:GetNewsResponse(GetNewsResult: ns2:StreamBody)
+     ns17:GetPreConfiguredPackages(request: ns18:GetPreConfiguredPackagesRequest)
+     ns17:GetPreConfiguredPackagesResponse(GetPreConfiguredPackagesResult: ns2:StreamBody)
+     ns17:GetPriceList(request: ns18:JsonRequest)
+     ns17:GetPriceListResponse(GetPriceListResult: ns2:StreamBody)
+     ns17:GetPrivateCloudResourcesTypes(request: ns18:JsonRequest)
+     ns17:GetPrivateCloudResourcesTypesResponse(GetPrivateCloudResourcesTypesResult: ns2:StreamBody)
+     ns17:GetPurchasedFTP(request: ns18:JsonRequest)
+     ns17:GetPurchasedFTPResponse(GetPurchasedFTPResult: ns2:StreamBody)
+     ns17:GetPurchasedIpAddresses(request: ns18:JsonRequest)
+     ns17:GetPurchasedIpAddressesResponse(GetPurchasedIpAddressesResult: ns2:StreamBody)
+     ns17:GetPurchasedPrivateClouds(request: ns18:JsonRequest)
+     ns17:GetPurchasedPrivateCloudsResponse(GetPurchasedPrivateCloudsResult: ns2:StreamBody)
+     ns17:GetPurchasedVLans(request: ns18:JsonRequest)
+     ns17:GetPurchasedVLansResponse(GetPurchasedVLansResult: ns2:StreamBody)
+     ns17:GetScheduledOperations(request: ns18:GetScheduledOperationRequest)
+     ns17:GetScheduledOperationsResponse(GetScheduledOperationsResult: ns2:StreamBody)
+     ns17:GetSchedulerDataTypes(request: ns18:JsonRequest)
+     ns17:GetSchedulerDataTypesResponse(GetSchedulerDataTypesResult: ns2:StreamBody)
+     ns17:GetSerialCommandResult(request: ns18:GetSerialCommandResultRequest)
+     ns17:GetSerialCommandResultResponse(GetSerialCommandResultResult: ns2:StreamBody)
+     ns17:GetServerDetails(request: ns18:ServerRequest)
+     ns17:GetServerDetailsResponse(GetServerDetailsResult: ns2:StreamBody)
+     ns17:GetServerSchedulesLogs(request: ns18:GetServerSchedulesLogsRequest)
+     ns17:GetServerSchedulesLogsResponse(GetServerSchedulesLogsResult: ns2:StreamBody)
+     ns17:GetServers(request: ns18:GetServersRequest)
+     ns17:GetServersResponse(GetServersResult: ns2:StreamBody)
+     ns17:GetUserAssistanceRequests(request: ns18:UserAssistanceRequestsFilter)
+     ns17:GetUserAssistanceRequestsResponse(GetUserAssistanceRequestsResult: ns2:StreamBody)
+     ns17:GetUserAuthenticationToken(request: ns18:GetUserAuthenticationTokenRequest)
+     ns17:GetUserAuthenticationTokenResponse(GetUserAuthenticationTokenResult: ns2:StreamBody)
+     ns17:GetUserInfo(request: ns18:JsonRequest)
+     ns17:GetUserInfoResponse(GetUserInfoResult: ns2:StreamBody)
+     ns17:GetVDCGraph(request: ns18:JsonRequest)
+     ns17:GetVDCGraphResponse(GetVDCGraphResult: ns2:StreamBody)
+     ns17:GetVirtualDatacenter(request: ns18:JsonRequest)
+     ns17:GetVirtualDatacenterCost(request: ns18:JsonRequest)
+     ns17:GetVirtualDatacenterCostResponse(GetVirtualDatacenterCostResult: ns2:StreamBody)
+     ns17:GetVirtualDatacenterResponse(GetVirtualDatacenterResult: ns2:StreamBody)
+     ns17:SetAddServerScheduledOperation(request: ns18:SetAddScheduledOperationRequest)
+     ns17:SetAddServerScheduledOperationResponse(SetAddServerScheduledOperationResult: ns2:StreamBody)
+     ns17:SetAddVDCGraph(request: ns18:SetAddVDCGraphRequest)
+     ns17:SetAddVDCGraphResponse(SetAddVDCGraphResult: ns2:StreamBody)
+     ns17:SetAssistanceQuotationAcceptance(request: ns18:AssistanceQuotationAcceptance)
+     ns17:SetAssistanceQuotationAcceptanceResponse(SetAssistanceQuotationAcceptanceResult: ns2:StreamBody)
+     ns17:SetChangeNoteServer(request: ns18:SetChangeNoteServerRequest)
+     ns17:SetChangeNoteServerResponse(SetChangeNoteServerResult: ns2:StreamBody)
+     ns17:SetControlToolActivationRequest(request: ns18:SetControlToolActivationRequestRequest)
+     ns17:SetControlToolActivationRequestResponse(SetControlToolActivationRequestResult: ns2:StreamBody)
+     ns17:SetControlToolActive(request: ns18:SetControlToolActiveRequest)
+     ns17:SetControlToolActiveResponse(SetControlToolActiveResult: ns2:StreamBody)
+     ns17:SetControlToolDisable(request: ns18:ServerRequest)
+     ns17:SetControlToolDisableResponse(SetControlToolDisableResult: ns2:StreamBody)
+     ns17:SetEnqueueAssociateIpAddress(request: ns18:SetEnqueueAssociateIpAddressRequest)
+     ns17:SetEnqueueAssociateIpAddressResponse(SetEnqueueAssociateIpAddressResult: ns2:StreamBody)
+     ns17:SetEnqueueAssociateVLan(request: ns18:SetEnqueueAssociateVLanRequest)
+     ns17:SetEnqueueAssociateVLanResponse(SetEnqueueAssociateVLanResult: ns2:StreamBody)
+     ns17:SetEnqueueCreateFTPAccount(request: ns18:JsonRequest)
+     ns17:SetEnqueueCreateFTPAccountResponse(SetEnqueueCreateFTPAccountResult: ns2:StreamBody)
+     ns17:SetEnqueueDeassociateIpAddress(request: ns18:SetEnqueueDeassociateIpAddressRequest)
+     ns17:SetEnqueueDeassociateIpAddressResponse(SetEnqueueDeassociateIpAddressResult: ns2:StreamBody)
+     ns17:SetEnqueueDeassociateVLan(request: ns18:SetEnqueueDeassociateVLanRequest)
+     ns17:SetEnqueueDeassociateVLanResponse(SetEnqueueDeassociateVLanResult: ns2:StreamBody)
+     ns17:SetEnqueueHardwareUpdate(request: ns18:SetEnqueueHardwareUpdateRequest)
+     ns17:SetEnqueueHardwareUpdateResponse(SetEnqueueHardwareUpdateResult: ns2:StreamBody)
+     ns17:SetEnqueueLoadBalancerDeletion(request: ns18:SetEnqueueLoadBalancerDeletionRequest)
+     ns17:SetEnqueueLoadBalancerDeletionResponse(SetEnqueueLoadBalancerDeletionResult: ns2:StreamBody)
+     ns17:SetEnqueueLoadBalancerPowerOff(request: ns18:SetEnqueueLoadBalancerPowerOffRequest)
+     ns17:SetEnqueueLoadBalancerPowerOffResponse(SetEnqueueLoadBalancerPowerOffResult: ns2:StreamBody)
+     ns17:SetEnqueueLoadBalancerStart(request: ns18:SetEnqueueLoadBalancerStartRequest)
+     ns17:SetEnqueueLoadBalancerStartResponse(SetEnqueueLoadBalancerStartResult: ns2:StreamBody)
+     ns17:SetEnqueueModifyPrivateCloudResources(request: ns18:ModifyPrivateCloudResources)
+     ns17:SetEnqueueModifyPrivateCloudResourcesResponse(SetEnqueueModifyPrivateCloudResourcesResult: ns2:StreamBody)
+     ns17:SetEnqueueMountDvdIso(request: ns18:SetEnqueueMountDvdIsoRequest)
+     ns17:SetEnqueueMountDvdIsoResponse(SetEnqueueMountDvdIsoResult: ns2:StreamBody)
+     ns17:SetEnqueuePrivateCloudActivation(request: ns18:PrivateCloudIdentifier)
+     ns17:SetEnqueuePrivateCloudActivationResponse(SetEnqueuePrivateCloudActivationResult: ns2:StreamBody)
+     ns17:SetEnqueuePrivateCloudDeletion(request: ns18:PrivateCloudIdentifier)
+     ns17:SetEnqueuePrivateCloudDeletionResponse(SetEnqueuePrivateCloudDeletionResult: ns2:StreamBody)
+     ns17:SetEnqueuePurchasePrivateCloud(request: ns18:PurchasePrivateCloud)
+     ns17:SetEnqueuePurchasePrivateCloudResponse(SetEnqueuePurchasePrivateCloudResult: ns2:StreamBody)
+     ns17:SetEnqueueReinitializeServer(request: ns18:ReinitializeServerRequest)
+     ns17:SetEnqueueReinitializeServerResponse(SetEnqueueReinitializeServerResult: ns2:StreamBody)
+     ns17:SetEnqueueResizeFTPAccount(request: ns18:SetEnqueueResizeFTPAccountRequest)
+     ns17:SetEnqueueResizeFTPAccountResponse(SetEnqueueResizeFTPAccountResult: ns2:StreamBody)
+     ns17:SetEnqueueServerArchiviation(request: ns18:ServerRequest)
+     ns17:SetEnqueueServerArchiviationResponse(SetEnqueueServerArchiviationResult: ns2:StreamBody)
+     ns17:SetEnqueueServerCreation(request: ns18:SetEnqueueServerCreationRequest)
+     ns17:SetEnqueueServerCreationResponse(SetEnqueueServerCreationResult: ns2:StreamBody)
+     ns17:SetEnqueueServerDeletion(request: ns18:ServerRequest)
+     ns17:SetEnqueueServerDeletionResponse(SetEnqueueServerDeletionResult: ns2:StreamBody)
+     ns17:SetEnqueueServerPowerOff(request: ns18:ServerRequest)
+     ns17:SetEnqueueServerPowerOffResponse(SetEnqueueServerPowerOffResult: ns2:StreamBody)
+     ns17:SetEnqueueServerReset(request: ns18:ServerRequest)
+     ns17:SetEnqueueServerResetResponse(SetEnqueueServerResetResult: ns2:StreamBody)
+     ns17:SetEnqueueServerRestart(request: ns18:ServerRequest)
+     ns17:SetEnqueueServerRestartResponse(SetEnqueueServerRestartResult: ns2:StreamBody)
+     ns17:SetEnqueueServerRestore(request: ns18:SetEnqueueServerRestoreRequest)
+     ns17:SetEnqueueServerRestoreResponse(SetEnqueueServerRestoreResult: ns2:StreamBody)
+     ns17:SetEnqueueServerSnapshot(request: ns18:SetEnqueueServerSnapshotRequest)
+     ns17:SetEnqueueServerSnapshotResponse(SetEnqueueServerSnapshotResult: ns2:StreamBody)
+     ns17:SetEnqueueServerStart(request: ns18:ServerRequest)
+     ns17:SetEnqueueServerStartResponse(SetEnqueueServerStartResult: ns2:StreamBody)
+     ns17:SetEnqueueServerStop(request: ns18:ServerRequest)
+     ns17:SetEnqueueServerStopResponse(SetEnqueueServerStopResult: ns2:StreamBody)
+     ns17:SetEnqueueServerUpdate(request: ns18:SetEnqueueServerUpdateRequest)
+     ns17:SetEnqueueServerUpdateResponse(SetEnqueueServerUpdateResult: ns2:StreamBody)
+     ns17:SetEnqueueUnmountDvdIso(request: ns18:ServerRequest)
+     ns17:SetEnqueueUnmountDvdIsoResponse(SetEnqueueUnmountDvdIsoResult: ns2:StreamBody)
+     ns17:SetEnqueueUpdateControlTool(request: ns18:ServerRequest)
+     ns17:SetEnqueueUpdateControlToolResponse(SetEnqueueUpdateControlToolResult: ns2:StreamBody)
+     ns17:SetEnqueueVirtualDiskExport(request: ns18:SetEnqueueVirtualDiskExportRequest)
+     ns17:SetEnqueueVirtualDiskExportResponse(SetEnqueueVirtualDiskExportResult: ns2:StreamBody)
+     ns17:SetEnqueueVirtualDiskManage(request: ns18:SetEnqueueVirtualDiskManageRequest)
+     ns17:SetEnqueueVirtualDiskManageResponse(SetEnqueueVirtualDiskManageResult: ns2:StreamBody)
+     ns17:SetInsertAssistanceRequest(request: ns18:NewAssistanceRequest)
+     ns17:SetInsertAssistanceRequestResponse(SetInsertAssistanceRequestResult: ns2:StreamBody)
+     ns17:SetModifyPrivateCloud(request: ns18:ModifyPrivateCloud)
+     ns17:SetModifyPrivateCloudResponse(SetModifyPrivateCloudResult: ns2:StreamBody)
+     ns17:SetPurchaseIpAddress(request: ns18:JsonRequest)
+     ns17:SetPurchaseIpAddressResponse(SetPurchaseIpAddressResult: ns2:StreamBody)
+     ns17:SetPurchaseVLan(request: ns18:SetPurchaseVLanRequest)
+     ns17:SetPurchaseVLanResponse(SetPurchaseVLanResult: ns2:StreamBody)
+     ns17:SetReadNews(request: ns18:SetReadNewsRequest)
+     ns17:SetReadNewsResponse(SetReadNewsResult: ns2:StreamBody)
+     ns17:SetRemoveIpAddress(request: ns18:SetRemoveIpAddressRequest)
+     ns17:SetRemoveIpAddressResponse(SetRemoveIpAddressResult: ns2:StreamBody)
+     ns17:SetRemoveServerScheduledOperation(request: ns18:SetRemoveScheduledOperationRequest)
+     ns17:SetRemoveServerScheduledOperationResponse(SetRemoveServerScheduledOperationResult: ns2:StreamBody)
+     ns17:SetRemoveVLan(request: ns18:SetRemoveVLanRequest)
+     ns17:SetRemoveVLanResponse(SetRemoveVLanResult: ns2:StreamBody)
+     ns17:SetRenameServer(request: ns18:SetRenameServerRequest)
+     ns17:SetRenameServerResponse(SetRenameServerResult: ns2:StreamBody)
+     ns17:SetRenameVLan(request: ns18:SetRenameVLanRequest)
+     ns17:SetRenameVLanResponse(SetRenameVLanResult: ns2:StreamBody)
+     ns17:SetSendAssistanceRequest(request: ns18:AssistanceRequestIdentifier)
+     ns17:SetSendAssistanceRequestResponse(SetSendAssistanceRequestResult: ns2:StreamBody)
+     ns17:SetUpdateAssistanceRequest(assistanceRequest: ns18:UpdateAssistanceRequest)
+     ns17:SetUpdateAssistanceRequestResponse(SetUpdateAssistanceRequestResult: ns2:StreamBody)
+     ns17:SetUpdateServerScheduledOperation(request: ns18:SetUpdateScheduledOperationRequest)
+     ns17:SetUpdateServerScheduledOperationResponse(SetUpdateServerScheduledOperationResult: ns2:StreamBody)
+     ns17:SetUpdateVDCGraph(request: ns18:SetUpdateVDCGraphRequest)
+     ns17:SetUpdateVDCGraphResponse(SetUpdateVDCGraphResult: ns2:StreamBody)
+     ns3:GetAdditionalServices(operationRequest: ns14:GetAdditionalServicesRequest)
+     ns3:GetAdditionalServicesResponse(GetAdditionalServicesResult: ns11:WsResultOfArrayOfAdditionalServiceDescriptor)
+     ns3:GetAssistanceLanguages()
+     ns3:GetAssistanceLanguagesResponse(GetAssistanceLanguagesResult: ns11:WsResultOfArrayOfLanguages)
+     ns3:GetAssistanceRequestDetails(requestID: xsd:int)
+     ns3:GetAssistanceRequestDetailsResponse(GetAssistanceRequestDetailsResult: ns11:WsResultOfAssistanceRequest)
+     ns3:GetAvailablePersonalTemplates()
+     ns3:GetAvailablePersonalTemplatesResponse(GetAvailablePersonalTemplatesResult: ns11:WsResultOfArrayOfPersonalTemplate)
+     ns3:GetCompanyByUrl(url: xsd:string)
+     ns3:GetCompanyByUrlResponse(GetCompanyByUrlResult: ns11:WsResultOfCompanySettings)
+     ns3:GetControlToolActivationRequests()
+     ns3:GetControlToolActivationRequestsResponse(GetControlToolActivationRequestsResult: ns11:WsResultOfArrayOfControlToolActivationRequest)
+     ns3:GetControlToolCheck(serverID: xsd:int)
+     ns3:GetControlToolCheckResponse(GetControlToolCheckResult: ns11:WsResultOfboolean)
+     ns3:GetControlToolCommandResult(serverID: xsd:int, command: xsd:string)
+     ns3:GetControlToolCommandResultResponse(GetControlToolCommandResultResult: ns11:WsResultOfstring)
+     ns3:GetCredit()
+     ns3:GetCreditResponse(GetCreditResult: ns11:WsResultOfCredit)
+     ns3:GetCustomVirtualDisks(hypervisorType: ns4:HypervisorTypes)
+     ns3:GetCustomVirtualDisksResponse(GetCustomVirtualDisksResult: ns11:WsResultOfArrayOfCustomVirtualDisk)
+     ns3:GetDatacenterConfigurations()
+     ns3:GetDatacenterConfigurationsResponse(GetDatacenterConfigurationsResult: ns11:WsResultOfArrayOfDatacenterConfig)
+     ns3:GetHypervisorDetails(hypervisorType: ns4:HypervisorTypes)
+     ns3:GetHypervisorDetailsResponse(GetHypervisorDetailsResult: ns11:WsResultOfHypervisor)
+     ns3:GetHypervisorTypes()
+     ns3:GetHypervisorTypesResponse(GetHypervisorTypesResult: ns11:WsResultOfArrayOfHypervisor)
+     ns3:GetHypervisors()
+     ns3:GetHypervisorsResponse(GetHypervisorsResult: ns11:WsResultOfArrayOfHypervisor)
+     ns3:GetIsos()
+     ns3:GetIsosResponse(GetIsosResult: ns11:WsResultOfArrayOfIsoDetails)
+     ns3:GetJobs()
+     ns3:GetJobsResponse(GetJobsResult: ns11:WsResultOfArrayOfJob)
+     ns3:GetLoadBalancerLoads(request: ns8:LoadBalancerLoadRequest)
+     ns3:GetLoadBalancerLoadsResponse(GetLoadBalancerLoadsResult: ns11:WsResultOfLoadBalancerLoads)
+     ns3:GetLoadBalancerNotifications(request: ns8:LoadBalancerNotificationsRequest)
+     ns3:GetLoadBalancerNotificationsResponse(GetLoadBalancerNotificationsResult: ns11:WsResultOfLoadBalancerNotifications)
+     ns3:GetLoadBalancerRuleStatistics(request: ns8:LoadBalancerRuleStatisticsRequest)
+     ns3:GetLoadBalancerRuleStatisticsResponse(GetLoadBalancerRuleStatisticsResult: ns11:WsResultOfLoadBalancerRuleStatistics)
+     ns3:GetLoadBalancers(filter: ns8:LoadBalancersFilter)
+     ns3:GetLoadBalancersResponse(GetLoadBalancersResult: ns11:WsResultOfArrayOfLoadBalancer)
+     ns3:GetLogs(serverId: xsd:int, from: xsd:dateTime, to: xsd:dateTime)
+     ns3:GetLogsResponse(GetLogsResult: ns11:WsResultOfArrayOfLog)
+     ns3:GetNetworkAdapterConfiguration(serverID: xsd:int, networkAdapter: xsd:string)
+     ns3:GetNetworkAdapterConfigurationResponse(GetNetworkAdapterConfigurationResult: ns11:WsResultOfNetworkAdapterEntity)
+     ns3:GetNews(language: xsd:string)
+     ns3:GetNewsResponse(GetNewsResult: ns11:WsResultOfArrayOfNews)
+     ns3:GetPreConfiguredPackages(request: ns15:GetPreConfiguredPackagesRequestEntity)
+     ns3:GetPreConfiguredPackagesResponse(GetPreConfiguredPackagesResult: ns11:WsResultOfArrayOfCloudPackage)
+     ns3:GetPriceList()
+     ns3:GetPriceListResponse(GetPriceListResult: ns11:WsResultOfArrayOfPriceList)
+     ns3:GetPrivateCloudResourcesTypes()
+     ns3:GetPrivateCloudResourcesTypesResponse(GetPrivateCloudResourcesTypesResult: ns11:WsResultOfPrivateCloudResurcesTypes)
+     ns3:GetPurchasedAdditionalServices(operationRequest: ns14:GetPurchasedAdditionalServicesRequest)
+     ns3:GetPurchasedAdditionalServicesResponse(GetPurchasedAdditionalServicesResult: ns11:WsResultOfArrayOfPurchasedAdditionalService)
+     ns3:GetPurchasedFTP()
+     ns3:GetPurchasedFTPResponse(GetPurchasedFTPResult: ns11:WsResultOfFTP)
+     ns3:GetPurchasedIpAddresses()
+     ns3:GetPurchasedIpAddressesResponse(GetPurchasedIpAddressesResult: ns11:WsResultOfArrayOfIPAddress)
+     ns3:GetPurchasedPrivateCloudDetails(privateCloudID: xsd:int)
+     ns3:GetPurchasedPrivateCloudDetailsResponse(GetPurchasedPrivateCloudDetailsResult: ns11:WsResultOfPrivateCloudEntityDetails)
+     ns3:GetPurchasedPrivateClouds()
+     ns3:GetPurchasedPrivateCloudsResponse(GetPurchasedPrivateCloudsResult: ns11:WsResultOfPrivateCloudEntities)
+     ns3:GetPurchasedVLans()
+     ns3:GetPurchasedVLansResponse(GetPurchasedVLansResult: ns11:WsResultOfArrayOfVLan)
+     ns3:GetRemoteAccessUrl(operationRequest: ns4:GetRemoteAccessUrlRequest)
+     ns3:GetRemoteAccessUrlResponse(GetRemoteAccessUrlResult: ns11:WsResultOfstring)
+     ns3:GetScheduleOccurrences(operationRequest: ns4:GetScheduleOccurrencesRequest)
+     ns3:GetScheduleOccurrencesResponse(GetScheduleOccurrencesResult: ns11:WsResultOfArrayOfScheduledOperationOccurrence)
+     ns3:GetScheduledOperations(operationRequest: ns4:GetScheduledOperationRequest)
+     ns3:GetScheduledOperationsResponse(GetScheduledOperationsResult: ns11:WsResultOfArrayOfScheduledOperation)
+     ns3:GetSchedulerDataTypes()
+     ns3:GetSchedulerDataTypesResponse(GetSchedulerDataTypesResult: ns11:WsResultOfSchedulerDataTypes)
+     ns3:GetServerDetails(serverId: xsd:int)
+     ns3:GetServerDetailsResponse(GetServerDetailsResult: ns11:WsResultOfServerDetails)
+     ns3:GetServerSchedulesLogs(operationRequest: ns4:GetServerSchedulesLogsRequest)
+     ns3:GetServerSchedulesLogsResponse(GetServerSchedulesLogsResult: ns11:WsResultOfArrayOfScheduleLog)
+     ns3:GetServers(statusId: xsd:int)
+     ns3:GetServersResponse(GetServersResult: ns11:WsResultOfArrayOfServer)
+     ns3:GetSharedStorages()
+     ns3:GetSharedStoragesResponse(GetSharedStoragesResult: ns11:WsResultOfArrayOfSharedStorage)
+     ns3:GetSystemStatusHistory(systemStatusHistoryRequest: ns4:SystemStatusHistoryRequest)
+     ns3:GetSystemStatusHistoryResponse(GetSystemStatusHistoryResult: ns11:WsResultOfSystemStatusHistory)
+     ns3:GetTemplateCategories()
+     ns3:GetTemplateCategoriesResponse(GetTemplateCategoriesResult: ns11:WsResultOfTemplateCategories)
+     ns3:GetTemplateDetails(templateID: xsd:int)
+     ns3:GetTemplateDetailsResponse(GetTemplateDetailsResult: ns11:WsResultOfTemplateDetails)
+     ns3:GetUserAssistanceRequests(DateStart: xsd:dateTime, DateEnd: xsd:dateTime, status: ns4:AssistanceRequestStatus)
+     ns3:GetUserAssistanceRequestsResponse(GetUserAssistanceRequestsResult: ns11:WsResultOfArrayOfAssistanceRequest)
+     ns3:GetUserAuthenticationToken(userAuthenticationTokenRequest: ns4:GetUserAuthenticationTokenRequest)
+     ns3:GetUserAuthenticationTokenResponse(GetUserAuthenticationTokenResult: ns11:WsResultOfUserToken)
+     ns3:GetUserInfo()
+     ns3:GetUserInfoResponse(GetUserInfoResult: ns11:WsResultOfUserInfo)
+     ns3:GetVDCGraph()
+     ns3:GetVDCGraphResponse(GetVDCGraphResult: ns11:WsResultOfstring)
+     ns3:GetVirtualDatacenter()
+     ns3:GetVirtualDatacenterCost()
+     ns3:GetVirtualDatacenterCostResponse(GetVirtualDatacenterCostResult: ns11:WsResultOfVirtualDatacenterCost)
+     ns3:GetVirtualDatacenterResponse(GetVirtualDatacenterResult: ns11:WsResultOfVirtualDatacenter)
+     ns3:SetAddLoadBalancerContacts(request: ns8:AddLoadBalancerContactsRequest)
+     ns3:SetAddLoadBalancerContactsResponse(SetAddLoadBalancerContactsResult: ns11:WsResult)
+     ns3:SetAddLoadBalancerRule(request: ns8:AddLoadBalancerRuleRequest)
+     ns3:SetAddLoadBalancerRuleResponse(SetAddLoadBalancerRuleResult: ns11:WsResult)
+     ns3:SetAddServerScheduledOperation(operationRequest: ns4:SetAddScheduledOperationRequest)
+     ns3:SetAddServerScheduledOperationResponse(SetAddServerScheduledOperationResult: ns11:WsResult)
+     ns3:SetAddVDCGraph(jsonSerialization: xsd:string)
+     ns3:SetAddVDCGraphResponse(SetAddVDCGraphResult: ns11:WsResult)
+     ns3:SetAssistanceQuotationAcceptance(quotationID: xsd:int, status: ns4:AssistanceRequestQuotationAcceptanceStatus)
+     ns3:SetAssistanceQuotationAcceptanceResponse(SetAssistanceQuotationAcceptanceResult: ns11:WsResult)
+     ns3:SetChangeNoteServer(serverId: xsd:int, note: xsd:string)
+     ns3:SetChangeNoteServerResponse(SetChangeNoteServerResult: ns11:WsResult)
+     ns3:SetControlToolActivationRequest(serverIDs: ns5:ArrayOfint)
+     ns3:SetControlToolActivationRequestResponse(SetControlToolActivationRequestResult: ns11:WsResult)
+     ns3:SetControlToolActive(token: xsd:string)
+     ns3:SetControlToolActiveResponse(SetControlToolActiveResult: ns11:WsResult)
+     ns3:SetControlToolDisable(serverID: xsd:int)
+     ns3:SetControlToolDisableResponse(SetControlToolDisableResult: ns11:WsResult)
+     ns3:SetEnqueueAddIQNSharedStorage(operationRequest: ns10:EnqueueAddIQNSharedStorageRequest)
+     ns3:SetEnqueueAddIQNSharedStorageResponse(SetEnqueueAddIQNSharedStorageResult: ns11:WsResult)
+     ns3:SetEnqueueAssociateIpAddress(ipRequest: ns4:IpAddressesRequest)
+     ns3:SetEnqueueAssociateIpAddressResponse(SetEnqueueAssociateIpAddressResult: ns11:WsResult)
+     ns3:SetEnqueueAssociateVLan(vlanRequest: ns4:SetVlanRequest)
+     ns3:SetEnqueueAssociateVLanResponse(SetEnqueueAssociateVLanResult: ns11:WsResult)
+     ns3:SetEnqueueCreateFTPAccount()
+     ns3:SetEnqueueCreateFTPAccountResponse(SetEnqueueCreateFTPAccountResult: ns11:WsResult)
+     ns3:SetEnqueueDeassociateIpAddress(ipRequest: ns4:IpAddressesRequest)
+     ns3:SetEnqueueDeassociateIpAddressResponse(SetEnqueueDeassociateIpAddressResult: ns11:WsResult)
+     ns3:SetEnqueueDeassociateVLan(vlanRequest: ns4:VlanRequest)
+     ns3:SetEnqueueDeassociateVLanResponse(SetEnqueueDeassociateVLanResult: ns11:WsResult)
+     ns3:SetEnqueueLoadBalancerAddInstances(request: ns8:LoadBalancerInstancesRequest)
+     ns3:SetEnqueueLoadBalancerAddInstancesResponse(SetEnqueueLoadBalancerAddInstancesResult: ns11:WsResult)
+     ns3:SetEnqueueLoadBalancerCreation(request: ns8:LoadBalancerCreationRequest)
+     ns3:SetEnqueueLoadBalancerCreationResponse(SetEnqueueLoadBalancerCreationResult: ns11:WsResult)
+     ns3:SetEnqueueLoadBalancerDeletion(loadBalancerID: xsd:int)
+     ns3:SetEnqueueLoadBalancerDeletionResponse(SetEnqueueLoadBalancerDeletionResult: ns11:WsResult)
+     ns3:SetEnqueueLoadBalancerPowerOff(loadBalancerID: xsd:int)
+     ns3:SetEnqueueLoadBalancerPowerOffResponse(SetEnqueueLoadBalancerPowerOffResult: ns11:WsResult)
+     ns3:SetEnqueueLoadBalancerRemoveInstances(request: ns8:LoadBalancerInstancesRequest)
+     ns3:SetEnqueueLoadBalancerRemoveInstancesResponse(SetEnqueueLoadBalancerRemoveInstancesResult: ns11:WsResult)
+     ns3:SetEnqueueLoadBalancerStart(loadBalancerID: xsd:int)
+     ns3:SetEnqueueLoadBalancerStartResponse(SetEnqueueLoadBalancerStartResult: ns11:WsResult)
+     ns3:SetEnqueueModifyPrivateCloudResources(request: ns9:ModifyPrivateCloudResources)
+     ns3:SetEnqueueModifyPrivateCloudResourcesResponse(SetEnqueueModifyPrivateCloudResourcesResult: ns11:WsResult)
+     ns3:SetEnqueueModifySharedStorage(operationRequest: ns10:EnqueueModifySharedStorageRequest)
+     ns3:SetEnqueueModifySharedStorageResponse(SetEnqueueModifySharedStorageResult: ns11:WsResult)
+     ns3:SetEnqueueMountDvdIso(iso: ns4:NewIso)
+     ns3:SetEnqueueMountDvdIsoResponse(SetEnqueueMountDvdIsoResult: ns11:WsResult)
+     ns3:SetEnqueuePersonalTemplateCreation(template: ns4:NewPersonalTemplate)
+     ns3:SetEnqueuePersonalTemplateCreationResponse(SetEnqueuePersonalTemplateCreationResult: ns11:WsResult)
+     ns3:SetEnqueuePrivateCloudActivation(privateCloudID: xsd:int)
+     ns3:SetEnqueuePrivateCloudActivationResponse(SetEnqueuePrivateCloudActivationResult: ns11:WsResult)
+     ns3:SetEnqueuePrivateCloudDeletion(privateCloudID: xsd:int)
+     ns3:SetEnqueuePrivateCloudDeletionResponse(SetEnqueuePrivateCloudDeletionResult: ns11:WsResult)
+     ns3:SetEnqueuePurchasePrivateCloud(request: ns9:PurchasePrivateCloud)
+     ns3:SetEnqueuePurchasePrivateCloudResponse(SetEnqueuePurchasePrivateCloudResult: ns11:WsResultOfPurchasedPrivateCloud)
+     ns3:SetEnqueuePurchaseSharedStorage(operationRequest: ns10:EnqueuePurchaseSharedStorageRequest)
+     ns3:SetEnqueuePurchaseSharedStorageResponse(SetEnqueuePurchaseSharedStorageResult: ns11:WsResult)
+     ns3:SetEnqueueReinitializeServer(request: ns15:ReinitializeServerRequest)
+     ns3:SetEnqueueReinitializeServerResponse(SetEnqueueReinitializeServerResult: ns11:WsResult)
+     ns3:SetEnqueueRemoveIQNSharedStorage(operationRequest: ns10:EnqueueRemoveIQNSharedStorageRequest)
+     ns3:SetEnqueueRemoveIQNSharedStorageResponse(SetEnqueueRemoveIQNSharedStorageResult: ns11:WsResult)
+     ns3:SetEnqueueRemoveSharedStorage(operationRequest: ns10:EnqueueRemoveSharedStorageRequest)
+     ns3:SetEnqueueRemoveSharedStorageResponse(SetEnqueueRemoveSharedStorageResult: ns11:WsResult)
+     ns3:SetEnqueueResizeFTPAccount(FtpSize: xsd:int)
+     ns3:SetEnqueueResizeFTPAccountResponse(SetEnqueueResizeFTPAccountResult: ns11:WsResult)
+     ns3:SetEnqueueServerArchiviation(serverId: xsd:int)
+     ns3:SetEnqueueServerArchiviationResponse(SetEnqueueServerArchiviationResult: ns11:WsResult)
+     ns3:SetEnqueueServerCreation(server: ns4:NewServer)
+     ns3:SetEnqueueServerCreationResponse(SetEnqueueServerCreationResult: ns11:WsResult)
+     ns3:SetEnqueueServerDeletion(serverId: xsd:int)
+     ns3:SetEnqueueServerDeletionResponse(SetEnqueueServerDeletionResult: ns11:WsResult)
+     ns3:SetEnqueueServerPowerOff(serverId: xsd:int)
+     ns3:SetEnqueueServerPowerOffResponse(SetEnqueueServerPowerOffResult: ns11:WsResult)
+     ns3:SetEnqueueServerReset(serverId: xsd:int)
+     ns3:SetEnqueueServerResetResponse(SetEnqueueServerResetResult: ns11:WsResult)
+     ns3:SetEnqueueServerRestart(serverId: xsd:int)
+     ns3:SetEnqueueServerRestartResponse(SetEnqueueServerRestartResult: ns11:WsResult)
+     ns3:SetEnqueueServerRestore(server: ns4:ServerRestore)
+     ns3:SetEnqueueServerRestoreResponse(SetEnqueueServerRestoreResult: ns11:WsResult)
+     ns3:SetEnqueueServerSnapshot(serverId: xsd:int, snapshotOperation: ns4:SnapshotOperationTypes)
+     ns3:SetEnqueueServerSnapshotResponse(SetEnqueueServerSnapshotResult: ns11:WsResult)
+     ns3:SetEnqueueServerStart(serverId: xsd:int)
+     ns3:SetEnqueueServerStartResponse(SetEnqueueServerStartResult: ns11:WsResult)
+     ns3:SetEnqueueServerStop(serverId: xsd:int)
+     ns3:SetEnqueueServerStopResponse(SetEnqueueServerStopResult: ns11:WsResult)
+     ns3:SetEnqueueServerUpdate(server: ns4:ServerUpdate)
+     ns3:SetEnqueueServerUpdateResponse(SetEnqueueServerUpdateResult: ns11:WsResult)
+     ns3:SetEnqueueUnmountDvdIso(serverId: xsd:int)
+     ns3:SetEnqueueUnmountDvdIsoResponse(SetEnqueueUnmountDvdIsoResult: ns11:WsResult)
+     ns3:SetEnqueueUpdateControlTool(serverID: xsd:int)
+     ns3:SetEnqueueUpdateControlToolResponse(SetEnqueueUpdateControlToolResult: ns11:WsResult)
+     ns3:SetEnqueueVirtualDiskExport(disk: ns4:ExportVirtualDisk)
+     ns3:SetEnqueueVirtualDiskExportResponse(SetEnqueueVirtualDiskExportResult: ns11:WsResult)
+     ns3:SetEnqueueVirtualDiskManage(serverId: xsd:int, disk: ns4:VirtualDiskUpdate)
+     ns3:SetEnqueueVirtualDiskManageResponse(SetEnqueueVirtualDiskManageResult: ns11:WsResult)
+     ns3:SetInsertAssistanceRequest(newAssistanceRequest: ns4:NewAssistanceRequest)
+     ns3:SetInsertAssistanceRequestResponse(SetInsertAssistanceRequestResult: ns11:WsResult)
+     ns3:SetModifyLoadBalancer(request: ns8:ModifyLoadBalancerRequest)
+     ns3:SetModifyLoadBalancerResponse(SetModifyLoadBalancerResult: ns11:WsResult)
+     ns3:SetModifyPrivateCloud(request: ns9:ModifyPrivateCloud)
+     ns3:SetModifyPrivateCloudResponse(SetModifyPrivateCloudResult: ns11:WsResult)
+     ns3:SetPurchaseIpAddress()
+     ns3:SetPurchaseIpAddressResponse(SetPurchaseIpAddressResult: ns11:WsResultOfIPAddress)
+     ns3:SetPurchaseVLan(vLanName: xsd:string)
+     ns3:SetPurchaseVLanResponse(SetPurchaseVLanResult: ns11:WsResultOfVLan)
+     ns3:SetPurchasedAdditionalServices(operationRequest: ns14:SetPurchasedAdditionalServicesRequest)
+     ns3:SetPurchasedAdditionalServicesResponse(SetPurchasedAdditionalServicesResult: ns11:WsResult)
+     ns3:SetReadNews(newsID: xsd:int, senderType: ns4:NewsSenderTypes)
+     ns3:SetReadNewsResponse(SetReadNewsResult: ns11:WsResult)
+     ns3:SetRemoveIpAddress(ipAddressResourceId: xsd:int)
+     ns3:SetRemoveIpAddressResponse(SetRemoveIpAddressResult: ns11:WsResult)
+     ns3:SetRemoveLoadBalancerContacts(request: ns8:RemoveLoadBalancerContactsRequest)
+     ns3:SetRemoveLoadBalancerContactsResponse(SetRemoveLoadBalancerContactsResult: ns11:WsResult)
+     ns3:SetRemoveLoadBalancerRule(request: ns8:RemoveLoadBalancerRuleRequest)
+     ns3:SetRemoveLoadBalancerRuleResponse(SetRemoveLoadBalancerRuleResult: ns11:WsResult)
+     ns3:SetRemovePersonalTemplate(templateID: xsd:int)
+     ns3:SetRemovePersonalTemplateResponse(SetRemovePersonalTemplateResult: ns11:WsResult)
+     ns3:SetRemoveServerScheduledOperation(operationRequest: ns4:SetRemoveScheduledOperationRequest)
+     ns3:SetRemoveServerScheduledOperationResponse(SetRemoveServerScheduledOperationResult: ns11:WsResult)
+     ns3:SetRemoveVLan(vLanResourceId: xsd:int)
+     ns3:SetRemoveVLanResponse(SetRemoveVLanResult: ns11:WsResult)
+     ns3:SetRenameServer(serverId: xsd:int, serverName: xsd:string)
+     ns3:SetRenameServerResponse(SetRenameServerResult: ns11:WsResult)
+     ns3:SetRenameSharedStorage(operationRequest: ns10:RenameSharedStorageRequest)
+     ns3:SetRenameSharedStorageResponse(SetRenameSharedStorageResult: ns11:WsResult)
+     ns3:SetRenameVLan(vLanResourceId: xsd:int, vLanName: xsd:string)
+     ns3:SetRenameVLanResponse(SetRenameVLanResult: ns11:WsResult)
+     ns3:SetSendAssistanceRequest(request: ns4:SendAssistanceRequest)
+     ns3:SetSendAssistanceRequestResponse(SetSendAssistanceRequestResult: ns11:WsResult)
+     ns3:SetUpdateAssistanceRequest(assistanceRequest: ns4:UpdateAssistanceRequest)
+     ns3:SetUpdateAssistanceRequestResponse(SetUpdateAssistanceRequestResult: ns11:WsResult)
+     ns3:SetUpdatePersonalTemplate(template: ns4:UpdatePersonalTemplate)
+     ns3:SetUpdatePersonalTemplateResponse(SetUpdatePersonalTemplateResult: ns11:WsResult)
+     ns3:SetUpdateServerScheduledOperation(operationRequest: ns4:SetUpdateScheduledOperationRequest)
+     ns3:SetUpdateServerScheduledOperationResponse(SetUpdateServerScheduledOperationResult: ns11:WsResult)
+     ns3:SetUpdateVDCGraph(jsonSerialization: xsd:string)
+     ns3:SetUpdateVDCGraphResponse(SetUpdateVDCGraphResult: ns11:WsResult)
+
+Global types:
+     xsd:anyType
+     ns11:WsResult(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean)
+     ns11:WsResultOfArrayOfAdditionalServiceDescriptor(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns14:ArrayOfAdditionalServiceDescriptor)
+     ns11:WsResultOfArrayOfAssistanceRequest(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfAssistanceRequest)
+     ns11:WsResultOfArrayOfCloudPackage(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns15:ArrayOfCloudPackage)
+     ns11:WsResultOfArrayOfControlToolActivationRequest(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfControlToolActivationRequest)
+     ns11:WsResultOfArrayOfCustomVirtualDisk(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfCustomVirtualDisk)
+     ns11:WsResultOfArrayOfDatacenterConfig(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfDatacenterConfig)
+     ns11:WsResultOfArrayOfHypervisor(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfHypervisor)
+     ns11:WsResultOfArrayOfIPAddress(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfIPAddress)
+     ns11:WsResultOfArrayOfIsoDetails(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfIsoDetails)
+     ns11:WsResultOfArrayOfJob(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfJob)
+     ns11:WsResultOfArrayOfLanguages(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfLanguages)
+     ns11:WsResultOfArrayOfLoadBalancer(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns8:ArrayOfLoadBalancer)
+     ns11:WsResultOfArrayOfLog(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfLog)
+     ns11:WsResultOfArrayOfNews(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfNews)
+     ns11:WsResultOfArrayOfPersonalTemplate(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfPersonalTemplate)
+     ns11:WsResultOfArrayOfPriceList(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfPriceList)
+     ns11:WsResultOfArrayOfPurchasedAdditionalService(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns14:ArrayOfPurchasedAdditionalService)
+     ns11:WsResultOfArrayOfScheduleLog(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfScheduleLog)
+     ns11:WsResultOfArrayOfScheduledOperation(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfScheduledOperation)
+     ns11:WsResultOfArrayOfScheduledOperationOccurrence(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfScheduledOperationOccurrence)
+     ns11:WsResultOfArrayOfServer(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfServer)
+     ns11:WsResultOfArrayOfSharedStorage(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns10:ArrayOfSharedStorage)
+     ns11:WsResultOfArrayOfVLan(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ArrayOfVLan)
+     ns11:WsResultOfAssistanceRequest(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:AssistanceRequest)
+     ns11:WsResultOfCompanySettings(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns13:CompanySettings)
+     ns11:WsResultOfCredit(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:Credit)
+     ns11:WsResultOfFTP(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:FTP)
+     ns11:WsResultOfHypervisor(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:Hypervisor)
+     ns11:WsResultOfIPAddress(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:IPAddress)
+     ns11:WsResultOfLoadBalancerLoads(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns8:LoadBalancerLoads)
+     ns11:WsResultOfLoadBalancerNotifications(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns8:LoadBalancerNotifications)
+     ns11:WsResultOfLoadBalancerRuleStatistics(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns8:LoadBalancerRuleStatistics)
+     ns11:WsResultOfNetworkAdapterEntity(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:NetworkAdapterEntity)
+     ns11:WsResultOfPrivateCloudEntities(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns9:PrivateCloudEntities)
+     ns11:WsResultOfPrivateCloudEntityDetails(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns9:PrivateCloudEntityDetails)
+     ns11:WsResultOfPrivateCloudResurcesTypes(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns9:PrivateCloudResurcesTypes)
+     ns11:WsResultOfPurchasedPrivateCloud(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns9:PurchasedPrivateCloud)
+     ns11:WsResultOfSchedulerDataTypes(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:SchedulerDataTypes)
+     ns11:WsResultOfServerDetails(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:ServerDetails)
+     ns11:WsResultOfSystemStatusHistory(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:SystemStatusHistory)
+     ns11:WsResultOfTemplateCategories(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:TemplateCategories)
+     ns11:WsResultOfTemplateDetails(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:TemplateDetails)
+     ns11:WsResultOfUserInfo(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:UserInfo)
+     ns11:WsResultOfUserToken(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:UserToken)
+     ns11:WsResultOfVLan(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:VLan)
+     ns11:WsResultOfVirtualDatacenter(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:VirtualDatacenter)
+     ns11:WsResultOfVirtualDatacenterCost(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: ns4:VirtualDatacenterCost)
+     ns11:WsResultOfboolean(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: xsd:boolean)
+     ns11:WsResultOfstring(ExceptionInfo: ns12:ExceptionInfo, ResultCode: xsd:int, ResultMessage: xsd:string, Success: xsd:boolean, Value: xsd:string)
+     ns14:AdditionalService(ProductId: xsd:int, Quantity: xsd:int)
+     ns14:AdditionalServiceDescriptor(CloudReferenceType: ns4:CloudReferenceType, Name: xsd:string, ProductId: xsd:int)
+     ns14:ArrayOfAdditionalService(AdditionalService: ns14:AdditionalService[])
+     ns14:ArrayOfAdditionalServiceDescriptor(AdditionalServiceDescriptor: ns14:AdditionalServiceDescriptor[])
+     ns14:ArrayOfPurchasedAdditionalService(PurchasedAdditionalService: ns14:PurchasedAdditionalService[])
+     ns14:GetAdditionalServicesRequest(CloudReferenceType: ns4:CloudReferenceType, LanguageID: xsd:int, ProductId: ns5:ArrayOfint)
+     ns14:GetPurchasedAdditionalServicesRequest(CloudReferenceId: xsd:int, CloudReferenceType: ns4:CloudReferenceType, LanguageID: xsd:int, ProductId: ns5:ArrayOfint)
+     ns14:PurchasedAdditionalService(ActivationDate: xsd:dateTime, Category: xsd:string, CloudReferenceId: xsd:int, CloudReferenceName: xsd:string, CloudReferenceType: ns4:CloudReferenceType, Name: xsd:string, ProductId: xsd:int, Quantity: xsd:int, QuantityVariationToApply: xsd:int, Status: ns4:CustomPriceListElementStatus, UnitPrice: xsd:decimal, WorkingStatus: ns14:PurchasedAdditionalServiceWorkingStatus)
+     ns14:PurchasedAdditionalServiceWorkingStatus
+     ns14:SetPurchasedAdditionalServicesRequest(AdditionalServices: ns14:ArrayOfAdditionalService, CloudReferenceId: xsd:int, CloudReferenceType: ns4:CloudReferenceType, EmailAddress: xsd:string, TelephoneNumber: xsd:string)
+     ns7:ArrayOfCustomProductCost(CustomProductCost: ns7:CustomProductCost[])
+     ns7:ArrayOfCustomProductEntity(CustomProductEntity: ns7:CustomProductEntity[])
+     ns7:ArrayOfCustomProductHistory(CustomProductHistory: ns7:CustomProductHistory[])
+     ns7:CloudResource(Description: xsd:string, ResourceID: xsd:int)
+     ns7:CustomProductCategory(CustomProductCategoryID: xsd:int, Description: xsd:string)
+     ns7:CustomProductCost(TotalHourlyCost: xsd:decimal, HourlyCost: xsd:decimal, ProductId: xsd:int, Quantity: xsd:int, ResourceType: ns4:ResourceTypes, BillingType: ns4:BillingTypes, ProductName: xsd:string, UnitPrice: xsd:decimal)
+     ns7:CustomProductEntity(BillingType: ns4:BillingTypes, CompanyID: xsd:int, CustomPriceListElementStatus: ns4:CustomPriceListElementStatus, CustomProductID: xsd:int, DataCenterID: xsd:int, DeletionDate: xsd:dateTime, ExpiryDate: xsd:dateTime, History: ns7:ArrayOfCustomProductHistory, InsertDate: xsd:dateTime, ModifiedDate: xsd:dateTime, Price: xsd:decimal, ProductCategory: ns7:CustomProductCategory, ProductDescription: xsd:string, ProductID: xsd:int, ProductName: xsd:string, Quantity: xsd:int, ReferencedResource: ns7:CloudResource, ResourceID: xsd:int, UserID: xsd:int)
+     ns7:CustomProductHistory(BillingType: ns4:BillingTypes, CustomPriceListElementStatus: ns4:CustomPriceListElementStatus, DeletionDate: xsd:dateTime, ExpiryDate: xsd:dateTime, HistoryDate: xsd:dateTime, Price: xsd:decimal, ProductCategory: ns7:CustomProductCategory, ProductDescription: xsd:string, ProductName: xsd:string, Quantity: xsd:int, ReferencedResource: ns7:CloudResource, ResourceID: xsd:int)
+     ns8:AddLoadBalancerContactsRequest(LoadBalancerID: xsd:int, NotificationContacts: ns8:ArrayOfNotificationContact)
+     ns8:AddLoadBalancerRuleRequest(LoadBalancerID: xsd:int, NewLoadBalancerRule: ns8:LoadBalancerRule)
+     ns8:ArrayOfCommunication(Communication: ns8:Communication[])
+     ns8:ArrayOfLoad(Load: ns8:Load[])
+     ns8:ArrayOfLoadBalancer(LoadBalancer: ns8:LoadBalancer[])
+     ns8:ArrayOfLoadBalancerCost(LoadBalancerCost: ns8:LoadBalancerCost[])
+     ns8:ArrayOfLoadBalancerIPAddress(LoadBalancerIPAddress: ns8:LoadBalancerIPAddress[])
+     ns8:ArrayOfLoadBalancerInstance(LoadBalancerInstance: ns8:LoadBalancerInstance[])
+     ns8:ArrayOfLoadBalancerRule(LoadBalancerRule: ns8:LoadBalancerRule[])
+     ns8:ArrayOfNotificationContact(NotificationContact: ns8:NotificationContact[])
+     ns8:ArrayOfRecipient(Recipient: ns8:Recipient[])
+     ns8:ArrayOfRuleNotificationEvent(RuleNotificationEvent: ns8:RuleNotificationEvent[])
+     ns8:ArrayOfStatistics(Statistics: ns8:Statistics[])
+     ns8:Communication(NotificationType: ns4:NotificationType, ProductID: xsd:int, Recipients: ns8:ArrayOfRecipient, ResourceID: xsd:int, SendDate: xsd:dateTime, Text: xsd:string)
+     ns8:Load(EventTime: xsd:dateTime, LoadID: xsd:int)
+     ns8:LoadBalancer(CompanyID: xsd:int, CreationDate: xsd:dateTime, DataCenterID: xsd:int, HealthCheckNotification: xsd:boolean, Instances: ns8:ArrayOfLoadBalancerInstance, LoadBalancerClassOfServiceID: xsd:int, LoadBalancerID: xsd:int, LoadBalancerIPAddresses: ns8:ArrayOfLoadBalancerIPAddress, LoadBalancerRules: ns8:ArrayOfLoadBalancerRule, LoadBalancerStatus: ns4:LoadBalancerStatus, Name: xsd:string, NotificationContacts: ns8:ArrayOfNotificationContact, ProductID: xsd:int, ResourceID: xsd:int, ResourceType: ns4:ResourceTypes, UserID: xsd:int)
+     ns8:LoadBalancerContactsRequest(LoadBalancerID: xsd:int, NotificationContacts: ns8:ArrayOfNotificationContact)
+     ns8:LoadBalancerCost(TotalHourlyCost: xsd:decimal, HourlyCost: xsd:decimal, ProductId: xsd:int, Quantity: xsd:int, ResourceType: ns4:ResourceTypes)
+     ns8:LoadBalancerCreationRequest(HealthCheckNotification: xsd:boolean, Instance: ns8:ArrayOfLoadBalancerInstance, IpAddressResourceId: ns5:ArrayOfint, LoadBalancerClassOfServiceID: xsd:int, Name: xsd:string, NotificationContacts: ns8:ArrayOfNotificationContact, Rules: ns8:ArrayOfLoadBalancerRule)
+     ns8:LoadBalancerIPAddress(ProductID: xsd:int, ResourceID: xsd:int, ResourceType: ns4:ResourceTypes, Value: xsd:string)
+     ns8:LoadBalancerInstance(IPAddress: xsd:string)
+     ns8:LoadBalancerInstancesRequest(Instances: ns8:ArrayOfLoadBalancerInstance, LoadBalancerID: xsd:int)
+     ns8:LoadBalancerLoadRequest(EndTime: xsd:dateTime, LoadBalancerID: xsd:int, StartTime: xsd:dateTime)
+     ns8:LoadBalancerLoads(CompanyID: xsd:int, DataCenterID: xsd:int, LoadBalancerID: xsd:int, Loads: ns8:ArrayOfLoad, Name: xsd:string, UserID: xsd:int)
+     ns8:LoadBalancerNotifications(CompanyID: xsd:int, DataCenterID: xsd:int, LoadBalancerID: xsd:int, Name: xsd:string, RuleNotificationEvents: ns8:ArrayOfRuleNotificationEvent, UserID: xsd:int)
+     ns8:LoadBalancerNotificationsRequest(EndDate: xsd:dateTime, LoadBalancerID: xsd:int, LoadBalancerRuleID: xsd:int, StartDate: xsd:dateTime)
+     ns8:LoadBalancerRule(BalanceType: ns4:LoadBalancerAlgorithmType, Certificate: xsd:string, CreationDate: xsd:dateTime, ID: xsd:int, InstancePort: xsd:int, LoadBalancerPort: xsd:int, Protocol: ns4:LoadBalancerProtocol)
+     ns8:LoadBalancerRuleStatistics(CompanyID: xsd:int, DataCenterID: xsd:int, LoadBalancerID: xsd:int, LoadBalancerRuleID: xsd:int, Name: xsd:string, Statistics: ns8:ArrayOfStatistics, UserID: xsd:int)
+     ns8:LoadBalancerRuleStatisticsRequest(EndTime: xsd:dateTime, LoadBalancerRuleID: xsd:int, StartTime: xsd:dateTime)
+     ns8:LoadBalancersFilter(LoadBalancerID: xsd:int)
+     ns8:ModifyLoadBalancerRequest(HealthCheckNotification: xsd:boolean, LoadBalancerID: xsd:int, Name: xsd:string)
+     ns8:NotificationContact(ContactValue: xsd:string, LoadBalancerContactID: xsd:int, Type: ns4:NotificationType)
+     ns8:Recipient(Value: xsd:string)
+     ns8:RemoveLoadBalancerContactsRequest(LoadBalancerContactsID: ns5:ArrayOfint, LoadBalancerID: xsd:int)
+     ns8:RemoveLoadBalancerRuleRequest(LoadBalancerRuleID: xsd:int)
+     ns8:RuleNotificationEvent(Communications: ns8:ArrayOfCommunication, EventDate: xsd:dateTime, HostIP: xsd:string, LoadBalancerRuleID: xsd:int)
+     ns8:Statistics(ActiveSession: xsd:int, EventTime: xsd:dateTime, KbpsIn: xsd:int, KbpsOut: xsd:int, RateSession: xsd:int)
+     ns9:ArrayOfCPUEntity(CPUEntity: ns9:CPUEntity[])
+     ns9:ArrayOfCPUProduct(CPUProduct: ns9:CPUProduct[])
+     ns9:ArrayOfCpuCost(CpuCost: ns9:CpuCost[])
+     ns9:ArrayOfDiskCost(DiskCost: ns9:DiskCost[])
+     ns9:ArrayOfDiskEntity(DiskEntity: ns9:DiskEntity[])
+     ns9:ArrayOfDiskProduct(DiskProduct: ns9:DiskProduct[])
+     ns9:ArrayOfPrivateCloudCPU(PrivateCloudCPU: ns9:PrivateCloudCPU[])
+     ns9:ArrayOfPrivateCloudCost(PrivateCloudCost: ns9:PrivateCloudCost[])
+     ns9:ArrayOfPrivateCloudDisk(PrivateCloudDisk: ns9:PrivateCloudDisk[])
+     ns9:ArrayOfPrivateCloudEntity(PrivateCloudEntity: ns9:PrivateCloudEntity[])
+     ns9:BaseCost(HourlyCost: xsd:decimal, ProductID: xsd:int, Quantity: xsd:int)
+     ns9:BaseProduct(MaxBound: xsd:int, MinCreateBound: xsd:int, MinUpgradeBound: xsd:int, ProductID: xsd:int)
+     ns9:CPUEntity(NewQuantity: xsd:int, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int, CPUType: xsd:string, CPUTypeID: xsd:int)
+     ns9:CPUProduct(MaxBound: xsd:int, MinCreateBound: xsd:int, MinUpgradeBound: xsd:int, ProductID: xsd:int, CPUType: xsd:string, CPUTypeID: xsd:int)
+     ns9:CpuCost(HourlyCost: xsd:decimal, ProductID: xsd:int, Quantity: xsd:int, CpuType: xsd:string, CpuTypeID: xsd:int)
+     ns9:DiskCost(HourlyCost: xsd:decimal, ProductID: xsd:int, Quantity: xsd:int, DiskType: xsd:string, DiskTypeID: xsd:int)
+     ns9:DiskEntity(NewQuantity: xsd:int, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int, DiskType: xsd:string, DiskTypeID: xsd:int)
+     ns9:DiskProduct(MaxBound: xsd:int, MinCreateBound: xsd:int, MinUpgradeBound: xsd:int, ProductID: xsd:int, DiskType: xsd:string, DiskTypeID: xsd:int)
+     ns9:IPCost(HourlyCost: xsd:decimal, ProductID: xsd:int, Quantity: xsd:int)
+     ns9:IPEntity(NewQuantity: xsd:int, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int)
+     ns9:IPProduct(MaxBound: xsd:int, MinCreateBound: xsd:int, MinUpgradeBound: xsd:int, ProductID: xsd:int)
+     ns9:ModifyPrivateCloud(Description: xsd:string, Email: xsd:string, Name: xsd:string, PrivateCloudID: xsd:int, TelephoneNumber: xsd:string)
+     ns9:ModifyPrivateCloudResources(CPUs: ns9:ArrayOfPrivateCloudCPU, Disks: ns9:ArrayOfPrivateCloudDisk, IP: xsd:int, PrivateCloudID: xsd:int, RAM: xsd:int)
+     ns9:PrivateCloudCPU(CPUTypeID: xsd:int, Quantity: xsd:int)
+     ns9:PrivateCloudCost(TotalHourlyCost: xsd:decimal, Cpus: ns9:ArrayOfCpuCost, Disks: ns9:ArrayOfDiskCost, Ip: ns9:IPCost, PrivateCloudCostID: xsd:int, ProductID: xsd:int, Ram: ns9:RamCost, VLan: ns9:VLanCost)
+     ns9:PrivateCloudDisk(DiskTypeID: xsd:int, Quantity: xsd:int)
+     ns9:PrivateCloudEntities(PrivateClouds: ns9:ArrayOfPrivateCloudEntity)
+     ns9:PrivateCloudEntity(CPUs: ns9:ArrayOfCPUEntity, CompanyID: xsd:int, CreationDate: xsd:dateTime, Description: xsd:string, Disks: ns9:ArrayOfDiskEntity, Email: xsd:string, IP: ns9:IPEntity, Name: xsd:string, PrivateCloudID: xsd:int, RAM: ns9:RAMEntity, ResourceID: xsd:int, Status: ns4:PrivateCloudInstanceStatus, TelephoneNumber: xsd:string, URL: xsd:string, UserID: xsd:int)
+     ns9:PrivateCloudEntityDetails(CPUs: ns9:ArrayOfCPUEntity, CompanyID: xsd:int, CreationDate: xsd:dateTime, Description: xsd:string, Disks: ns9:ArrayOfDiskEntity, Email: xsd:string, IP: ns9:IPEntity, Name: xsd:string, PrivateCloudID: xsd:int, RAM: ns9:RAMEntity, ResourceID: xsd:int, Status: ns4:PrivateCloudInstanceStatus, TelephoneNumber: xsd:string, URL: xsd:string, UserID: xsd:int, EndValidBillingDate: xsd:dateTime)
+     ns9:PrivateCloudProduct(Available: xsd:boolean, ProductID: xsd:int)
+     ns9:PrivateCloudResurcesTypes(CPUs: ns9:ArrayOfCPUProduct, Disks: ns9:ArrayOfDiskProduct, IP: ns9:IPProduct, MinimumCpuRamRatio: xsd:decimal, PrivateCloud: ns9:PrivateCloudProduct, RAM: ns9:RAMProduct)
+     ns9:PurchasePrivateCloud(CPUs: ns9:ArrayOfPrivateCloudCPU, Description: xsd:string, Disks: ns9:ArrayOfPrivateCloudDisk, Email: xsd:string, IP: xsd:int, Name: xsd:string, Password: xsd:string, RAM: xsd:int, TelephoneNumber: xsd:string, UserName: xsd:string)
+     ns9:PurchasedPrivateCloud(PrivateCloudID: xsd:int, ResourceID: xsd:int)
+     ns9:RAMEntity(NewQuantity: xsd:int, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int)
+     ns9:RAMProduct(MaxBound: xsd:int, MinCreateBound: xsd:int, MinUpgradeBound: xsd:int, ProductID: xsd:int)
+     ns9:RamCost(HourlyCost: xsd:decimal, ProductID: xsd:int, Quantity: xsd:int)
+     ns9:ResourceBaseEntity(NewQuantity: xsd:int, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int)
+     ns9:VLanCost(HourlyCost: xsd:decimal, ProductID: xsd:int, Quantity: xsd:int)
+     ns10:ArrayOfSharedStorage(SharedStorage: ns10:SharedStorage[])
+     ns10:ArrayOfSharedStorageIQN(SharedStorageIQN: ns10:SharedStorageIQN[])
+     ns10:ArrayOfSharedStorageResource(SharedStorageResource: ns10:SharedStorageResource[])
+     ns10:EnqueueAddIQNSharedStorageRequest(SharedStorageID: xsd:int, SharedStorageIQNs: ns10:ArrayOfSharedStorageIQN)
+     ns10:EnqueueModifySharedStorageRequest(Quantity: xsd:int, SharedStorageID: xsd:int)
+     ns10:EnqueuePurchaseSharedStorageRequest(Quantity: xsd:int, SharedStorageIQNs: ns10:ArrayOfSharedStorageIQN, SharedStorageName: xsd:string, SharedStorageProtocolType: ns4:SharedStorageProtocolType)
+     ns10:EnqueueRemoveIQNSharedStorageRequest(SharedStorageID: xsd:int, SharedStorageIQNs: ns10:ArrayOfSharedStorageIQN)
+     ns10:EnqueueRemoveSharedStorageRequest(SharedStorageID: xsd:int)
+     ns10:PrivateVlan(DataCenterID: xsd:int, PrivateVlanCode: xsd:string, PrivateVlanID: xsd:int, PrivateVlanName: xsd:string, ResourceID: xsd:int)
+     ns10:RenameSharedStorageRequest(SharedStorageID: xsd:int, SharedStorageName: xsd:string)
+     ns10:SharedStorage(CompanyID: xsd:int, CreationDate: xsd:dateTime, DataCenterID: xsd:int, DeletionDate: xsd:dateTime, MountPoint: xsd:string, PrivateVlan: ns10:PrivateVlan, SharedStorageID: xsd:int, SharedStorageIQNs: ns10:ArrayOfSharedStorageIQN, SharedStorageName: xsd:string, SharedStorageProtocolType: ns4:SharedStorageProtocolType, SharedStorageResources: ns10:ArrayOfSharedStorageResource, Status: ns4:SharedStorageStatus, UserID: xsd:int)
+     ns10:SharedStorageIQN(SharedStorageIQNID: xsd:int, Status: ns4:SharedStorageStatus, Value: xsd:string)
+     ns10:SharedStorageResource(ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int)
+     ns15:ArrayOfCloudPackage(CloudPackage: ns15:CloudPackage[])
+     ns15:CloudPackage(BillingType: ns4:BillingTypes, CpuQuantity: xsd:int, Descriptions: ns4:ArrayOfLocalizedText, Hdd0Quantity: xsd:int, PackageID: xsd:int, Price: xsd:decimal, ProductID: xsd:int, RAMQuantity: xsd:int)
+     ns15:GetPreConfiguredPackagesRequestEntity(HypervisorType: ns4:HypervisorTypes)
+     ns15:ReinitializeServerRequest(AdministratorPassword: xsd:string, OSTemplateId: xsd:int, ServerId: xsd:int)
+     ns4:AggregateCost(TotalHourlyCost: xsd:decimal)
+     ns4:ApplianceType(ApplianceTypeDescription: xsd:string, ApplianceTypeID: xsd:int)
+     ns4:ApplianceTypes
+     ns4:ArchitectureType(ArchitectureTypeDescription: xsd:string, ArchitectureTypeID: xsd:int)
+     ns4:ArchitectureTypes
+     ns4:ArrayOfApplianceType(ApplianceType: ns4:ApplianceType[])
+     ns4:ArrayOfArchitectureType(ArchitectureType: ns4:ArchitectureType[])
+     ns4:ArrayOfAssistanceRequest(AssistanceRequest: ns4:AssistanceRequest[])
+     ns4:ArrayOfCloudService(CloudService: ns4:CloudService[])
+     ns4:ArrayOfControlToolActivationRequest(ControlToolActivationRequest: ns4:ControlToolActivationRequest[])
+     ns4:ArrayOfCore(Core: ns4:Core[])
+     ns4:ArrayOfCpuHistory(CpuHistory: ns4:CpuHistory[])
+     ns4:ArrayOfCustomVirtualDisk(CustomVirtualDisk: ns4:CustomVirtualDisk[])
+     ns4:ArrayOfDatacenterConfig(DatacenterConfig: ns4:DatacenterConfig[])
+     ns4:ArrayOfDisk(Disk: ns4:Disk[])
+     ns4:ArrayOfDiskHistory(DiskHistory: ns4:DiskHistory[])
+     ns4:ArrayOfFeatureType(FeatureType: ns4:FeatureType[])
+     ns4:ArrayOfFeatureTypes(FeatureTypes: ns4:FeatureTypes[])
+     ns4:ArrayOfHypervisor(Hypervisor: ns4:Hypervisor[])
+     ns4:ArrayOfHypervisorTemplateBounds(HypervisorTemplateBounds: ns4:HypervisorTemplateBounds[])
+     ns4:ArrayOfIPAddress(IPAddress: ns4:IPAddress[])
+     ns4:ArrayOfIPConfiguration(IPConfiguration: ns4:IPConfiguration[])
+     ns4:ArrayOfIsoDetails(IsoDetails: ns4:IsoDetails[])
+     ns4:ArrayOfJob(Job: ns4:Job[])
+     ns4:ArrayOfKeyValuePair(KeyValuePair: ns4:KeyValuePair[])
+     ns4:ArrayOfLanguages(Languages: ns4:Languages[])
+     ns4:ArrayOfLicenseKey(LicenseKey: ns4:LicenseKey[])
+     ns4:ArrayOfLocalizedText(LocalizedText: ns4:LocalizedText[])
+     ns4:ArrayOfLog(Log: ns4:Log[])
+     ns4:ArrayOfNetworkAdapter(NetworkAdapter: ns4:NetworkAdapter[])
+     ns4:ArrayOfNetworkAdapterConfiguration(NetworkAdapterConfiguration: ns4:NetworkAdapterConfiguration[])
+     ns4:ArrayOfNews(News: ns4:News[])
+     ns4:ArrayOfOperatingSystemFamily(OperatingSystemFamily: ns4:OperatingSystemFamily[])
+     ns4:ArrayOfOperationParameters(OperationParameters: ns4:OperationParameters[])
+     ns4:ArrayOfPermission(Permission: ns4:Permission[])
+     ns4:ArrayOfPersonalTemplate(PersonalTemplate: ns4:PersonalTemplate[])
+     ns4:ArrayOfPleskLicense(PleskLicense: ns4:PleskLicense[])
+     ns4:ArrayOfPleskLicenseCost(PleskLicenseCost: ns4:PleskLicenseCost[])
+     ns4:ArrayOfPrice(Price: ns4:Price[])
+     ns4:ArrayOfPriceList(PriceList: ns4:PriceList[])
+     ns4:ArrayOfPriceModifier(PriceModifier: ns4:PriceModifier[])
+     ns4:ArrayOfPublicIpAddressDetails(PublicIpAddressDetails: ns4:PublicIpAddressDetails[])
+     ns4:ArrayOfPurchasedAddonLicense(PurchasedAddonLicense: ns4:PurchasedAddonLicense[])
+     ns4:ArrayOfRamHistory(RamHistory: ns4:RamHistory[])
+     ns4:ArrayOfResourceBound(ResourceBound: ns4:ResourceBound[])
+     ns4:ArrayOfResourceCost(ResourceCost: ns4:ResourceCost[])
+     ns4:ArrayOfScheduleFrequencyTypeDescription(ScheduleFrequencyTypeDescription: ns4:ScheduleFrequencyTypeDescription[])
+     ns4:ArrayOfScheduleFrequencyTypes(ScheduleFrequencyTypes: ns4:ScheduleFrequencyTypes[])
+     ns4:ArrayOfScheduleLog(ScheduleLog: ns4:ScheduleLog[])
+     ns4:ArrayOfScheduleParameterTypeDescription(ScheduleParameterTypeDescription: ns4:ScheduleParameterTypeDescription[])
+     ns4:ArrayOfScheduleParametersType(ScheduleParametersType: ns4:ScheduleParametersType[])
+     ns4:ArrayOfScheduleWeekDays(ScheduleWeekDays: ns4:ScheduleWeekDays[])
+     ns4:ArrayOfScheduledOperation(ScheduledOperation: ns4:ScheduledOperation[])
+     ns4:ArrayOfScheduledOperationOccurrence(ScheduledOperationOccurrence: ns4:ScheduledOperationOccurrence[])
+     ns4:ArrayOfServer(Server: ns4:Server[])
+     ns4:ArrayOfServerCost(ServerCost: ns4:ServerCost[])
+     ns4:ArrayOfServerDetails(ServerDetails: ns4:ServerDetails[])
+     ns4:ArrayOfSharedStorageCost(SharedStorageCost: ns4:SharedStorageCost[])
+     ns4:ArrayOfSnapshot(Snapshot: ns4:Snapshot[])
+     ns4:ArrayOfTemplateBound(TemplateBound: ns4:TemplateBound[])
+     ns4:ArrayOfTemplateDetails(TemplateDetails: ns4:TemplateDetails[])
+     ns4:ArrayOfTemplateFeature(TemplateFeature: ns4:TemplateFeature[])
+     ns4:ArrayOfTemplateType(TemplateType: ns4:TemplateType[])
+     ns4:ArrayOfUserContact(UserContact: ns4:UserContact[])
+     ns4:ArrayOfUserServiceAvailabilitySettings(UserServiceAvailabilitySettings: ns4:UserServiceAvailabilitySettings[])
+     ns4:ArrayOfVLan(VLan: ns4:VLan[])
+     ns4:ArrayOfVirtualDVD(VirtualDVD: ns4:VirtualDVD[])
+     ns4:ArrayOfVirtualDisk(VirtualDisk: ns4:VirtualDisk[])
+     ns4:ArrayOfVirtualDiskDetails(VirtualDiskDetails: ns4:VirtualDiskDetails[])
+     ns4:ArrayOfVirtualDiskUpdate(VirtualDiskUpdate: ns4:VirtualDiskUpdate[])
+     ns4:AssistanceQuotation(LastModifiedDate: xsd:dateTime, QuotationExpiryDate: xsd:dateTime, QuotationHours: xsd:int, QuotationID: xsd:int, QuotationNote: xsd:string, QuotationPrice: xsd:decimal, QuotationType: ns4:QuotationType)
+     ns4:AssistanceRequest(AssistanceQuotation: ns4:AssistanceQuotation, AssistanceRequestBody: xsd:string, AssistanceRequestCurrency: ns4:AssistanceRequestCurrency, AssistanceRequestID: xsd:int, AssistanceRequestStatus: ns4:AssistanceRequestStatus, AssistanceRequestSubject: xsd:string, CompanyID: xsd:int, CompanyName: xsd:string, CustomerFullName: xsd:string, CustomerMail: xsd:string, CustomerPhoneNumber: xsd:string, DataCenterID: xsd:int, Language: ns4:Languages, LastModifiedDate: xsd:dateTime, ResourceID: xsd:int, UnitPrice: xsd:decimal, UserID: xsd:int, VirtualMachineID: xsd:int)
+     ns4:AssistanceRequestCurrency
+     ns4:AssistanceRequestQuotationAcceptanceStatus
+     ns4:AssistanceRequestStatus
+     ns4:BillingTypes
+     ns4:CloudEntity(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int)
+     ns4:CloudReferenceType
+     ns4:CloudService(ServiceStatus: ns4:ServiceStatuses, ServiceType: ns4:ServiceTypes)
+     ns4:Company(CompanyID: xsd:int, Name: xsd:string, PrefixCode: xsd:string)
+     ns4:CompanyDataCenterStatuses
+     ns4:ContactTypes
+     ns4:ControlToolActivationRequest(ExpirationDate: xsd:dateTime, RequestDate: xsd:dateTime, Servers: ns5:ArrayOfstring)
+     ns4:Core(CoreNumber: xsd:string, UsedPercentage: xsd:decimal)
+     ns4:Cpu(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int, Quantity: xsd:int)
+     ns4:CpuHistory(Cores: ns4:ArrayOfCore, HistoryTime: xsd:dateTime, RequestID: ns6:guid)
+     ns4:Credit(OverdraftLimit: xsd:decimal, Value: xsd:decimal)
+     ns4:CustomPriceListElementStatus
+     ns4:CustomVirtualDisk(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int, CreationDate: xsd:dateTime, Size: xsd:int, FileName: xsd:string, InvalidityCode: xsd:int, InvalidityReason: xsd:string, IsEligible: xsd:boolean, RelativePath: xsd:string, RelativePathFile: xsd:string, SizeByte: xsd:long, SizeGBNormalized: xsd:int, VirtualDiskType: xsd:string)
+     ns4:DataCenterTypes
+     ns4:DatacenterConfig(AdminPanelBaseUrl: xsd:string, Country: xsd:string, DataCenterType: ns4:DataCenterTypes, DatacenterId: xsd:int, Name: xsd:string, Priority: xsd:int, SmartVMWareEnabled: xsd:boolean, Status: ns4:DatacenterConfigStatus, WsBaseUrl: xsd:string)
+     ns4:DatacenterConfigStatus
+     ns4:DelayerModifier
+     ns4:Disk(AvailableQuantity: xsd:decimal, DiskName: xsd:string, TotalQuantity: xsd:decimal, UsedPercentage: xsd:decimal, UsedQuantity: xsd:decimal)
+     ns4:DiskHistory(Disks: ns4:ArrayOfDisk, HistoryTime: xsd:dateTime, RequestID: ns6:guid)
+     ns4:ExportVirtualDisk(ServerId: xsd:int, VirtualDiskType: ns4:VirtualDiskTypes)
+     ns4:FTP(CreationDate: xsd:dateTime, DataCenterID: xsd:int, FTPAccountID: xsd:int, FTPAccountStatus: ns4:FTPAccountStatus, FTPServer: ns4:FTPServer, Path: xsd:string, PersonalTemplateUsedSpace: xsd:int, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int, UsedSpace: xsd:int, UserID: xsd:int)
+     ns4:FTPAccountStatus
+     ns4:FTPCost(TotalHourlyCost: xsd:decimal, HourlyCost: xsd:decimal, ProductId: xsd:int, Quantity: xsd:int, ResourceType: ns4:ResourceTypes, FTPFreeSize: xsd:int)
+     ns4:FTPServer(HostName: xsd:string, MaxUserSize: xsd:int, Name: xsd:string, Port: xsd:int, PublicIPAddress: xsd:string)
+     ns4:FeatureType(FeatureTypeDescription: xsd:string, FeatureTypeID: xsd:int)
+     ns4:FeatureTypes
+     ns4:GetRemoteAccessUrlRequest(VirtualMachineId: xsd:int)
+     ns4:GetScheduleOccurrencesRequest(ScheduleEndDate: xsd:dateTime, ScheduleStartDate: xsd:dateTime)
+     ns4:GetSchedulePlan(FirstExecutionTime: xsd:dateTime, LastExecutionTime: xsd:dateTime, ScheduleDaysOfMonth: ns5:ArrayOfint, ScheduleEndDateTime: xsd:dateTime, ScheduleFrequency: xsd:int, ScheduleFrequencyType: ns4:ScheduleFrequencyType, ScheduleOperationLabel: xsd:string, ScheduleStartDateTime: xsd:dateTime, ScheduleWeekDays: ns4:ArrayOfScheduleWeekDays, ScheduledMontlyRecurrence: ns4:ScheduledMontlyRecurrence, ScheduledOwnerType: ns4:ScheduleOwnerType, ScheduledPlanId: xsd:int, ScheduledPlanStatus: ns4:ScheduledPlanStatus)
+     ns4:GetScheduledOperationRequest(EndDate: xsd:dateTime, StartDate: xsd:dateTime)
+     ns4:GetServerSchedulesLogsRequest(EndDate: xsd:dateTime, ServerID: xsd:int, StartDate: xsd:dateTime)
+     ns4:GetUserAuthenticationTokenRequest(OtpValue: xsd:string)
+     ns4:GroupBy
+     ns4:Hypervisor(HypervisorServerType: ns4:HypervisorServerTypes, HypervisorType: ns4:HypervisorTypes, Templates: ns4:ArrayOfTemplateDetails)
+     ns4:HypervisorServerTypes
+     ns4:HypervisorTemplateBounds(HypervisorType: ns4:HypervisorTypes, MaxBoundValue: xsd:int, MinBoundValue: xsd:int, ResourceType: ns4:ResourceTypes)
+     ns4:HypervisorTypes
+     ns4:IPAddress(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int, Gateway: xsd:string, LoadBalancerID: xsd:int, ServerId: xsd:int, SubNetMask: xsd:string, Value: xsd:string)
+     ns4:IPConfiguration(GateWay: xsd:string, IP: xsd:string, SubNetMask: xsd:string)
+     ns4:IpAddressCost(TotalHourlyCost: xsd:decimal, HourlyCost: xsd:decimal, ProductId: xsd:int, Quantity: xsd:int, ResourceType: ns4:ResourceTypes, IpToPay: xsd:int)
+     ns4:IpAddressesRequest(IpAddressResourceIds: ns5:ArrayOfint, NetworkAdapterId: xsd:int, SetOnVirtualMachine: xsd:boolean)
+     ns4:IsoDetails(Description: xsd:string, InvalidityCode: xsd:int, InvalidityReason: xsd:string, IsoType: ns4:IsoTypes, Name: xsd:string, Path: xsd:string, Size: xsd:int, SizeByte: xsd:long)
+     ns4:IsoTypes
+     ns4:Job(CreationDate: xsd:dateTime, JobId: xsd:int, LastUpdateDate: xsd:dateTime, LicenseId: xsd:int, OperationName: xsd:string, Progress: xsd:int, ResourceId: xsd:int, ResourceValue: xsd:string, ServerId: xsd:int, ServerName: xsd:string, Status: ns4:JobStatus, UserId: xsd:int, Username: xsd:string)
+     ns4:JobStatus
+     ns4:KeyValuePair(Key: ns4:ServerParameterKeys, Value: xsd:string)
+     ns4:Languages
+     ns4:LicenseKey(Key: xsd:string, KeyExtension: xsd:string)
+     ns4:LicenseStatusTypes
+     ns4:LoadBalancerAlgorithmType
+     ns4:LoadBalancerProtocol
+     ns4:LoadBalancerStatus
+     ns4:LocalizedText(LanguageDescription: xsd:string, LanguageID: xsd:int, Text: xsd:string)
+     ns4:Log(JobId: xsd:int, LogDate: xsd:dateTime, LogId: xsd:int, LogLastUpdateDate: xsd:dateTime, Message: xsd:string, MessageId: xsd:int, OperationName: xsd:string, ResourceId: xsd:int, ResourceValue: xsd:string, ServerId: xsd:int, ServerName: xsd:string, Status: ns4:JobStatus, UserId: xsd:int, Username: xsd:string)
+     ns4:MonitoringResourceType
+     ns4:NetworkAdapter(IPAddresses: ns4:ArrayOfIPAddress, Id: xsd:int, MacAddress: xsd:string, NetworkAdapterType: ns4:NetworkAdapterTypes, ServerId: xsd:int, VLan: ns4:VLan)
+     ns4:NetworkAdapterConfiguration(NetworkAdapterType: ns4:NetworkAdapterTypes, PrivateVLan: ns4:PrivateVLanDetails, PublicIpAddresses: ns4:ArrayOfPublicIpAddressDetails)
+     ns4:NetworkAdapterEntity(IPConfigurations: ns4:ArrayOfIPConfiguration, MACAddress: xsd:string)
+     ns4:NetworkAdapterTypes
+     ns4:NewAssistanceRequest(AssistanceRequestBody: xsd:string, AssistanceRequestSubject: xsd:string, CustomerEmail: xsd:string, CustomerFullName: xsd:string, CustomerPhoneNumber: xsd:string, Language: ns4:Languages, VirtualMachineID: xsd:int)
+     ns4:NewIso(IsoPath: xsd:string, IsoType: ns4:IsoTypes, ServerId: xsd:int)
+     ns4:NewPersonalTemplate(ApplianceTypeID: xsd:int, ArchitectureTypeID: xsd:int, Icon: xsd:base64Binary, OSFamilyID: xsd:int, OSVersion: xsd:string, Revision: xsd:string, TemplateBound: ns4:ArrayOfTemplateBound, TemplateDescription: xsd:string, TemplateExternalDescription: xsd:string, TemplatePassword: xsd:string, TemplateUsername: xsd:string, VirtualMachineID: xsd:int)
+     ns4:NewServer(AdministratorPassword: xsd:string, CPUQuantity: xsd:int, Name: xsd:string, NetworkAdaptersConfiguration: ns4:ArrayOfNetworkAdapterConfiguration, Note: xsd:string, OSTemplateId: xsd:int, RAMQuantity: xsd:int, SmartVMWarePackageID: xsd:int, VirtualDisks: ns4:ArrayOfVirtualDiskDetails)
+     ns4:NewTemplateBound(DefaultValue: xsd:int, MaxValue: xsd:int, MinValue: xsd:int, ResourceType: ns4:ResourceTypes)
+     ns4:News(Category: ns4:NewsCategoryTypes, MessageText: xsd:string, NewsID: xsd:int, Priority: ns4:NewsPriorityTypes, Sender: ns4:NewsSenderTypes, StartDate: xsd:dateTime)
+     ns4:NewsCategoryTypes
+     ns4:NewsPriorityTypes
+     ns4:NewsSenderTypes
+     ns4:NotificationType
+     ns4:OSFamilyTypes
+     ns4:OperatingSystemFamily(OperatingSystemFamilyDescription: xsd:string, OperatingSystemFamilyID: xsd:int, TemplateTypes: ns4:TemplateTypes)
+     ns4:OperationParameters(ParameterType: ns4:ParameterType, ParameterValue: xsd:string)
+     ns4:OtpDetails(ActivationCode: xsd:string, OtpAttempsLeft: xsd:int, StartDate: xsd:dateTime)
+     ns4:ParameterType
+     ns4:Permission(Description: xsd:string, ParentPermissionID: xsd:int, PermissionID: xsd:int, PermissionOrder: xsd:int)
+     ns4:PersonalTemplate(ApplianceTypeID: xsd:int, ArchitectureTypeID: xsd:int, CompanyID: xsd:int, DateEnd: xsd:dateTime, DateStart: xsd:dateTime, Exportable: xsd:boolean, HypervisorType: ns4:HypervisorTypes, Icon: xsd:base64Binary, IdentificationCode: xsd:string, InsertDate: xsd:dateTime, OSFamilyID: xsd:int, OSVersion: xsd:string, Revision: xsd:string, Size: xsd:decimal, TemplateBounds: ns4:ArrayOfTemplateBound, TemplateDescription: xsd:string, TemplateExtendedDescription: xsd:string, TemplateFeatures: ns4:ArrayOfTemplateFeature, TemplateID: xsd:int, TemplateName: xsd:string, TemplatePassword: xsd:string, TemplateSellingStatus: ns4:TemplateSellingStatus, TemplateStatus: ns4:TemplateStatus, TemplateType: ns4:TemplateTypes, TemplateUsername: xsd:string, UserID: xsd:int)
+     ns4:PleskLicense(AddonLicenses: ns4:ArrayOfPurchasedAddonLicense, CreationDate: xsd:dateTime, LicenseCode: xsd:string, LicenseDescription: xsd:string, LicenseID: xsd:int, LicenseKeys: ns4:ArrayOfLicenseKey, LicensePleskTypeID: xsd:int, LicenseStatus: ns4:LicenseStatusTypes, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int)
+     ns4:PleskLicenseCost(TotalHourlyCost: xsd:decimal, HourlyCost: xsd:decimal, ProductId: xsd:int, Quantity: xsd:int, ResourceType: ns4:ResourceTypes, LicenseID: xsd:int)
+     ns4:Price(BillingType: ns4:BillingTypes, DelayerModifier: ns4:DelayerModifier, HypervisorType: ns4:HypervisorTypes, InsertDate: xsd:dateTime, Modifiers: ns4:ArrayOfPriceModifier, PriceListElementStatus: ns4:PriceListElementStatus, ProductID: xsd:int, ResourceType: ns4:ResourceTypes, TimeUnitInHours: xsd:int, Value: xsd:decimal)
+     ns4:PriceList(CurrencyCode: xsd:string, Values: ns4:ArrayOfPrice)
+     ns4:PriceListElementStatus
+     ns4:PriceModifier(ResourceType: ns4:ResourceTypes)
+     ns4:PrivateCloudInstanceStatus
+     ns4:PrivateVLanDetails(Gateway: xsd:string, IPAddress: xsd:string, PrivateVLanResourceId: xsd:int, SubNetMask: xsd:string)
+     ns4:PublicIpAddressDetails(PrimaryIPAddress: xsd:boolean, PublicIpAddressResourceId: xsd:int)
+     ns4:PurchasedAddonLicense(CreationDate: xsd:dateTime, LicenseDescription: xsd:string, LicenseID: xsd:int, LicensePleskTypeAddonID: xsd:int, LicenseStatus: ns4:LicenseStatusTypes, ProductID: xsd:int, Quantity: xsd:int, ResourceID: xsd:int)
+     ns4:QuotationType
+     ns4:Ram(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int, Quantity: xsd:int)
+     ns4:RamHistory(AvailableQuantity: xsd:decimal, HistoryTime: xsd:dateTime, RequestID: ns6:guid, TotalQuantity: xsd:decimal, UsedQuantity: xsd:decimal)
+     ns4:ResourceBound(Default: xsd:int, Max: xsd:int, Min: xsd:int, ResourceType: ns4:ResourceTypes)
+     ns4:ResourceCost(TotalHourlyCost: xsd:decimal, HourlyCost: xsd:decimal, ProductId: xsd:int, Quantity: xsd:int, ResourceType: ns4:ResourceTypes)
+     ns4:ResourceTypes
+     ns4:Roles
+     ns4:ScheduleFrequencyType
+     ns4:ScheduleFrequencyTypeDescription(Description: xsd:string, LanguageCode: xsd:string)
+     ns4:ScheduleFrequencyTypes(ScheduleFrequencyTypeDescription: ns4:ArrayOfScheduleFrequencyTypeDescription, ScheduleFrequencyTypeId: xsd:int)
+     ns4:ScheduleLog(LastExecutionDate: xsd:dateTime, LogCodeID: xsd:int, LogDate: xsd:dateTime, LogMessage: xsd:string, Operation: ns4:ScheduledOperationTypes, Parameters: xsd:string, ScheduleID: xsd:int, ScheduleLabel: xsd:string, ScheduleLogId: xsd:int, ServerID: xsd:int, ServerName: xsd:string, StartDate: xsd:dateTime)
+     ns4:ScheduleOwnerType
+     ns4:ScheduleParameterTypeDescription(Description: xsd:string, LanguageCode: xsd:string)
+     ns4:ScheduleParametersType(ScheduleOperationDescription: xsd:string, ScheduleOperationTypeId: xsd:int, ScheduleParameterTypeDescription: ns4:ArrayOfScheduleParameterTypeDescription, ScheduledParameterTypeId: xsd:int, ValidationExpression: xsd:int)
+     ns4:SchedulePlan(FirstExecutionTime: xsd:dateTime, LastExecutionTime: xsd:dateTime, ScheduleDaysOfMonth: ns5:ArrayOfint, ScheduleEndDateTime: xsd:dateTime, ScheduleFrequency: xsd:int, ScheduleFrequencyType: ns4:ScheduleFrequencyType, ScheduleOperationLabel: xsd:string, ScheduleStartDateTime: xsd:dateTime, ScheduleWeekDays: ns4:ArrayOfScheduleWeekDays, ScheduledMontlyRecurrence: ns4:ScheduledMontlyRecurrence, ScheduledPlanStatus: ns4:ScheduledPlanStatus)
+     ns4:ScheduleWeekDays
+     ns4:ScheduledMontlyRecurrence
+     ns4:ScheduledOperation(OperationParameter: ns4:ArrayOfOperationParameters, OperationType: ns4:ScheduledOperationTypes, ScheduledOperationID: xsd:int, ScheduledPlan: ns4:GetSchedulePlan, ServerId: xsd:int, ServerName: xsd:string)
+     ns4:ScheduledOperationOccurrence(OperationType: ns4:ScheduledOperationTypes, ScheduleDateTime: xsd:dateTime, ScheduleOperationID: xsd:int)
+     ns4:ScheduledOperationTypes
+     ns4:ScheduledPlanStatus
+     ns4:SchedulerDataTypes(ScheduleFrequencyTypes: ns4:ArrayOfScheduleFrequencyTypes, ScheduleParameterType: ns4:ArrayOfScheduleParametersType)
+     ns4:SendAssistanceRequest(AssistanceRequestId: xsd:int)
+     ns4:Server(Busy: xsd:boolean, CPUQuantity: xsd:int, CompanyId: xsd:int, DatacenterId: xsd:int, HDQuantity: xsd:int, HDTotalSize: xsd:int, HypervisorServerType: ns4:HypervisorServerTypes, HypervisorType: ns4:HypervisorTypes, Name: xsd:string, OSTemplateId: xsd:int, RAMQuantity: xsd:int, ServerId: xsd:int, ServerStatus: ns4:ServerStatus, UserId: xsd:int)
+     ns4:ServerCost(TotalHourlyCost: xsd:decimal, CpuCost: ns4:ResourceCost, OSTemplateCost: ns4:ResourceCost, RamCost: ns4:ResourceCost, ServerId: xsd:int, VirtualDiskCost: ns4:VirtualDiskCost)
+     ns4:ServerDetails(ActiveJobs: ns4:ArrayOfJob, CPUQuantity: ns4:Cpu, CompanyId: xsd:int, ControlToolActivationDate: xsd:dateTime, ControlToolInstalled: xsd:boolean, CreationDate: xsd:dateTime, DatacenterId: xsd:int, EasyCloudIPAddress: ns4:IPAddress, EasyCloudPackageID: xsd:int, HypervisorServerType: ns4:HypervisorServerTypes, HypervisorType: ns4:HypervisorTypes, Name: xsd:string, NetworkAdapters: ns4:ArrayOfNetworkAdapter, Note: xsd:string, OSTemplate: ns4:Template, Parameters: ns4:ArrayOfKeyValuePair, RAMQuantity: ns4:Ram, ScheduledOperations: ns4:ArrayOfScheduledOperation, ServerId: xsd:int, ServerStatus: ns4:ServerStatus, Snapshots: ns4:ArrayOfSnapshot, ToolsAvailable: xsd:boolean, UserId: xsd:int, VirtualDVDs: ns4:ArrayOfVirtualDVD, VirtualDisks: ns4:ArrayOfVirtualDisk, VncPort: xsd:int)
+     ns4:ServerParameterKeys
+     ns4:ServerRestore(CPUQuantity: xsd:int, RAMQuantity: xsd:int, ServerId: xsd:int)
+     ns4:ServerStatus
+     ns4:ServerUpdate(CPUQuantity: xsd:int, RAMQuantity: xsd:int, RestartAfterExecuted: xsd:boolean, ServerId: xsd:int, SmartVMWarePackageID: xsd:int, VirtualDisks: ns4:ArrayOfVirtualDiskUpdate)
+     ns4:ServiceStatuses
+     ns4:ServiceTypes
+     ns4:SetAddScheduledOperationRequest(NewSchedulePlan: ns4:SchedulePlan, OperationType: ns4:ScheduledOperationTypes, OperationsParameters: ns4:ArrayOfOperationParameters, ServerID: xsd:int)
+     ns4:SetRemoveScheduledOperationRequest(ScheduledOperationId: xsd:int)
+     ns4:SetUpdateScheduledOperationRequest(OperationType: ns4:ScheduledOperationTypes, OperationsParameters: ns4:ArrayOfOperationParameters, SchedulePlan: ns4:SchedulePlan, ScheduledOperationId: xsd:int)
+     ns4:SetVlanRequest(NetworkAdapterId: xsd:int, SetOnVirtualMachine: xsd:boolean, VLanResourceId: xsd:int, PrivateIps: ns4:ArrayOfIPConfiguration)
+     ns4:SharedStorageCost(TotalHourlyCost: xsd:decimal, SharedStorageId: xsd:int, SharedStorageResource: ns4:ArrayOfResourceCost)
+     ns4:SharedStorageProtocolType
+     ns4:SharedStorageStatus
+     ns4:Snapshot(CreationDate: xsd:dateTime, ExpirationDate: xsd:dateTime, Status: ns4:SnapshotStatusTypes)
+     ns4:SnapshotOperationTypes
+     ns4:SnapshotStatusTypes
+     ns4:SystemStatusHistory(CpuHistory: ns4:ArrayOfCpuHistory, DiskHistory: ns4:ArrayOfDiskHistory, RamHistory: ns4:ArrayOfRamHistory, ServerID: xsd:int)
+     ns4:SystemStatusHistoryRequest(FromDate: xsd:dateTime, GroupBy: ns4:GroupBy, MonitoringResource: ns4:MonitoringResourceType, ServerID: xsd:int, ToDate: xsd:dateTime)
+     ns4:Template(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int, Description: xsd:string, Id: xsd:int, Name: xsd:string)
+     ns4:TemplateBound(DefaultValue: xsd:int, MaxValue: xsd:int, MinValue: xsd:int, ResourceType: ns4:ResourceTypes, TemplateBoundID: xsd:int)
+     ns4:TemplateCategories(ApplianceType: ns4:ArrayOfApplianceType, ArchitectureType: ns4:ArrayOfArchitectureType, FeatureType: ns4:ArrayOfFeatureType, HypervisorTemplateBounds: ns4:ArrayOfHypervisorTemplateBounds, OperatingSystemFamily: ns4:ArrayOfOperatingSystemFamily, TemplateType: ns4:ArrayOfTemplateType)
+     ns4:TemplateDetails(ApplianceType: ns4:ApplianceTypes, ArchitectureType: ns4:ArchitectureTypes, CompanyID: xsd:int, CompatiblePreConfiguredPackages: ns5:ArrayOfint, Description: xsd:string, Enabled: xsd:boolean, ExportEnabled: xsd:boolean, FeatureTypes: ns4:ArrayOfFeatureTypes, Icon: xsd:base64Binary, Id: xsd:int, IdentificationCode: xsd:string, Name: xsd:string, OSFamily: ns4:OSFamilyTypes, OSVersion: xsd:string, OwnerUserId: xsd:int, ParentTemplateID: xsd:int, ProductId: xsd:int, ResourceBounds: ns4:ArrayOfResourceBound, Revision: xsd:string, TemplateExtendedDescription: xsd:string, TemplateOwnershipType: ns4:TemplateOwnershipTypes, TemplatePassword: xsd:string, TemplateSellingStatus: ns4:TemplateSellingStatus, TemplateStatus: ns4:TemplateStatus, TemplateType: ns4:TemplateTypes, TemplateUsername: xsd:string, ToolsAvailable: xsd:boolean)
+     ns4:TemplateFeature(FeatureID: xsd:int, FeatureTypeID: xsd:int)
+     ns4:TemplateOwnershipTypes
+     ns4:TemplateSellingStatus
+     ns4:TemplateStatus
+     ns4:TemplateType(TemplateTypeDescription: xsd:string, TemplateTypeID: xsd:int)
+     ns4:TemplateTypes
+     ns4:TokenType
+     ns4:UpdateAssistanceRequest(AssistanceRequestBody: xsd:string, AssistanceRequestID: xsd:int, AssistanceRequestSubject: xsd:string, CustomerEmail: xsd:string, CustomerFullName: xsd:string, CustomerPhoneNumber: xsd:string, Language: ns4:Languages, VirtualMachineID: xsd:int)
+     ns4:UpdatePersonalTemplate(ApplianceTypeID: xsd:int, ArchitectureTypeID: xsd:int, Icon: xsd:base64Binary, OSFamilyID: xsd:int, OSVersion: xsd:string, Revision: xsd:string, TemplateBounds: ns4:ArrayOfTemplateBound, TemplateDescription: xsd:string, TemplateExtendedDescription: xsd:string, TemplateID: xsd:int, TemplatePassword: xsd:string, TemplateUsername: xsd:string)
+     ns4:UserContact(ContactType: ns4:ContactTypes, UserContactID: xsd:int, Value: xsd:string)
+     ns4:UserInfo(CompanyID: xsd:int, CompanyName: xsd:string, DefaultLanguage: ns4:Languages, IsCompanyRoot: xsd:boolean, OtpActive: xsd:boolean, OtpDetails: ns4:OtpDetails, OtpVisibility: xsd:boolean, Permission: ns4:ArrayOfPermission, UserContacts: ns4:ArrayOfUserContact, UserID: xsd:int, UserName: xsd:string, UserRole: ns4:Roles, UserServiceAvailabilitySettingsList: ns4:ArrayOfUserServiceAvailabilitySettings, UserStatus: ns4:UserStatus)
+     ns4:UserServiceAvailabilitySettings(CloudServices: ns4:ArrayOfCloudService, DataCenterID: xsd:int, DataCenterStatus: ns4:CompanyDataCenterStatuses)
+     ns4:UserStatus
+     ns4:UserToken(AttempsLeft: xsd:int, Token: xsd:string, TokenType: ns4:TokenType, UserName: xsd:string)
+     ns4:VLan(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int, Name: xsd:string, ServerIds: ns5:ArrayOfint, VlanCode: xsd:string)
+     ns4:VirtualDVD(MountDate: xsd:dateTime, Name: xsd:string)
+     ns4:VirtualDatacenter(CustomProductEntities: ns7:ArrayOfCustomProductEntity, DatacenterId: xsd:int, FTP: ns4:FTP, IpAddresses: ns4:ArrayOfIPAddress, LoadBalancers: ns8:ArrayOfLoadBalancer, PleskLicenses: ns4:ArrayOfPleskLicense, PrivateCloudEntities: ns9:ArrayOfPrivateCloudEntity, Servers: ns4:ArrayOfServerDetails, SharedStorages: ns10:ArrayOfSharedStorage, VLans: ns4:ArrayOfVLan)
+     ns4:VirtualDatacenterCost(TotalHourlyCost: xsd:decimal, CurrencyCode: xsd:string, CustomProductsCost: ns7:ArrayOfCustomProductCost, DatacenterId: xsd:int, FTPCost: ns4:FTPCost, IpAddressCost: ns4:IpAddressCost, LoadBalancersCost: ns8:ArrayOfLoadBalancerCost, PleskLicensesCost: ns4:ArrayOfPleskLicenseCost, PrivateCloudCost: ns9:ArrayOfPrivateCloudCost, ServerCost: ns4:ArrayOfServerCost, SharedStorageCost: ns4:ArrayOfSharedStorageCost, VLanCost: ns4:ResourceCost)
+     ns4:VirtualDisk(CompanyId: xsd:int, ProductId: xsd:int, ResourceId: xsd:int, ResourceType: ns4:ResourceTypes, UserId: xsd:int, CreationDate: xsd:dateTime, Size: xsd:int)
+     ns4:VirtualDiskCost(TotalHourlyCost: xsd:decimal, Values: ns4:ArrayOfResourceCost)
+     ns4:VirtualDiskDetails(CustomVirtualDiskPath: xsd:string, Size: xsd:int, VirtualDiskType: ns4:VirtualDiskTypes)
+     ns4:VirtualDiskOperationTypes
+     ns4:VirtualDiskTypes
+     ns4:VirtualDiskUpdate(CustomVirtualDiskPath: xsd:string, Size: xsd:int, VirtualDiskType: ns4:VirtualDiskTypes, VirtualDiskUpdateType: ns4:VirtualDiskOperationTypes)
+     ns4:VlanRequest(NetworkAdapterId: xsd:int, SetOnVirtualMachine: xsd:boolean, VLanResourceId: xsd:int)
+     ns13:ArrayOfCompanyDataCenterSettings(CompanyDataCenterSettings: ns13:CompanyDataCenterSettings[])
+     ns13:ArrayOfCompanySupportSettings(CompanySupportSettings: ns13:CompanySupportSettings[])
+     ns13:CompanyDataCenterSettings(DataCenterEnabled: xsd:boolean, DataCenterID: xsd:int, DataCenterItemOrder: xsd:short)
+     ns13:CompanySettings(CompanyID: xsd:int, Name: xsd:string, PrefixCode: xsd:string, DataCenterSettings: ns13:ArrayOfCompanyDataCenterSettings, PrivateCloudCommercialSupportUrl: xsd:string, SupportSettings: ns13:ArrayOfCompanySupportSettings, TechnicalPanelDomainUrl: xsd:string, TechnicalPanelFooterLabel: xsd:string, TechnicalPanelHeaderColor: xsd:int, TechnicalPanelKbEnabled: xsd:boolean, TechnicalPanelLogoGif: xsd:base64Binary, TechnicalPanelLostPasswordUrl: xsd:string, TechnicalPanelSupportEnabled: xsd:boolean, TechnicalPanelTelerikSkin: xsd:string, TechnicalPanelVisualCloudEnabled: xsd:boolean)
+     ns13:CompanySupportSettings(SupportItemUrl: xsd:string, SupportMenuItem: xsd:string, SupportMenuItemOrder: xsd:short)
+     ns18:AssistanceQuotationAcceptance(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, QuotationGUID: xsd:string, QuotationID: xsd:int, Status: ns4:AssistanceRequestQuotationAcceptanceStatus)
+     ns18:AssistanceRequestIdentifier(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, RequestID: xsd:int)
+     ns18:GetCompanyByUrlRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Url: xsd:string)
+     ns18:GetCustomVirtualDisksRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, HypervisorType: ns4:HypervisorTypes)
+     ns18:GetLoadBalancerLoadsRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, EndDate: xsd:dateTime, LoadBalancerID: xsd:int, StartDate: xsd:dateTime)
+     ns18:GetLoadBalancerNotificationsRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, EndDate: xsd:dateTime, LoadBalancerID: xsd:int, LoadBalancerRuleID: xsd:int, StartDate: xsd:dateTime)
+     ns18:GetLoadBalancerRuleStatisticsRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, EndDate: xsd:dateTime, LoadBalancerRuleID: xsd:int, StartDate: xsd:dateTime)
+     ns18:GetLoadBalancersRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Filter: ns8:LoadBalancersFilter)
+     ns18:GetLogsRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, From: xsd:dateTime, To: xsd:dateTime)
+     ns18:GetNetworkAdapterConfigurationRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, NetworkAdapter: xsd:string)
+     ns18:GetNewsRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Language: xsd:string)
+     ns18:GetPreConfiguredPackagesRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, HypervisorType: ns4:HypervisorTypes)
+     ns18:GetScheduledOperationRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, EndDate: xsd:dateTime, StartDate: xsd:dateTime)
+     ns18:GetSerialCommandResultRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, Command: xsd:string)
+     ns18:GetServerSchedulesLogsRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, EndDate: xsd:dateTime, ServerID: xsd:int, StartDate: xsd:dateTime)
+     ns18:GetServersRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, StatusId: xsd:int)
+     ns18:GetUserAuthenticationTokenRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, OtpValue: xsd:string)
+     ns18:JsonHeader(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string)
+     ns18:JsonRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string)
+     ns18:ModifyPrivateCloud(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Description: xsd:string, Email: xsd:string, Name: xsd:string, PrivateCloudID: xsd:int, TelephoneNumber: xsd:string)
+     ns18:ModifyPrivateCloudResources(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, CPUs: ns9:ArrayOfPrivateCloudCPU, Disks: ns9:ArrayOfPrivateCloudDisk, IP: xsd:int, PrivateCloudID: xsd:int, RAM: xsd:int)
+     ns18:NewAssistanceRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, AssistanceRequestBody: xsd:string, AssistanceRequestSubject: xsd:string, CustomerEmail: xsd:string, CustomerFullName: xsd:string, CustomerPhoneNumber: xsd:string, Language: ns4:Languages, VirtualMachineID: xsd:int)
+     ns18:PrivateCloudIdentifier(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, PrivateCloudID: xsd:int)
+     ns18:PurchasePrivateCloud(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, CPUs: ns9:ArrayOfPrivateCloudCPU, Description: xsd:string, Disks: ns9:ArrayOfPrivateCloudDisk, Email: xsd:string, IP: xsd:int, Name: xsd:string, Password__1: xsd:string, RAM: xsd:int, TelephoneNumber: xsd:string, UserName: xsd:string)
+     ns18:ReinitializeServerRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, AdministratorPassword: xsd:string, ServerId: xsd:int)
+     ns18:ServerRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int)
+     ns18:SetAddScheduledOperationRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, NewSchedulePlan: ns4:SchedulePlan, OperationType: ns4:ScheduledOperationTypes, OperationsParameters: ns4:ArrayOfOperationParameters, ServerID: xsd:int)
+     ns18:SetAddVDCGraphRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, JsonSerialization: xsd:string)
+     ns18:SetChangeNoteServerRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, Note: xsd:string)
+     ns18:SetControlToolActivationRequestRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerIDs: ns5:ArrayOfint)
+     ns18:SetControlToolActiveRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Token: xsd:string)
+     ns18:SetEnqueueAssociateIpAddressRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, IpRequest: ns4:IpAddressesRequest)
+     ns18:SetEnqueueAssociateVLanRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, VLanRequest: ns4:SetVlanRequest)
+     ns18:SetEnqueueDeassociateIpAddressRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, IpRequest: ns4:IpAddressesRequest)
+     ns18:SetEnqueueDeassociateVLanRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, VLanRequest: ns4:VlanRequest)
+     ns18:SetEnqueueHardwareUpdateRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, CpuQuantity: xsd:int, RamQuantity: xsd:int, RestartAfterExecuted: xsd:boolean)
+     ns18:SetEnqueueLoadBalancerDeletionRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, LoadBalancerId: xsd:int)
+     ns18:SetEnqueueLoadBalancerPowerOffRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, LoadBalancerId: xsd:int)
+     ns18:SetEnqueueLoadBalancerStartRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, LoadBalancerId: xsd:int)
+     ns18:SetEnqueueMountDvdIsoRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Iso: ns4:NewIso)
+     ns18:SetEnqueueResizeFTPAccountRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, FtpSize: xsd:int)
+     ns18:SetEnqueueServerCreationRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Server: ns4:NewServer)
+     ns18:SetEnqueueServerRestoreRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Server: ns4:ServerRestore)
+     ns18:SetEnqueueServerSnapshotRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, SnapshotOperation: ns4:SnapshotOperationTypes)
+     ns18:SetEnqueueServerUpdateRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Server: ns4:ServerUpdate)
+     ns18:SetEnqueueVirtualDiskExportRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, Disk: ns4:ExportVirtualDisk)
+     ns18:SetEnqueueVirtualDiskManageRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, Disk: ns4:VirtualDiskUpdate)
+     ns18:SetPurchaseVLanRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, VLanName: xsd:string)
+     ns18:SetReadNewsRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, NewsID: xsd:int, SenderType: ns4:NewsSenderTypes)
+     ns18:SetRemoveIpAddressRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, IpAddressResourceId: xsd:int)
+     ns18:SetRemoveScheduledOperationRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ScheduledOperationId: xsd:int)
+     ns18:SetRemoveVLanRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, VLanResourceId: xsd:int)
+     ns18:SetRenameServerRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, ServerId: xsd:int, ServerName: xsd:string)
+     ns18:SetRenameVLanRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, VLanName: xsd:string, VLanResourceId: xsd:int)
+     ns18:SetUpdateScheduledOperationRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, OperationType: ns4:ScheduledOperationTypes, OperationsParameters: ns4:ArrayOfOperationParameters, SchedulePlan: ns4:SchedulePlan, ScheduledOperationId: xsd:int)
+     ns18:SetUpdateVDCGraphRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, JsonSerialization: xsd:string)
+     ns18:UpdateAssistanceRequest(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, AssistanceRequestBody: xsd:string, AssistanceRequestID: xsd:int, AssistanceRequestSubject: xsd:string, CustomerEmail: xsd:string, CustomerFullName: xsd:string, CustomerPhoneNumber: xsd:string, Language: ns4:Languages, VirtualMachineID: xsd:int)
+     ns18:UserAssistanceRequestsFilter(ApplicationId: xsd:string, RequestId: xsd:string, SessionId: xsd:string, Password: xsd:string, Username: xsd:string, DateEnd: xsd:dateTime, DateStart: xsd:dateTime, Status: ns4:AssistanceRequestStatus)
+     ns12:ExceptionInfo(_fullString: xsd:string, _message: xsd:string, _source: xsd:string, _stackTrace: xsd:string)
+     ns5:ArrayOfint(int: xsd:int[])
+     ns5:ArrayOfstring(string: xsd:string[])
+     ns6:char
+     ns6:duration
+     ns6:guid
+     ns2:StreamBody
+     xsd:ENTITIES
+     xsd:ENTITY
+     xsd:ID
+     xsd:IDREF
+     xsd:IDREFS
+     xsd:NCName
+     xsd:NMTOKEN
+     xsd:NMTOKENS
+     xsd:NOTATION
+     xsd:Name
+     xsd:QName
+     xsd:anySimpleType
+     xsd:anyURI
+     xsd:base64Binary
+     xsd:boolean
+     xsd:byte
+     xsd:date
+     xsd:dateTime
+     xsd:decimal
+     xsd:double
+     xsd:duration
+     xsd:float
+     xsd:gDay
+     xsd:gMonth
+     xsd:gMonthDay
+     xsd:gYear
+     xsd:gYearMonth
+     xsd:hexBinary
+     xsd:int
+     xsd:integer
+     xsd:language
+     xsd:long
+     xsd:negativeInteger
+     xsd:nonNegativeInteger
+     xsd:nonPositiveInteger
+     xsd:normalizedString
+     xsd:positiveInteger
+     xsd:short
+     xsd:string
+     xsd:time
+     xsd:token
+     xsd:unsignedByte
+     xsd:unsignedInt
+     xsd:unsignedLong
+     xsd:unsignedShort
+
+Bindings:
+     Soap11Binding: {https://api.computing.cloud.it/WsEndUser}BasicHttpsEndpoint
+     Soap12Binding: {https://api.computing.cloud.it/WsEndUser}HttpsEndpoint
+
+Service: WsEndUser
+     Port: HttpsEndpoint (Soap12Binding: {https://api.computing.cloud.it/WsEndUser}HttpsEndpoint)
+         Operations:
+            GetAdditionalServices(operationRequest: ns14:GetAdditionalServicesRequest) -> GetAdditionalServicesResult: ns11:WsResultOfArrayOfAdditionalServiceDescriptor
+            GetAssistanceLanguages() -> GetAssistanceLanguagesResult: ns11:WsResultOfArrayOfLanguages
+            GetAssistanceRequestDetails(requestID: xsd:int) -> GetAssistanceRequestDetailsResult: ns11:WsResultOfAssistanceRequest
+            GetAvailablePersonalTemplates() -> GetAvailablePersonalTemplatesResult: ns11:WsResultOfArrayOfPersonalTemplate
+            GetCompanyByUrl(url: xsd:string) -> GetCompanyByUrlResult: ns11:WsResultOfCompanySettings
+            GetControlToolActivationRequests() -> GetControlToolActivationRequestsResult: ns11:WsResultOfArrayOfControlToolActivationRequest
+            GetControlToolCheck(serverID: xsd:int) -> GetControlToolCheckResult: ns11:WsResultOfboolean
+            GetControlToolCommandResult(serverID: xsd:int, command: xsd:string) -> GetControlToolCommandResultResult: ns11:WsResultOfstring
+            GetCredit() -> GetCreditResult: ns11:WsResultOfCredit
+            GetCustomVirtualDisks(hypervisorType: ns4:HypervisorTypes) -> GetCustomVirtualDisksResult: ns11:WsResultOfArrayOfCustomVirtualDisk
+            GetDatacenterConfigurations() -> GetDatacenterConfigurationsResult: ns11:WsResultOfArrayOfDatacenterConfig
+            GetHypervisorDetails(hypervisorType: ns4:HypervisorTypes) -> GetHypervisorDetailsResult: ns11:WsResultOfHypervisor
+            GetHypervisorTypes() -> GetHypervisorTypesResult: ns11:WsResultOfArrayOfHypervisor
+            GetHypervisors() -> GetHypervisorsResult: ns11:WsResultOfArrayOfHypervisor
+            GetIsos() -> GetIsosResult: ns11:WsResultOfArrayOfIsoDetails
+            GetJobs() -> GetJobsResult: ns11:WsResultOfArrayOfJob
+            GetLoadBalancerLoads(request: ns8:LoadBalancerLoadRequest) -> GetLoadBalancerLoadsResult: ns11:WsResultOfLoadBalancerLoads
+            GetLoadBalancerNotifications(request: ns8:LoadBalancerNotificationsRequest) -> GetLoadBalancerNotificationsResult: ns11:WsResultOfLoadBalancerNotifications
+            GetLoadBalancerRuleStatistics(request: ns8:LoadBalancerRuleStatisticsRequest) -> GetLoadBalancerRuleStatisticsResult: ns11:WsResultOfLoadBalancerRuleStatistics
+            GetLoadBalancers(filter: ns8:LoadBalancersFilter) -> GetLoadBalancersResult: ns11:WsResultOfArrayOfLoadBalancer
+            GetLogs(serverId: xsd:int, from: xsd:dateTime, to: xsd:dateTime) -> GetLogsResult: ns11:WsResultOfArrayOfLog
+            GetNetworkAdapterConfiguration(serverID: xsd:int, networkAdapter: xsd:string) -> GetNetworkAdapterConfigurationResult: ns11:WsResultOfNetworkAdapterEntity
+            GetNews(language: xsd:string) -> GetNewsResult: ns11:WsResultOfArrayOfNews
+            GetPreConfiguredPackages(request: ns15:GetPreConfiguredPackagesRequestEntity) -> GetPreConfiguredPackagesResult: ns11:WsResultOfArrayOfCloudPackage
+            GetPriceList() -> GetPriceListResult: ns11:WsResultOfArrayOfPriceList
+            GetPrivateCloudResourcesTypes() -> GetPrivateCloudResourcesTypesResult: ns11:WsResultOfPrivateCloudResurcesTypes
+            GetPurchasedAdditionalServices(operationRequest: ns14:GetPurchasedAdditionalServicesRequest) -> GetPurchasedAdditionalServicesResult: ns11:WsResultOfArrayOfPurchasedAdditionalService
+            GetPurchasedFTP() -> GetPurchasedFTPResult: ns11:WsResultOfFTP
+            GetPurchasedIpAddresses() -> GetPurchasedIpAddressesResult: ns11:WsResultOfArrayOfIPAddress
+            GetPurchasedPrivateCloudDetails(privateCloudID: xsd:int) -> GetPurchasedPrivateCloudDetailsResult: ns11:WsResultOfPrivateCloudEntityDetails
+            GetPurchasedPrivateClouds() -> GetPurchasedPrivateCloudsResult: ns11:WsResultOfPrivateCloudEntities
+            GetPurchasedVLans() -> GetPurchasedVLansResult: ns11:WsResultOfArrayOfVLan
+            GetRemoteAccessUrl(operationRequest: ns4:GetRemoteAccessUrlRequest) -> GetRemoteAccessUrlResult: ns11:WsResultOfstring
+            GetScheduleOccurrences(operationRequest: ns4:GetScheduleOccurrencesRequest) -> GetScheduleOccurrencesResult: ns11:WsResultOfArrayOfScheduledOperationOccurrence
+            GetScheduledOperations(operationRequest: ns4:GetScheduledOperationRequest) -> GetScheduledOperationsResult: ns11:WsResultOfArrayOfScheduledOperation
+            GetSchedulerDataTypes() -> GetSchedulerDataTypesResult: ns11:WsResultOfSchedulerDataTypes
+            GetServerDetails(serverId: xsd:int) -> GetServerDetailsResult: ns11:WsResultOfServerDetails
+            GetServerSchedulesLogs(operationRequest: ns4:GetServerSchedulesLogsRequest) -> GetServerSchedulesLogsResult: ns11:WsResultOfArrayOfScheduleLog
+            GetServers(statusId: xsd:int) -> GetServersResult: ns11:WsResultOfArrayOfServer
+            GetSharedStorages() -> GetSharedStoragesResult: ns11:WsResultOfArrayOfSharedStorage
+            GetSystemStatusHistory(systemStatusHistoryRequest: ns4:SystemStatusHistoryRequest) -> GetSystemStatusHistoryResult: ns11:WsResultOfSystemStatusHistory
+            GetTemplateCategories() -> GetTemplateCategoriesResult: ns11:WsResultOfTemplateCategories
+            GetTemplateDetails(templateID: xsd:int) -> GetTemplateDetailsResult: ns11:WsResultOfTemplateDetails
+            GetUserAssistanceRequests(DateStart: xsd:dateTime, DateEnd: xsd:dateTime, status: ns4:AssistanceRequestStatus) -> GetUserAssistanceRequestsResult: ns11:WsResultOfArrayOfAssistanceRequest
+            GetUserAuthenticationToken(userAuthenticationTokenRequest: ns4:GetUserAuthenticationTokenRequest) -> GetUserAuthenticationTokenResult: ns11:WsResultOfUserToken
+            GetUserInfo() -> GetUserInfoResult: ns11:WsResultOfUserInfo
+            GetVDCGraph() -> GetVDCGraphResult: ns11:WsResultOfstring
+            GetVirtualDatacenter() -> GetVirtualDatacenterResult: ns11:WsResultOfVirtualDatacenter
+            GetVirtualDatacenterCost() -> GetVirtualDatacenterCostResult: ns11:WsResultOfVirtualDatacenterCost
+            SetAddLoadBalancerContacts(request: ns8:AddLoadBalancerContactsRequest) -> SetAddLoadBalancerContactsResult: ns11:WsResult
+            SetAddLoadBalancerRule(request: ns8:AddLoadBalancerRuleRequest) -> SetAddLoadBalancerRuleResult: ns11:WsResult
+            SetAddServerScheduledOperation(operationRequest: ns4:SetAddScheduledOperationRequest) -> SetAddServerScheduledOperationResult: ns11:WsResult
+            SetAddVDCGraph(jsonSerialization: xsd:string) -> SetAddVDCGraphResult: ns11:WsResult
+            SetAssistanceQuotationAcceptance(quotationID: xsd:int, status: ns4:AssistanceRequestQuotationAcceptanceStatus) -> SetAssistanceQuotationAcceptanceResult: ns11:WsResult
+            SetChangeNoteServer(serverId: xsd:int, note: xsd:string) -> SetChangeNoteServerResult: ns11:WsResult
+            SetControlToolActivationRequest(serverIDs: ns5:ArrayOfint) -> SetControlToolActivationRequestResult: ns11:WsResult
+            SetControlToolActive(token: xsd:string) -> SetControlToolActiveResult: ns11:WsResult
+            SetControlToolDisable(serverID: xsd:int) -> SetControlToolDisableResult: ns11:WsResult
+            SetEnqueueAddIQNSharedStorage(operationRequest: ns10:EnqueueAddIQNSharedStorageRequest) -> SetEnqueueAddIQNSharedStorageResult: ns11:WsResult
+            SetEnqueueAssociateIpAddress(ipRequest: ns4:IpAddressesRequest) -> SetEnqueueAssociateIpAddressResult: ns11:WsResult
+            SetEnqueueAssociateVLan(vlanRequest: ns4:SetVlanRequest) -> SetEnqueueAssociateVLanResult: ns11:WsResult
+            SetEnqueueCreateFTPAccount() -> SetEnqueueCreateFTPAccountResult: ns11:WsResult
+            SetEnqueueDeassociateIpAddress(ipRequest: ns4:IpAddressesRequest) -> SetEnqueueDeassociateIpAddressResult: ns11:WsResult
+            SetEnqueueDeassociateVLan(vlanRequest: ns4:VlanRequest) -> SetEnqueueDeassociateVLanResult: ns11:WsResult
+            SetEnqueueLoadBalancerAddInstances(request: ns8:LoadBalancerInstancesRequest) -> SetEnqueueLoadBalancerAddInstancesResult: ns11:WsResult
+            SetEnqueueLoadBalancerCreation(request: ns8:LoadBalancerCreationRequest) -> SetEnqueueLoadBalancerCreationResult: ns11:WsResult
+            SetEnqueueLoadBalancerDeletion(loadBalancerID: xsd:int) -> SetEnqueueLoadBalancerDeletionResult: ns11:WsResult
+            SetEnqueueLoadBalancerPowerOff(loadBalancerID: xsd:int) -> SetEnqueueLoadBalancerPowerOffResult: ns11:WsResult
+            SetEnqueueLoadBalancerRemoveInstances(request: ns8:LoadBalancerInstancesRequest) -> SetEnqueueLoadBalancerRemoveInstancesResult: ns11:WsResult
+            SetEnqueueLoadBalancerStart(loadBalancerID: xsd:int) -> SetEnqueueLoadBalancerStartResult: ns11:WsResult
+            SetEnqueueModifyPrivateCloudResources(request: ns9:ModifyPrivateCloudResources) -> SetEnqueueModifyPrivateCloudResourcesResult: ns11:WsResult
+            SetEnqueueModifySharedStorage(operationRequest: ns10:EnqueueModifySharedStorageRequest) -> SetEnqueueModifySharedStorageResult: ns11:WsResult
+            SetEnqueueMountDvdIso(iso: ns4:NewIso) -> SetEnqueueMountDvdIsoResult: ns11:WsResult
+            SetEnqueuePersonalTemplateCreation(template: ns4:NewPersonalTemplate) -> SetEnqueuePersonalTemplateCreationResult: ns11:WsResult
+            SetEnqueuePrivateCloudActivation(privateCloudID: xsd:int) -> SetEnqueuePrivateCloudActivationResult: ns11:WsResult
+            SetEnqueuePrivateCloudDeletion(privateCloudID: xsd:int) -> SetEnqueuePrivateCloudDeletionResult: ns11:WsResult
+            SetEnqueuePurchasePrivateCloud(request: ns9:PurchasePrivateCloud) -> SetEnqueuePurchasePrivateCloudResult: ns11:WsResultOfPurchasedPrivateCloud
+            SetEnqueuePurchaseSharedStorage(operationRequest: ns10:EnqueuePurchaseSharedStorageRequest) -> SetEnqueuePurchaseSharedStorageResult: ns11:WsResult
+            SetEnqueueReinitializeServer(request: ns15:ReinitializeServerRequest) -> SetEnqueueReinitializeServerResult: ns11:WsResult
+            SetEnqueueRemoveIQNSharedStorage(operationRequest: ns10:EnqueueRemoveIQNSharedStorageRequest) -> SetEnqueueRemoveIQNSharedStorageResult: ns11:WsResult
+            SetEnqueueRemoveSharedStorage(operationRequest: ns10:EnqueueRemoveSharedStorageRequest) -> SetEnqueueRemoveSharedStorageResult: ns11:WsResult
+            SetEnqueueResizeFTPAccount(FtpSize: xsd:int) -> SetEnqueueResizeFTPAccountResult: ns11:WsResult
+            SetEnqueueServerArchiviation(serverId: xsd:int) -> SetEnqueueServerArchiviationResult: ns11:WsResult
+            SetEnqueueServerCreation(server: ns4:NewServer) -> SetEnqueueServerCreationResult: ns11:WsResult
+            SetEnqueueServerDeletion(serverId: xsd:int) -> SetEnqueueServerDeletionResult: ns11:WsResult
+            SetEnqueueServerPowerOff(serverId: xsd:int) -> SetEnqueueServerPowerOffResult: ns11:WsResult
+            SetEnqueueServerReset(serverId: xsd:int) -> SetEnqueueServerResetResult: ns11:WsResult
+            SetEnqueueServerRestart(serverId: xsd:int) -> SetEnqueueServerRestartResult: ns11:WsResult
+            SetEnqueueServerRestore(server: ns4:ServerRestore) -> SetEnqueueServerRestoreResult: ns11:WsResult
+            SetEnqueueServerSnapshot(serverId: xsd:int, snapshotOperation: ns4:SnapshotOperationTypes) -> SetEnqueueServerSnapshotResult: ns11:WsResult
+            SetEnqueueServerStart(serverId: xsd:int) -> SetEnqueueServerStartResult: ns11:WsResult
+            SetEnqueueServerStop(serverId: xsd:int) -> SetEnqueueServerStopResult: ns11:WsResult
+            SetEnqueueServerUpdate(server: ns4:ServerUpdate) -> SetEnqueueServerUpdateResult: ns11:WsResult
+            SetEnqueueUnmountDvdIso(serverId: xsd:int) -> SetEnqueueUnmountDvdIsoResult: ns11:WsResult
+            SetEnqueueUpdateControlTool(serverID: xsd:int) -> SetEnqueueUpdateControlToolResult: ns11:WsResult
+            SetEnqueueVirtualDiskExport(disk: ns4:ExportVirtualDisk) -> SetEnqueueVirtualDiskExportResult: ns11:WsResult
+            SetEnqueueVirtualDiskManage(serverId: xsd:int, disk: ns4:VirtualDiskUpdate) -> SetEnqueueVirtualDiskManageResult: ns11:WsResult
+            SetInsertAssistanceRequest(newAssistanceRequest: ns4:NewAssistanceRequest) -> SetInsertAssistanceRequestResult: ns11:WsResult
+            SetModifyLoadBalancer(request: ns8:ModifyLoadBalancerRequest) -> SetModifyLoadBalancerResult: ns11:WsResult
+            SetModifyPrivateCloud(request: ns9:ModifyPrivateCloud) -> SetModifyPrivateCloudResult: ns11:WsResult
+            SetPurchaseIpAddress() -> SetPurchaseIpAddressResult: ns11:WsResultOfIPAddress
+            SetPurchaseVLan(vLanName: xsd:string) -> SetPurchaseVLanResult: ns11:WsResultOfVLan
+            SetPurchasedAdditionalServices(operationRequest: ns14:SetPurchasedAdditionalServicesRequest) -> SetPurchasedAdditionalServicesResult: ns11:WsResult
+            SetReadNews(newsID: xsd:int, senderType: ns4:NewsSenderTypes) -> SetReadNewsResult: ns11:WsResult
+            SetRemoveIpAddress(ipAddressResourceId: xsd:int) -> SetRemoveIpAddressResult: ns11:WsResult
+            SetRemoveLoadBalancerContacts(request: ns8:RemoveLoadBalancerContactsRequest) -> SetRemoveLoadBalancerContactsResult: ns11:WsResult
+            SetRemoveLoadBalancerRule(request: ns8:RemoveLoadBalancerRuleRequest) -> SetRemoveLoadBalancerRuleResult: ns11:WsResult
+            SetRemovePersonalTemplate(templateID: xsd:int) -> SetRemovePersonalTemplateResult: ns11:WsResult
+            SetRemoveServerScheduledOperation(operationRequest: ns4:SetRemoveScheduledOperationRequest) -> SetRemoveServerScheduledOperationResult: ns11:WsResult
+            SetRemoveVLan(vLanResourceId: xsd:int) -> SetRemoveVLanResult: ns11:WsResult
+            SetRenameServer(serverId: xsd:int, serverName: xsd:string) -> SetRenameServerResult: ns11:WsResult
+            SetRenameSharedStorage(operationRequest: ns10:RenameSharedStorageRequest) -> SetRenameSharedStorageResult: ns11:WsResult
+            SetRenameVLan(vLanResourceId: xsd:int, vLanName: xsd:string) -> SetRenameVLanResult: ns11:WsResult
+            SetSendAssistanceRequest(request: ns4:SendAssistanceRequest) -> SetSendAssistanceRequestResult: ns11:WsResult
+            SetUpdateAssistanceRequest(assistanceRequest: ns4:UpdateAssistanceRequest) -> SetUpdateAssistanceRequestResult: ns11:WsResult
+            SetUpdatePersonalTemplate(template: ns4:UpdatePersonalTemplate) -> SetUpdatePersonalTemplateResult: ns11:WsResult
+            SetUpdateServerScheduledOperation(operationRequest: ns4:SetUpdateScheduledOperationRequest) -> SetUpdateServerScheduledOperationResult: ns11:WsResult
+            SetUpdateVDCGraph(jsonSerialization: xsd:string) -> SetUpdateVDCGraphResult: ns11:WsResult
+
+     Port: BasicHttpsEndpoint (Soap11Binding: {https://api.computing.cloud.it/WsEndUser}BasicHttpsEndpoint)
+         Operations:
+            GetAdditionalServices(operationRequest: ns14:GetAdditionalServicesRequest) -> GetAdditionalServicesResult: ns11:WsResultOfArrayOfAdditionalServiceDescriptor
+            GetAssistanceLanguages() -> GetAssistanceLanguagesResult: ns11:WsResultOfArrayOfLanguages
+            GetAssistanceRequestDetails(requestID: xsd:int) -> GetAssistanceRequestDetailsResult: ns11:WsResultOfAssistanceRequest
+            GetAvailablePersonalTemplates() -> GetAvailablePersonalTemplatesResult: ns11:WsResultOfArrayOfPersonalTemplate
+            GetCompanyByUrl(url: xsd:string) -> GetCompanyByUrlResult: ns11:WsResultOfCompanySettings
+            GetControlToolActivationRequests() -> GetControlToolActivationRequestsResult: ns11:WsResultOfArrayOfControlToolActivationRequest
+            GetControlToolCheck(serverID: xsd:int) -> GetControlToolCheckResult: ns11:WsResultOfboolean
+            GetControlToolCommandResult(serverID: xsd:int, command: xsd:string) -> GetControlToolCommandResultResult: ns11:WsResultOfstring
+            GetCredit() -> GetCreditResult: ns11:WsResultOfCredit
+            GetCustomVirtualDisks(hypervisorType: ns4:HypervisorTypes) -> GetCustomVirtualDisksResult: ns11:WsResultOfArrayOfCustomVirtualDisk
+            GetDatacenterConfigurations() -> GetDatacenterConfigurationsResult: ns11:WsResultOfArrayOfDatacenterConfig
+            GetHypervisorDetails(hypervisorType: ns4:HypervisorTypes) -> GetHypervisorDetailsResult: ns11:WsResultOfHypervisor
+            GetHypervisorTypes() -> GetHypervisorTypesResult: ns11:WsResultOfArrayOfHypervisor
+            GetHypervisors() -> GetHypervisorsResult: ns11:WsResultOfArrayOfHypervisor
+            GetIsos() -> GetIsosResult: ns11:WsResultOfArrayOfIsoDetails
+            GetJobs() -> GetJobsResult: ns11:WsResultOfArrayOfJob
+            GetLoadBalancerLoads(request: ns8:LoadBalancerLoadRequest) -> GetLoadBalancerLoadsResult: ns11:WsResultOfLoadBalancerLoads
+            GetLoadBalancerNotifications(request: ns8:LoadBalancerNotificationsRequest) -> GetLoadBalancerNotificationsResult: ns11:WsResultOfLoadBalancerNotifications
+            GetLoadBalancerRuleStatistics(request: ns8:LoadBalancerRuleStatisticsRequest) -> GetLoadBalancerRuleStatisticsResult: ns11:WsResultOfLoadBalancerRuleStatistics
+            GetLoadBalancers(filter: ns8:LoadBalancersFilter) -> GetLoadBalancersResult: ns11:WsResultOfArrayOfLoadBalancer
+            GetLogs(serverId: xsd:int, from: xsd:dateTime, to: xsd:dateTime) -> GetLogsResult: ns11:WsResultOfArrayOfLog
+            GetNetworkAdapterConfiguration(serverID: xsd:int, networkAdapter: xsd:string) -> GetNetworkAdapterConfigurationResult: ns11:WsResultOfNetworkAdapterEntity
+            GetNews(language: xsd:string) -> GetNewsResult: ns11:WsResultOfArrayOfNews
+            GetPreConfiguredPackages(request: ns15:GetPreConfiguredPackagesRequestEntity) -> GetPreConfiguredPackagesResult: ns11:WsResultOfArrayOfCloudPackage
+            GetPriceList() -> GetPriceListResult: ns11:WsResultOfArrayOfPriceList
+            GetPrivateCloudResourcesTypes() -> GetPrivateCloudResourcesTypesResult: ns11:WsResultOfPrivateCloudResurcesTypes
+            GetPurchasedAdditionalServices(operationRequest: ns14:GetPurchasedAdditionalServicesRequest) -> GetPurchasedAdditionalServicesResult: ns11:WsResultOfArrayOfPurchasedAdditionalService
+            GetPurchasedFTP() -> GetPurchasedFTPResult: ns11:WsResultOfFTP
+            GetPurchasedIpAddresses() -> GetPurchasedIpAddressesResult: ns11:WsResultOfArrayOfIPAddress
+            GetPurchasedPrivateCloudDetails(privateCloudID: xsd:int) -> GetPurchasedPrivateCloudDetailsResult: ns11:WsResultOfPrivateCloudEntityDetails
+            GetPurchasedPrivateClouds() -> GetPurchasedPrivateCloudsResult: ns11:WsResultOfPrivateCloudEntities
+            GetPurchasedVLans() -> GetPurchasedVLansResult: ns11:WsResultOfArrayOfVLan
+            GetRemoteAccessUrl(operationRequest: ns4:GetRemoteAccessUrlRequest) -> GetRemoteAccessUrlResult: ns11:WsResultOfstring
+            GetScheduleOccurrences(operationRequest: ns4:GetScheduleOccurrencesRequest) -> GetScheduleOccurrencesResult: ns11:WsResultOfArrayOfScheduledOperationOccurrence
+            GetScheduledOperations(operationRequest: ns4:GetScheduledOperationRequest) -> GetScheduledOperationsResult: ns11:WsResultOfArrayOfScheduledOperation
+            GetSchedulerDataTypes() -> GetSchedulerDataTypesResult: ns11:WsResultOfSchedulerDataTypes
+            GetServerDetails(serverId: xsd:int) -> GetServerDetailsResult: ns11:WsResultOfServerDetails
+            GetServerSchedulesLogs(operationRequest: ns4:GetServerSchedulesLogsRequest) -> GetServerSchedulesLogsResult: ns11:WsResultOfArrayOfScheduleLog
+            GetServers(statusId: xsd:int) -> GetServersResult: ns11:WsResultOfArrayOfServer
+            GetSharedStorages() -> GetSharedStoragesResult: ns11:WsResultOfArrayOfSharedStorage
+            GetSystemStatusHistory(systemStatusHistoryRequest: ns4:SystemStatusHistoryRequest) -> GetSystemStatusHistoryResult: ns11:WsResultOfSystemStatusHistory
+            GetTemplateCategories() -> GetTemplateCategoriesResult: ns11:WsResultOfTemplateCategories
+            GetTemplateDetails(templateID: xsd:int) -> GetTemplateDetailsResult: ns11:WsResultOfTemplateDetails
+            GetUserAssistanceRequests(DateStart: xsd:dateTime, DateEnd: xsd:dateTime, status: ns4:AssistanceRequestStatus) -> GetUserAssistanceRequestsResult: ns11:WsResultOfArrayOfAssistanceRequest
+            GetUserAuthenticationToken(userAuthenticationTokenRequest: ns4:GetUserAuthenticationTokenRequest) -> GetUserAuthenticationTokenResult: ns11:WsResultOfUserToken
+            GetUserInfo() -> GetUserInfoResult: ns11:WsResultOfUserInfo
+            GetVDCGraph() -> GetVDCGraphResult: ns11:WsResultOfstring
+            GetVirtualDatacenter() -> GetVirtualDatacenterResult: ns11:WsResultOfVirtualDatacenter
+            GetVirtualDatacenterCost() -> GetVirtualDatacenterCostResult: ns11:WsResultOfVirtualDatacenterCost
+            SetAddLoadBalancerContacts(request: ns8:AddLoadBalancerContactsRequest) -> SetAddLoadBalancerContactsResult: ns11:WsResult
+            SetAddLoadBalancerRule(request: ns8:AddLoadBalancerRuleRequest) -> SetAddLoadBalancerRuleResult: ns11:WsResult
+            SetAddServerScheduledOperation(operationRequest: ns4:SetAddScheduledOperationRequest) -> SetAddServerScheduledOperationResult: ns11:WsResult
+            SetAddVDCGraph(jsonSerialization: xsd:string) -> SetAddVDCGraphResult: ns11:WsResult
+            SetAssistanceQuotationAcceptance(quotationID: xsd:int, status: ns4:AssistanceRequestQuotationAcceptanceStatus) -> SetAssistanceQuotationAcceptanceResult: ns11:WsResult
+            SetChangeNoteServer(serverId: xsd:int, note: xsd:string) -> SetChangeNoteServerResult: ns11:WsResult
+            SetControlToolActivationRequest(serverIDs: ns5:ArrayOfint) -> SetControlToolActivationRequestResult: ns11:WsResult
+            SetControlToolActive(token: xsd:string) -> SetControlToolActiveResult: ns11:WsResult
+            SetControlToolDisable(serverID: xsd:int) -> SetControlToolDisableResult: ns11:WsResult
+            SetEnqueueAddIQNSharedStorage(operationRequest: ns10:EnqueueAddIQNSharedStorageRequest) -> SetEnqueueAddIQNSharedStorageResult: ns11:WsResult
+            SetEnqueueAssociateIpAddress(ipRequest: ns4:IpAddressesRequest) -> SetEnqueueAssociateIpAddressResult: ns11:WsResult
+            SetEnqueueAssociateVLan(vlanRequest: ns4:SetVlanRequest) -> SetEnqueueAssociateVLanResult: ns11:WsResult
+            SetEnqueueCreateFTPAccount() -> SetEnqueueCreateFTPAccountResult: ns11:WsResult
+            SetEnqueueDeassociateIpAddress(ipRequest: ns4:IpAddressesRequest) -> SetEnqueueDeassociateIpAddressResult: ns11:WsResult
+            SetEnqueueDeassociateVLan(vlanRequest: ns4:VlanRequest) -> SetEnqueueDeassociateVLanResult: ns11:WsResult
+            SetEnqueueLoadBalancerAddInstances(request: ns8:LoadBalancerInstancesRequest) -> SetEnqueueLoadBalancerAddInstancesResult: ns11:WsResult
+            SetEnqueueLoadBalancerCreation(request: ns8:LoadBalancerCreationRequest) -> SetEnqueueLoadBalancerCreationResult: ns11:WsResult
+            SetEnqueueLoadBalancerDeletion(loadBalancerID: xsd:int) -> SetEnqueueLoadBalancerDeletionResult: ns11:WsResult
+            SetEnqueueLoadBalancerPowerOff(loadBalancerID: xsd:int) -> SetEnqueueLoadBalancerPowerOffResult: ns11:WsResult
+            SetEnqueueLoadBalancerRemoveInstances(request: ns8:LoadBalancerInstancesRequest) -> SetEnqueueLoadBalancerRemoveInstancesResult: ns11:WsResult
+            SetEnqueueLoadBalancerStart(loadBalancerID: xsd:int) -> SetEnqueueLoadBalancerStartResult: ns11:WsResult
+            SetEnqueueModifyPrivateCloudResources(request: ns9:ModifyPrivateCloudResources) -> SetEnqueueModifyPrivateCloudResourcesResult: ns11:WsResult
+            SetEnqueueModifySharedStorage(operationRequest: ns10:EnqueueModifySharedStorageRequest) -> SetEnqueueModifySharedStorageResult: ns11:WsResult
+            SetEnqueueMountDvdIso(iso: ns4:NewIso) -> SetEnqueueMountDvdIsoResult: ns11:WsResult
+            SetEnqueuePersonalTemplateCreation(template: ns4:NewPersonalTemplate) -> SetEnqueuePersonalTemplateCreationResult: ns11:WsResult
+            SetEnqueuePrivateCloudActivation(privateCloudID: xsd:int) -> SetEnqueuePrivateCloudActivationResult: ns11:WsResult
+            SetEnqueuePrivateCloudDeletion(privateCloudID: xsd:int) -> SetEnqueuePrivateCloudDeletionResult: ns11:WsResult
+            SetEnqueuePurchasePrivateCloud(request: ns9:PurchasePrivateCloud) -> SetEnqueuePurchasePrivateCloudResult: ns11:WsResultOfPurchasedPrivateCloud
+            SetEnqueuePurchaseSharedStorage(operationRequest: ns10:EnqueuePurchaseSharedStorageRequest) -> SetEnqueuePurchaseSharedStorageResult: ns11:WsResult
+            SetEnqueueReinitializeServer(request: ns15:ReinitializeServerRequest) -> SetEnqueueReinitializeServerResult: ns11:WsResult
+            SetEnqueueRemoveIQNSharedStorage(operationRequest: ns10:EnqueueRemoveIQNSharedStorageRequest) -> SetEnqueueRemoveIQNSharedStorageResult: ns11:WsResult
+            SetEnqueueRemoveSharedStorage(operationRequest: ns10:EnqueueRemoveSharedStorageRequest) -> SetEnqueueRemoveSharedStorageResult: ns11:WsResult
+            SetEnqueueResizeFTPAccount(FtpSize: xsd:int) -> SetEnqueueResizeFTPAccountResult: ns11:WsResult
+            SetEnqueueServerArchiviation(serverId: xsd:int) -> SetEnqueueServerArchiviationResult: ns11:WsResult
+            SetEnqueueServerCreation(server: ns4:NewServer) -> SetEnqueueServerCreationResult: ns11:WsResult
+            SetEnqueueServerDeletion(serverId: xsd:int) -> SetEnqueueServerDeletionResult: ns11:WsResult
+            SetEnqueueServerPowerOff(serverId: xsd:int) -> SetEnqueueServerPowerOffResult: ns11:WsResult
+            SetEnqueueServerReset(serverId: xsd:int) -> SetEnqueueServerResetResult: ns11:WsResult
+            SetEnqueueServerRestart(serverId: xsd:int) -> SetEnqueueServerRestartResult: ns11:WsResult
+            SetEnqueueServerRestore(server: ns4:ServerRestore) -> SetEnqueueServerRestoreResult: ns11:WsResult
+            SetEnqueueServerSnapshot(serverId: xsd:int, snapshotOperation: ns4:SnapshotOperationTypes) -> SetEnqueueServerSnapshotResult: ns11:WsResult
+            SetEnqueueServerStart(serverId: xsd:int) -> SetEnqueueServerStartResult: ns11:WsResult
+            SetEnqueueServerStop(serverId: xsd:int) -> SetEnqueueServerStopResult: ns11:WsResult
+            SetEnqueueServerUpdate(server: ns4:ServerUpdate) -> SetEnqueueServerUpdateResult: ns11:WsResult
+            SetEnqueueUnmountDvdIso(serverId: xsd:int) -> SetEnqueueUnmountDvdIsoResult: ns11:WsResult
+            SetEnqueueUpdateControlTool(serverID: xsd:int) -> SetEnqueueUpdateControlToolResult: ns11:WsResult
+            SetEnqueueVirtualDiskExport(disk: ns4:ExportVirtualDisk) -> SetEnqueueVirtualDiskExportResult: ns11:WsResult
+            SetEnqueueVirtualDiskManage(serverId: xsd:int, disk: ns4:VirtualDiskUpdate) -> SetEnqueueVirtualDiskManageResult: ns11:WsResult
+            SetInsertAssistanceRequest(newAssistanceRequest: ns4:NewAssistanceRequest) -> SetInsertAssistanceRequestResult: ns11:WsResult
+            SetModifyLoadBalancer(request: ns8:ModifyLoadBalancerRequest) -> SetModifyLoadBalancerResult: ns11:WsResult
+            SetModifyPrivateCloud(request: ns9:ModifyPrivateCloud) -> SetModifyPrivateCloudResult: ns11:WsResult
+            SetPurchaseIpAddress() -> SetPurchaseIpAddressResult: ns11:WsResultOfIPAddress
+            SetPurchaseVLan(vLanName: xsd:string) -> SetPurchaseVLanResult: ns11:WsResultOfVLan
+            SetPurchasedAdditionalServices(operationRequest: ns14:SetPurchasedAdditionalServicesRequest) -> SetPurchasedAdditionalServicesResult: ns11:WsResult
+            SetReadNews(newsID: xsd:int, senderType: ns4:NewsSenderTypes) -> SetReadNewsResult: ns11:WsResult
+            SetRemoveIpAddress(ipAddressResourceId: xsd:int) -> SetRemoveIpAddressResult: ns11:WsResult
+            SetRemoveLoadBalancerContacts(request: ns8:RemoveLoadBalancerContactsRequest) -> SetRemoveLoadBalancerContactsResult: ns11:WsResult
+            SetRemoveLoadBalancerRule(request: ns8:RemoveLoadBalancerRuleRequest) -> SetRemoveLoadBalancerRuleResult: ns11:WsResult
+            SetRemovePersonalTemplate(templateID: xsd:int) -> SetRemovePersonalTemplateResult: ns11:WsResult
+            SetRemoveServerScheduledOperation(operationRequest: ns4:SetRemoveScheduledOperationRequest) -> SetRemoveServerScheduledOperationResult: ns11:WsResult
+            SetRemoveVLan(vLanResourceId: xsd:int) -> SetRemoveVLanResult: ns11:WsResult
+            SetRenameServer(serverId: xsd:int, serverName: xsd:string) -> SetRenameServerResult: ns11:WsResult
+            SetRenameSharedStorage(operationRequest: ns10:RenameSharedStorageRequest) -> SetRenameSharedStorageResult: ns11:WsResult
+            SetRenameVLan(vLanResourceId: xsd:int, vLanName: xsd:string) -> SetRenameVLanResult: ns11:WsResult
+            SetSendAssistanceRequest(request: ns4:SendAssistanceRequest) -> SetSendAssistanceRequestResult: ns11:WsResult
+            SetUpdateAssistanceRequest(assistanceRequest: ns4:UpdateAssistanceRequest) -> SetUpdateAssistanceRequestResult: ns11:WsResult
+            SetUpdatePersonalTemplate(template: ns4:UpdatePersonalTemplate) -> SetUpdatePersonalTemplateResult: ns11:WsResult
+            SetUpdateServerScheduledOperation(operationRequest: ns4:SetUpdateScheduledOperationRequest) -> SetUpdateServerScheduledOperationResult: ns11:WsResult
+            SetUpdateVDCGraph(jsonSerialization: xsd:string) -> SetUpdateVDCGraphResult: ns11:WsResult
+

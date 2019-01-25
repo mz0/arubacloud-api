@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="https://api.computing.cloud.it/WsEndUser/v2.0/Imports"
+<xsd:schema targetNamespace="https://api.computing.cloud.it/WsEndUser/v2.8/Imports"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<xsd:import
-		schemaLocation="https://api.dc1.computing.cloud.it/WsEndUser/v2.0/WsEndUser.svc?xsd=xsd0"
-		namespace="https://api.computing.cloud.it/WsEndUser/v2.0" />
+		schemaLocation="https://api.dc1.computing.cloud.it/WsEndUser/v2.8/WsEndUser.svc?xsd=xsd0"
+		namespace="https://api.computing.cloud.it/WsEndUser" /><!--
 	<xsd:import
 		schemaLocation="https://api.dc1.computing.cloud.it/WsEndUser/v2.0/WsEndUser.svc?xsd=xsd1"
 		namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
@@ -22,4 +22,5 @@
 	<xsd:import
 		schemaLocation="https://api.dc1.computing.cloud.it/WsEndUser/v2.0/WsEndUser.svc?xsd=xsd6"
 		namespace="http://schemas.datacontract.org/2004/07/Aruba.Cloud.WsEndUser.Business.Entities" />
+-->
 </xsd:schema>

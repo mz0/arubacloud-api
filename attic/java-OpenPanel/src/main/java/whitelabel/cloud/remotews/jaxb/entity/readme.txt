@@ -1,1 +1,0 @@
-Jaxb-Generated Artifacts Folder.

@@ -1,7 +1,7 @@
-(Fri, 05 Oct 2012 +0400) 
+(Fri, 05 Oct 2012 +0400)
 r15 arubacloud  14:29:04 mapping for ws-enduser API version 2.0
 
-(Wed, 19 Sep 2012) 
+(Wed, 19 Sep 2012)
 r14 arubacloud  17:29:41 -
 r13 arubacloud  17:27:42 (Wed, 19 Sep 2012) -
 
@@ -23,6 +23,6 @@ svn co https://svn.code.sf.net/p/java-openpanel/code-0/trunk java-opnpnel-svn
 mv java-opnpnel-svn/java-OpenPanel .
 svn log
 svn log -v -r r15
-svn diff -c r15 java-OpenPanel/README 
+svn diff -c r15 java-OpenPanel/README
 svn log -v -r r12
 svn diff -c r12
