@@ -39,4 +39,7 @@ client = Client(wsdl_uri, wsse=UsernameToken(myId, myPw))
 print("Login OK.")
 #templates = client.service.GetHypervisors()
 #print(templates)
-print(client.service.GetCredit()['Value']['Value'])
+print("Balance: {:0.2f}€".format(client.service.GetCredit()['Value']['Value']))
+
+for contact in client.service.GetUserInfo()['Value']['UserContacts']['UserContact']:
+    print("{}: {}".format(contact['ContactType'], contact['Value']))
