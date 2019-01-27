@@ -1,6 +1,4 @@
 //https://kb.arubacloud.com/en/api/computing/manipulating-the-items/creating-a-cloud-server.aspx
-
-// IWsEndUser.GetPreConfiguredPackages Method JAVA)
 public static String GetPreConfiguredPackages(IWsEndUser client) {
     StringBuilder sb = new StringBuilder();
     try {
@@ -19,19 +17,17 @@ public static String GetPreConfiguredPackages(IWsEndUser client) {
               sb.append("\n\t- Billing Type: " + cp.getBillingType());
               sb.append("\n\t- Hdd0Quantity: " + cp.getHdd0Quantity());
             }
-        } else {    
+        } else {
             throw new Exception(result.getResultMessage());
         }
-    } catch (Exception ex) { 
+    } catch (Exception ex) {
       System.out.println(ex);
     }
     return sb.toString();
 }
 
-https://kb.arubacloud.com/en/api/computing/advanced-manipulation-of-the-items/initialize-a-cloud-server-smart.aspx
-
-//IWsEndUser.SetEnqueueReinitializeServer Method (Java)
-    private static void SetEnqueueReinitializeServer(
+//https://kb.arubacloud.com/en/api/computing/advanced-manipulation-of-the-items/initialize-a-cloud-server-smart.aspx
+private static void SetEnqueueReinitializeServer(
         IWsEndUser client, int serverId, String administratorPassword) {
         try {
             ReinitializeServerRequest request = new ReinitializeServerRequest();
@@ -45,6 +41,4 @@ https://kb.arubacloud.com/en/api/computing/advanced-manipulation-of-the-items/in
         } catch (Exception ex) {
              System.out.println(ex);
         }
-    }
-// https://sourceforge.net/p/java-openpanel/code-0/HEAD/tree/trunk/java-OpenPanel/
-
+}

@@ -33,18 +33,3 @@ while len(i.get_jobs()['Value']) > 0:
 vm.reinitialize(admin_password=tmp_root_passwd)
 
 # 2018-12-10 15:19 MainThread DEBUG
-# :28,777 {"ApplicationId":"GetServers",
-# :29,761 {"ApplicationId":"GetPurchasedIpAddresses", ....}
-# :31,199 {"ApplicationId":"GetServerDetails",
-# Reinitialize: La
-# :32,032 {"ApplicationId":"SetEnqueueServerPowerOff",...., "ServerId":_}
-# :33,241 {"ApplicationId":"GetJobs",                 ....}
-# :35,469 {"ApplicationId":"GetJobs",
-# :37,404 {"ApplicationId":"GetJobs",
-# :39,002 {"ApplicationId":"GetJobs",
-# :40,896 {"ApplicationId":"GetJobs",
-# :42,716 {"ApplicationId":"GetJobs",
-# :44,480 {"ApplicationId":"GetJobs",
-# :46,197 {"ApplicationId":"GetJobs",
-# :47,189 {"ApplicationId":"SetEnqueueReinitializeServer",....,
-#          "AdministratorPassword":"~", "ServerId":_, "ConfigureIPv6":false}
