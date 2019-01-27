@@ -36,6 +36,7 @@ from zeep.wsse.username import UsernameToken
 
 wsdl_uri='https://api.dc1.computing.cloud.it/WsEndUser/v2.9/WsEndUser.svc?wsdl'
 client = Client(wsdl_uri, wsse=UsernameToken(myId, myPw))
-templates = client.service.GetHypervisors()
-
-print(templates)
+print("Login OK.")
+#templates = client.service.GetHypervisors()
+#print(templates)
+print(client.service.GetCredit()['Value']['Value'])
