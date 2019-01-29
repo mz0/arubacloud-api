@@ -1,0 +1,29 @@
+{ 'ExceptionInfo': { '_fullString': None, '_message': None, '_source': None, '_stackTrace': None },
+  'ResultCode': 0,
+  'ResultMessage': None,
+  'Success': True,
+  'Value': {
+      'LoginAfterResetPwd': datetime.datetime(2016, 1, 18, 23, 51, 23, 917000),
+      'UserContacts': { 'UserContact': [
+              { 'ContactType': 'Email', 'UserContactID': 13, 'Value': 'jd@example.com' },
+              { 'ContactType': 'MobileNumber', 'UserContactID': 17, 'Value': '+13331234567' } ] },
+      'UserID': 12345,
+      'UserName': 'AWI-12345',
+      'UserRole': 'User',
+      'UserServiceAvailabilitySettingsList': {
+          'UserServiceAvailabilitySettings': [
+                { 'CloudServices': { 'CloudService': [
+                            { 'ServiceStatus': 'Enabled', 'ServiceType': 'Computing' } ] }, 'DataCenterID': 1, 'DataCenterStatus': 'Enabled' },
+                { 'CloudServices': { 'CloudService': [
+                            { 'ServiceStatus': 'Enabled', 'ServiceType': 'Computing' } ] }, 'DataCenterID': 8, 'DataCenterStatus': 'Enabled' },
+                { 'CloudServices': { 'CloudService': [
+                            { 'ServiceStatus': 'Enabled', 'ServiceType': 'Storage' },
+                            { 'ServiceStatus': 'Enabled', 'ServiceType': 'SlaMonitoring' },
+                            { 'ServiceStatus': 'Enabled', 'ServiceType': 'Dns' },
+                            { 'ServiceStatus': 'Enabled', 'ServiceType': 'Domains' },
+                            { 'ServiceStatus': 'Enabled', 'ServiceType': 'Backup' }    ] }, 'DataCenterID': 1001, 'DataCenterStatus': 'Enabled' } ]
+      },
+      'UserSettings': { 'UserSettings': [ { 'UserSettingType': 'MaxVMAvailable', 'Value': '30' } ] },
+      'UserStatus': 'Active'
+  }
+}

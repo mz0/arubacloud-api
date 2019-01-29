@@ -1,0 +1,22 @@
+service: WsCommon
+method : DeactivateUserOtp
+method : GetAvailableApplicationPermissions
+method : GetAvailableApplicationPermissionsList
+method : GetBillingReport
+method : GetCompanyByUrl
+method : GetCredit
+method : GetCreditProjection
+method : GetDatacenterConfigurations
+method : GetNews
+method : GetPriceList
+method : GetPurchasedCustomProductDetails
+method : GetPurchasedCustomProducts
+method : GetServiceRequests
+method : GetUserAuthenticationToken
+method : GetUserInfo
+method : GetUserOtp
+method : NotifyLogin
+method : RequestTokenOtp
+method : SetOtpActive
+method : SetReadNews
+method : SyncToken
