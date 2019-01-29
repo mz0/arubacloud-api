@@ -1,0 +1,15 @@
+json_msg = {
+    'ApplicationId':'SetEnqueueServerCreation',
+    'RequestId':    'SetEnqueueServerCreation',
+    'Username': 'myId',
+    'Password': 'myPw',
+    'Server': {
+        'AdministratorPassword': 'admin_password',
+        'SshKey': '...',
+        'SshPasswordAuthAllowed': True,
+        'Name': 'foo-name',
+        'SmartVMWarePackageID': 1,
+        'Note': 'foo-note',
+        'OSTemplateId': 'template_id'
+    }
+}
